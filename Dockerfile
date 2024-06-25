@@ -1,7 +1,7 @@
 FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 as builder
 WORKDIR /app
 COPY . .
-COPY /app/node_modules ./node_modules
+COPY --chmod=755 node_modules ./node_modules
 RUN yarn build
 
 # Production image, copy all the files and run next
@@ -11,7 +11,7 @@ WORKDIR /app
 ENV NODE_ENV production
 
 RUN addgroup -g 1001 -S nodejs
-COPY --from=builder /app/src/public ./public
+COPY --from=builder --chmod=755 /app/src/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
