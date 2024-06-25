@@ -37,7 +37,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watchAll",
+    "test:unit": "jest --coverage --watchAll=false",
     "lint": "next lint",
     "coverage": "jest --watchAll --coverage --verbose --noStackTrace --silent --maxWorkers=50%"
   },
@@ -46,7 +46,6 @@
       "react-app",
       "react-app/jest"
     ],
-    "ignoreDuringBuilds": true,
     "rules": {
       "testing-library/prefer-screen-queries": "off",
       "testing-library/no-unnecessary-act": "off",
