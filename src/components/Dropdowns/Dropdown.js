@@ -1,6 +1,7 @@
-import { ChevronDownIcon } from '@heroicons/react/solid';
 import { Fragment, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+
+import { ChevronDownIcon } from '@heroicons/react/solid';
 import { useEffect } from 'react';
 
 export default function Dropdown({
