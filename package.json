@@ -27,7 +27,7 @@
     "react-apexcharts": "^1.4.0",
     "react-dom": "^18.2.0",
     "react-minimal-pie-chart": "^8.4.0",
-    "react-pdf": "^6.2.2",
+    "react-pdf": "7.7.3",
     "react-scripts": "5.0.1",
     "tailwind-merge": "^1.8.1",
     "web-vitals": "^2.1.4",
