@@ -7,6 +7,7 @@ COPY . .
 COPY node_modules ./node_modules
 
 RUN yarn build
+USER node
 
 # Production image, copy all the files and run next
 FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 as runner
