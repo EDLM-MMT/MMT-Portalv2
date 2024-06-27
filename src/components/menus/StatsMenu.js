@@ -1,16 +1,17 @@
+import { ChevronUpIcon, UserIcon } from '@heroicons/react/solid';
+/* eslint-disable no-restricted-globals */
 import {
-    UserCircleIcon,
-    LogoutIcon
-  } from '@heroicons/react/outline';
-  import { ChevronUpIcon, UserIcon } from '@heroicons/react/solid';
-  import { Fragment } from 'react';
-  import { Menu, Transition } from '@headlessui/react';
-  import { useRouter } from 'next/router';
-  import useStore from '@/store/store';
-  import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
+    LogoutIcon,
+    UserCircleIcon
+} from '@heroicons/react/outline';
+import { Menu, Transition } from '@headlessui/react';
 
-  
-  const listMenuButtons = [
+import { Fragment } from 'react';
+import { useRouter } from 'next/router';
+import useStore from '@/store/store';
+import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
+
+const listMenuButtons = [
     {
       name: 'Enrollment by University',
       href: '/execStakeholder/universityEnrollment',
