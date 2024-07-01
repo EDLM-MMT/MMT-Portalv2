@@ -1,9 +1,9 @@
-import logo from '@/../public/logo.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from "next/router"
 import Link from 'next/link';
+import logo from '@/../public/logo.png';
+import { useRouter } from "next/router"
+import { useState } from 'react';
 
 export default function Register() {
     const router = useRouter();
@@ -52,10 +52,10 @@ export default function Register() {
                     type="text" name="email" placeholder="Email"/>
                 <input  
                     className='mt-2 shadow focus:shadow-md rounded-md p-2 w-full border border-gray-200 text-gray-700 focus:ring-2 outline-none transition-all  duration-200'
-                    type="password" name="password" placeholder="Password"/>
+                    type="password" name="password" required placeholder="Password"/>
                 <input 
                     className='mt-2 shadow focus:shadow-md rounded-md p-2 w-full border border-gray-200 text-gray-700 focus:ring-2 outline-none transition-all  duration-200'
-                    type="password" name="confirmPassword" placeholder="Confirm Password"/>
+                    type="password" name="confirmPassword" required placeholder="Confirm Password"/>
                 <div className='flex mx-auto flex-col justify-center items-center'>
                 <Link href="/dashboard">
                     <button

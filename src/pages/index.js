@@ -1,15 +1,14 @@
 // intial login page for the app
 // all users must come here first before they can access the app
 
-import { useState } from 'react';
-import Link from 'next/link';
-
 import Alert from '@/components/overlays/Alert';
 import DODImage from '@/../public/logo.png';
 import DefaultLayout from "../components/layouts/DefaultLayout"
 import Image from 'next/image';
+import Link from 'next/link';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
+import { useState } from 'react';
 import useStore from '@/store/store';
 
 export default function LoginPage() {
@@ -74,7 +73,7 @@ export default function LoginPage() {
                   type="text" name="username" placeholder="Username"/> 
               <input 
                   className='mt-2 shadow focus:shadow-md rounded-md p-2 w-full border border-gray-200 text-gray-700 focus:ring-2 outline-none transition-all duration-200'
-                  type="password" name="password" placeholder="Password"/>
+                  type="password" name="password" required placeholder="Password"/>
               
               
               <div className='flex mx-auto flex-col justify-center items-center'>
