@@ -34,7 +34,6 @@ export default function InquiryView({inquiryId}) {
             setComments(res.data.inquiryComments);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

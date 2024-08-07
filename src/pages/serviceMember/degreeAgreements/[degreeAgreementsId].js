@@ -30,7 +30,6 @@ export default function DegreeAgreementsView({degreeAgreementsId}) {
             setDegreeAgreement(res.data);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

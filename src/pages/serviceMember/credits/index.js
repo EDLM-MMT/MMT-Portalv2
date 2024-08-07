@@ -19,7 +19,6 @@ export default function Credits() {
           setCredits(res.data);
         })
         .catch((err) => {
-          console.log(err);
         });
   }, []);
 

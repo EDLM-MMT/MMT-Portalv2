@@ -57,7 +57,6 @@ export default function ProgramAdminInquiryView({inquiryId}) {
             setComments(res.data.inquiryComments);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

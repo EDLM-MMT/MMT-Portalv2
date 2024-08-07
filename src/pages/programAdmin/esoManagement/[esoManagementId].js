@@ -33,7 +33,6 @@ export default function ESOManagementView({esoManagementId}) {
             setChecked(res.data.permissions)
         })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

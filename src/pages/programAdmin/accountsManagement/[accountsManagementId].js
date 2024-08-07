@@ -38,7 +38,6 @@ export default function AccountManagementView({accountsManagementId}) {
             setAccountData(res.data);
         })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

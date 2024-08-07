@@ -44,7 +44,6 @@ export default function CareerCounseling({careerCounselingId}) {
             setComments(res.data.counselingComments);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

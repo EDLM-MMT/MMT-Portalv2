@@ -15,7 +15,6 @@ export default function DegreeAgreements() {
             setData(res.data.degreeAgreements);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

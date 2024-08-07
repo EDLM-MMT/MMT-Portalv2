@@ -27,7 +27,6 @@ export default function Inquiry() {
             }
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

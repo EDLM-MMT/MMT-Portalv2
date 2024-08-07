@@ -23,7 +23,6 @@ export default function NewInquiry() {
             setIssuesList(res.data.common_issues);
           })
           .catch((err) => {
-            console.log(err);
           });
 
     }, []);

@@ -18,7 +18,6 @@ export default function Inquiry() {
             setData(res.data.inquiries);
           })
           .catch((err) => {
-            console.log(err);
           });
     }, []);
 

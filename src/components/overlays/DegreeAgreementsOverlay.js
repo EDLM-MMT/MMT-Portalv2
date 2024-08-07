@@ -64,13 +64,11 @@ export default function DegreeAgreementsOverlay({ toggleModal, title, message, b
             axios
             .post('/api/updateDegreeAgreements', {degreeAgreements: updatedData} )
             .catch((err) =>{
-                console.log(err);
             })
         }else{
             axios
             .post('/api/inquiry/updateInquiry', {inquiries: updatedData} )
             .catch((err) =>{
-                console.log(err);
             })
         }
 

@@ -27,7 +27,6 @@ export default function CareerCounselingList() {
             }
           })
           .catch((err) => {
-            console.log(err);
           });
 
     }, []);

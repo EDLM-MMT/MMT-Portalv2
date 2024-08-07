@@ -18,7 +18,6 @@ export default function DegreePathways() {
             setDegreePathways(data);
           })
           .catch((err) => {
-            console.log(err);
           });
 
     },[]);
