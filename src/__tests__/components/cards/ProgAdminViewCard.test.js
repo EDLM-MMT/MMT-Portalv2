@@ -2,6 +2,12 @@ import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import ProgramAdminViewCard from '../../../components/cards/ProgAdminViewCard';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("View Card component", () => {
 
   const mockData = [{

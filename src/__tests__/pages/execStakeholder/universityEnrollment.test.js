@@ -2,6 +2,12 @@ import UniversityEnrollment from "@/pages/execStakeholder/universityEnrollment/i
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("State Enrollment page", () => {
 
     it("should render the page", () => {
