@@ -55,7 +55,6 @@ export default function ResetPassword() {
                 resultExtName: 'https://w3id.org/xapi/ecc/result/extensions/searchTerm',
                 resultExtValue: "test",
             };
-            console.log(context);
             xAPISendStatement(context);
             console.log("sent");
         }
@@ -64,7 +63,7 @@ export default function ResetPassword() {
     return (
         <DefaultLayout >
         <div className='bg-white w-full border rounded-md border-gray-200 p-4 shadow'>
-        <h1 className='my-2 pb-4 border-b mt-4 mb-8 text-3xl font-semibold'>
+        {/* <h1 className='my-2 pb-4 border-b mt-4 mb-8 text-3xl font-semibold'>
             <div className='flex flex-row justify-between'>  
                 Change Password
             </div> 
@@ -88,7 +87,7 @@ export default function ResetPassword() {
             </div>
         </form>
         {isOpen && <GeneralPurposeOverlay toggleModal={setIsOpen} title={"Reset Password Confirmation"} disable={setIsSubmitted} message={"Are you sure you want to reset you password?"} path={"/profile"}/>}
-        {errorMessage && <Alert message={errorMessage} toggleModal={setIsOpen}></Alert>}
+        {errorMessage && <Alert message={errorMessage} toggleModal={setIsOpen}></Alert>} */}
 
         </div>
         </DefaultLayout>
