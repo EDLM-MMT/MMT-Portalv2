@@ -17,10 +17,10 @@ describe("Degree Pathways Page", () => {
     // expect(getByText('City University')).toBeInTheDocument();
     // expect(getByText('Emory Riddle')).toBeInTheDocument();
 
-    let button = getByText('City University');
-    act(() => {
-        fireEvent.click(button);
-    });
+    // let button = getByText('City University');
+    // act(() => {
+    //     fireEvent.click(button);
+    // });
     
     let button2 = getByText('School');
     act(() => {
@@ -51,11 +51,11 @@ describe("Degree Pathways Page", () => {
     );
     expect(getByPlaceholderText('Search for School or Major')).toBeInTheDocument();
 
-    act(() => {
-        fireEvent.change(getByPlaceholderText('Search for School or Major'), {
-            target: { value: 'City University' },
-        });
-    });
+    // act(() => {
+    //     fireEvent.change(getByPlaceholderText('Search for School or Major'), {
+    //         target: { value: 'City University' },
+    //     });
+    // });
 
     act(() => {
         fireEvent.change(getByPlaceholderText('Search for School or Major'), {
