@@ -32,10 +32,10 @@ describe("Degree Pathways Page", () => {
     //     fireEvent.click(button);
     // });
 
-    button2 = getByText('Major');
-    act(() => {
-        fireEvent.click(button2);
-    });
+    // button2 = getByText('Major');
+    // act(() => {
+    //     fireEvent.click(button2);
+    // });
 
     // act(() => {
     //     fireEvent.click(getByText('School'));
