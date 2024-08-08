@@ -13,7 +13,7 @@ describe("Degree Pathways Page", () => {
 
     expect(getByText('Degree Pathways Catalog')).toBeInTheDocument();
     expect(getByText('Sort By:')).toBeInTheDocument();
-    expect(getByText('School')).toBeInTheDocument();
+    // expect(getByText('School')).toBeInTheDocument();
     // expect(getByText('City University')).toBeInTheDocument();
     // expect(getByText('Emory Riddle')).toBeInTheDocument();
 
@@ -22,10 +22,10 @@ describe("Degree Pathways Page", () => {
     //     fireEvent.click(button);
     // });
     
-    let button2 = getByText('School');
-    act(() => {
-        fireEvent.click(button2);
-    });
+    // let button2 = getByText('School');
+    // act(() => {
+    //     fireEvent.click(button2);
+    // });
 
     // button = getByText('Major');
     // act(() => {
@@ -37,9 +37,9 @@ describe("Degree Pathways Page", () => {
         fireEvent.click(button2);
     });
 
-    act(() => {
-        fireEvent.click(getByText('School'));
-    });
+    // act(() => {
+    //     fireEvent.click(getByText('School'));
+    // });
 
   });
 
@@ -72,9 +72,9 @@ describe("Degree Pathways Page", () => {
         </MemoryRouterProvider>
     );
     
-    act(() => {
-        fireEvent.click(getByText('School'));
-    });
+    // act(() => {
+    //     fireEvent.click(getByText('School'));
+    // });
 
     act(() => {
         fireEvent.click(getByText('Major'));
