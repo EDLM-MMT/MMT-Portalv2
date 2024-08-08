@@ -28,7 +28,8 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
 
     //for axios
-    "axios": "axios/dist/node/axios.cjs"
+    // "axios": "axios/dist/node/axios.cjs"
+    '^axios$': require.resolve('jest-mock-axios')
 
   },
 
