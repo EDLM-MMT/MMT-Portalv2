@@ -1,6 +1,6 @@
 import React from 'react';
 import { act, render, fireEvent } from '@testing-library/react';
-import CreditsTable from '@/components/Tables/CreditsTable';
+import CreditsTable from '@/components/tables/CreditsTable';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 describe('CreditsTable component', () => {

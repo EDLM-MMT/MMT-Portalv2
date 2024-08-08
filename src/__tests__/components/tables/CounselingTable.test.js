@@ -1,7 +1,7 @@
 import React from 'react';
 import { act, render, fireEvent } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import CounselingTable from '@/components/Tables/CounselingTable';
+import CounselingTable from '@/components/tables/CounselingTable';
 
 describe('Counseling Table component', () => {
   const course_plan = [
