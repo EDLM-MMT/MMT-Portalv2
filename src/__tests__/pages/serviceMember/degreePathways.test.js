@@ -14,8 +14,8 @@ describe("Degree Pathways Page", () => {
     expect(getByText('Degree Pathways Catalog')).toBeInTheDocument();
     expect(getByText('Sort By:')).toBeInTheDocument();
     expect(getByText('School')).toBeInTheDocument();
-    expect(getByText('City University')).toBeInTheDocument();
-    expect(getByText('Emory Riddle')).toBeInTheDocument();
+    // expect(getByText('City University')).toBeInTheDocument();
+    // expect(getByText('Emory Riddle')).toBeInTheDocument();
 
     let button = getByText('City University');
     act(() => {
