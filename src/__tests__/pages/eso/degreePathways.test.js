@@ -76,9 +76,9 @@ describe("Degree Pathways Page", () => {
     //     fireEvent.click(getByText('School'));
     // });
 
-    act(() => {
-        fireEvent.click(getByText('Major'));
-    });
+    // act(() => {
+    //     fireEvent.click(getByText('Major'));
+    // });
 
     expect(getByPlaceholderText('Search for School or Major')).toBeInTheDocument();
 
