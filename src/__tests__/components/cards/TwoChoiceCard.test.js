@@ -3,6 +3,12 @@ import { act, render, fireEvent } from '@testing-library/react';
 import TwoChoiceCard from '../../../components/cards/TwoChoiceCard';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('TwoChoiceCard', () => {
   it('renders title and description', () => {
     const card = {
