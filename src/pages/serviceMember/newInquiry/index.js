@@ -66,7 +66,9 @@ export default function NewInquiry() {
         e.preventDefault();
         const min = 304;
         const max = 404;
-        const randId = parseInt(min + Math.random() * (max - min));
+        const crypto = require('crypto');
+        const randId = crypto.randomInt(min, max);
+        // const randId = parseInt(min + Math.random() * (max - min));
         const newInquiry = {
             id: randId,
             title: e.target.subject?.value,

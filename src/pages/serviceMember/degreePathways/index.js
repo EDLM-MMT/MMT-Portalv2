@@ -94,7 +94,9 @@ export default function DegreePathways() {
         console.log("school data: ", schoolData)
         const min = 306;
         const max = 407;
-        const randId = parseInt(min + Math.random() * (max - min));
+        const crypto = require('crypto');
+        const randId = crypto.randomInt(min, max);
+        // const randId = parseInt(min + Math.random() * (max - min));
           
         const newDegree= {
             "id": randId,
