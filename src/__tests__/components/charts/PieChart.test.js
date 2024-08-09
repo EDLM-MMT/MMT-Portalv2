@@ -5,6 +5,12 @@ import PieChart from "@/components/charts/PieChart";
 
 jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("Pie Chart component", () => {
 
 

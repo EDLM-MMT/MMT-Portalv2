@@ -3,6 +3,12 @@ import { render, fireEvent } from '@testing-library/react';
 import Table from '@/components/tables/BarGraphTable';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('BarGraphTable component', () => {
   const rowsData = [
     ['User 1', '2022-01-01', 'View', 'Reset'],

@@ -3,6 +3,12 @@ import { act, render, fireEvent } from '@testing-library/react';
 import ESOCommentsTable from '@/components/tables/ESOCommentsTable';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('ESOCommentsTable component', () => {
   const comments = [
     {

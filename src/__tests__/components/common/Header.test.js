@@ -3,6 +3,12 @@ import useStore from '@/store/store';
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/dist/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }))
+
 describe('Header', () => {
 
     it('should show the header text', () => {

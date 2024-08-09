@@ -3,6 +3,12 @@ import { act, render, fireEvent } from '@testing-library/react';
 import CreditsTable from '@/components/tables/CreditsTable';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('CreditsTable component', () => {
   const credits = [
     {
