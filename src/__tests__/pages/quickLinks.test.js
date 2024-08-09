@@ -2,6 +2,12 @@ import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import QuickLinks from "@/pages/quickLinks";
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("Quick Links Component", () => {
   it("should render the component", () => {
     const { getByText } = render(

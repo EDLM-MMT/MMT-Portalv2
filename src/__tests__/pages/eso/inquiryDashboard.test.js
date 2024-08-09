@@ -3,6 +3,12 @@ import { act, render, fireEvent } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import ESOInquiryDashboard from '@/pages/eso/inquiries';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('ESO Inquiry Dashboard component', () => {
 
   it('renders the component with the correct number of elements', () => {

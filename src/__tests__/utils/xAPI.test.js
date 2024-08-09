@@ -1,6 +1,12 @@
 import { sendStatement } from "@/utils/xapi/xAPIWrapper";
 import xAPIMapper from "@/utils/xapi/xAPIMapper";
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe('xAPI', () => {
   it('should send xAPI Statement to LRS with proper arguments', () => {
 

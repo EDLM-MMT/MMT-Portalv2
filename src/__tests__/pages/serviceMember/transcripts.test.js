@@ -2,6 +2,12 @@ import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import Transcripts from "@/pages/serviceMember/transcripts";
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("Transcripts Component", () => {
   jest.mock('next/router', () => ({
     ...jest.requireActual('next/router'),

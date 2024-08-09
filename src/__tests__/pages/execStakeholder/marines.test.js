@@ -2,6 +2,12 @@ import MarinesPersonnel from "@/pages/execStakeholder/personnelData/marines";
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("Marines Personnel Data page", () => {
 
     it("should render the page", () => {

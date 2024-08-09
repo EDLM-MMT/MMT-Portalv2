@@ -1,6 +1,12 @@
 import { act, fireEvent, render } from "@testing-library/react";
 import DownloadButton from "@/components/buttons/DownloadButton";
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 describe("Download Button Component", () => {
 
   const onChange = (e) => {
