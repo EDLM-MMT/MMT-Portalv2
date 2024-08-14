@@ -1,4 +1,5 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from "react";
 import Card from "@/components/cards/Card";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
