@@ -41,7 +41,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:unit": "jest --coverage --watchAll=false",
+    "test:unit": "jest --coverage --watchAll=false --runInBand",
     "lint": "next lint",
     "coverage": "jest --watchAll --coverage --verbose --noStackTrace --silent --maxWorkers=50%"
   },
