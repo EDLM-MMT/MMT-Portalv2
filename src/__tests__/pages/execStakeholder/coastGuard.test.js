@@ -8,6 +8,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
+jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
+
 describe("Coast Guard Personnel Data page", () => {
 
     it("should render the page", () => {

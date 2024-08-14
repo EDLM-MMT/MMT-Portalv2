@@ -1,5 +1,6 @@
 import ESOManagement from "@/pages/programAdmin/esoManagement/index";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({

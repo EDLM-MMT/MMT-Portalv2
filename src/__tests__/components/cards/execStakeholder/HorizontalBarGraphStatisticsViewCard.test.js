@@ -8,6 +8,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
+jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
+
 describe("Horizontal Bar Graph Statistics View Card component", () => {
 
   it("should render the component", () => {

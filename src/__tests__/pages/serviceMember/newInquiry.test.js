@@ -1,5 +1,6 @@
 import NewInquiry from "@/pages/serviceMember/newInquiry";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import axios from 'axios'
 
