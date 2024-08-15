@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { act, fireEvent, render, cleanup } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import DropdownViewCard from "@/components/cards/execStakeholder/DropdownSelectViewCard";
 
@@ -7,6 +7,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }))
+
+jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
 
 describe("Dropdown Select View Card component", () => {
 
