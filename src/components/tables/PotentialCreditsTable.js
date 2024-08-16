@@ -57,7 +57,7 @@ export default function PotentialCreditsTable({credits}) {
                 </thead>
                 {credits?.map((credit, index) => ( 
                     <tr key={index} className=' even:bg-gray-50 group'>
-                        {/* {setData(post)} */}
+                        {}
                         <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{credit.courseNumber}</td>
                         <td className='pl-2'>{credit.courseName}</td>
                         <td className='pl-2'>{credit.hours}</td>

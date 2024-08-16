@@ -2,7 +2,6 @@ import inquiryData from "@/data/service_member/inquiries.json";
 
 export default function handler(req, res) {
   const inquiryid =  req.query;
-  //console.log("Just checking whats here",inquiryData);
 
   const match = inquiryData.inquiries.find(
     (course) => course.id == parseInt(Object.values(inquiryid))

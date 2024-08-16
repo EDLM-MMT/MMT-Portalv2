@@ -7,7 +7,6 @@ const dataFilePath = path.join(process.cwd(), 'src/data/service_member/careerCou
 export default async function handler(req, res) {
    // console.log("req body:", req.body)
     if(req.method === 'GET'){
-        // console.log("here", careerCounseling);
         return res.status(200).json(careerCounseling);
     } else if (req.method === 'POST') {
         console.log("we're getting inside this post request");

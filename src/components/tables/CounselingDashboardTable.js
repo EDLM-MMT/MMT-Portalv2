@@ -97,7 +97,7 @@ export default function CounselingDashboardTable({careerList}) {
                             </tr>
                 ))}
             </table>
-            {/* {isOpen && <DeletePopup toggleModal={setIsOpen} message={"Are you sure you want to delete this row?"} path={"/serviceMember/careerCounseling"} degree={degree}/>}  */}
+            {}
             {}
         </div>
 
