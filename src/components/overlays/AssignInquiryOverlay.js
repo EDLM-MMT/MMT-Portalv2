@@ -9,12 +9,12 @@ export default function AssignInquiryOverlay({ toggleModal, message }){
     const router = useRouter();
 
     const closeModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
     }
 
     const confirmModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
         router.push("/programAdmin/inquiryManagement");
     }

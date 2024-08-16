@@ -6,7 +6,7 @@ export default function Alert({ toggleModal, message }){
     const cancelButtonRef = useRef(null);
     
     const closeModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
     }
 

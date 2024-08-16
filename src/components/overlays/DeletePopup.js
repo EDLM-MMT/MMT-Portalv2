@@ -9,12 +9,12 @@ export default function DeletePopupComponent({ toggleModal, message, path, degre
     const router = useRouter();
 
     const closeModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
     }
 
     const confirmModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
         router.push(path);
     }

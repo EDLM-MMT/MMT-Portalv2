@@ -10,13 +10,13 @@ export default function GeneralPurposeOverlay({ toggleModal, disable, title, mes
     const router = useRouter();
 
     const closeModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
     }
 
     const confirmModal = () => {
-        var state= setOpen(false);
-        var value = setMsg("now");
+        let state= setOpen(false);
+        let value = setMsg("now");
         toggleModal(state);
         if(toggle2ndModal){
             toggle2ndModal(state);

@@ -12,7 +12,7 @@ export default function DegreeAgreementsOverlay({ toggleModal, title, message, b
     const [inquiryFlag, setInquiryFlag] = useState(false);
     
     const closeModal = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
     }
 
@@ -54,7 +54,7 @@ export default function DegreeAgreementsOverlay({ toggleModal, title, message, b
     }, [updatedCard]);
 
     const changeStatus = () => {
-        var state= setOpen(false);
+        let state= setOpen(false);
         toggleModal(state);
         setUpdate(true);
 
