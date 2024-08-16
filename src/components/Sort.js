@@ -5,13 +5,17 @@ export default function Sort({options, data, setModifiedData}) {
   const onChange = (e) => {
     if(e.target.name === "Name"){
       setModifiedData(nameListSort([...data]));
-    } if(e.target.name === "Role"){
+    } 
+    if(e.target.name === "Role"){
       setModifiedData(roleListSort([...data]));
-    } if(e.target.name === "Most Recent"){
+    } 
+    if(e.target.name === "Most Recent"){
       setModifiedData(idListSort([...data]));
-    } if(e.target.name === "Status"){
+    } 
+    if(e.target.name === "Status"){
       setModifiedData(statusListSort([...data]));
-    } if(e.target.name === "Branch"){
+    } 
+    if(e.target.name === "Branch"){
       setModifiedData(branchListSort([...data]));
     }
 
