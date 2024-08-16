@@ -2914,7 +2914,7 @@
   resolved "https://registry.yarnpkg.com/@xapi/xapi/-/xapi-2.2.8.tgz#bf6c7cbe8f12d7a2b3989d489d35675f10844bfb"
   integrity sha512-xIrX1IxRV8zmg/IUPZNn9xjBUpkFKD0E3rGJLb4NlcFzj5VwZ7M564a1pKqOUImSBpJXzVxCRDG5Lx62uCg0pg==
   dependencies:
-    axios "^1.6.0"
+    axios "1.7.4"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -3350,15 +3350,6 @@ axios@1.7.4:
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.4.tgz#4c8ded1b43683c8dd362973c393f3ede24052aa2"
   integrity sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==
-  dependencies:
-    follow-redirects "^1.15.6"
-    form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
-
-axios@^1.6.0:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.3.tgz#a1125f2faf702bc8e8f2104ec3a76fab40257d85"
-  integrity sha512-Ar7ND9pU99eJ9GpoGQKhKf58GpUOgnzuaB7ueNQ5BMi0p+LZ5oaEnfF999fAArcTIBwXTCHAmGcHOZJaWPq9Nw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
