@@ -14,7 +14,7 @@
     "@xapi/xapi": "^2.0.1",
     "apexcharts": "^3.37.2",
     "autoprefixer": "^10.4.13",
-    "axios": "^1.2.2",
+    "axios": "1.7.4",
     "axios-mock-adapter": "^1.21.4",
     "fs": "^0.0.1-security",
     "heroicons": "^2.0.13",
