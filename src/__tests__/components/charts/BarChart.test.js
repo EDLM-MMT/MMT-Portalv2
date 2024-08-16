@@ -19,8 +19,6 @@ describe("Bar Chart component", () => {
         <BarChart chartTitle={"test title"} xAxisTitle="x Axis"/>
       </MemoryRouterProvider> 
     );
-
-    //  expect(getByText('test title')).toBeInTheDocument();
  
   });
 

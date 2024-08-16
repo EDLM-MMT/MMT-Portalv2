@@ -37,9 +37,9 @@ export default function BarGraphStatisticsViewCard({ title , routePath, classNam
             <div className="mt-8">
                 {(graph === "Total Personnel") && <BarChart chartTitle={"Total Personnel Distribution by State"} xAxisTitle={"Number of Personnel"} />}
                 {(graph === "Personnel Percent") && <BarChart chartTitle={"Personnel Status Percent Distribution by State"} xAxisTitle={"Personnel Percentage"} stackType={'100%'}/>}
-                {/* {(typeof window !== 'undefined' && graph === "Personnel Percent") && <BarGraphTable columnTitles={["State", "Active/Separated"]}/>} */}
-                {/* {(typeof window !== 'undefined' && graph === "Total Personnel") && <ReactApexChart options={state.options} series={state.series} type="bar" height={350}/>} */}
-                {/* {(typeof window !== 'undefined' && graph === "Personnel Percent") && <ReactApexChart options={state.secondOptions} series={state.series} type="bar" height={350}/>} */}
+                {}
+                {}
+                {}
             </div>
         </div>
         

@@ -1,4 +1,4 @@
-FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 as builder
+FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 AS builder
 USER root
 
 WORKDIR /app
@@ -10,12 +10,12 @@ RUN yarn build
 USER node
 
 # Production image, copy all the files and run next
-FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 as runner
+FROM registry1.dso.mil/ironbank/opensource/nodejs/nodejs18:18.20 AS runner
 USER root
 
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 # RUN addgroup -g 1001 -S nodejs
 
@@ -28,6 +28,6 @@ USER node
 
 EXPOSE 3000
 
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 CMD ["yarn", "start"]

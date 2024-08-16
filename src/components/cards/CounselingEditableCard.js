@@ -29,9 +29,7 @@ export default function CounselingEditableCard({ career , routePath, className})
     }, [career]);
 
 
-   // let passwordLastChanged = Math.ceil((currDate.getTime()-currDate.getTime())/(one_day))
-   // console.log('date Converter result', passwordLastChanged)
-    //if (passwordLastChanged < 0 ) {passwordLastChanged = 0}
+
 
     const handleEdit = () => {
         console.log("Click!");

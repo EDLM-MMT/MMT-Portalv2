@@ -87,7 +87,7 @@ export default function CounselingDashboardTable({careerList}) {
                 </thead>
                 {degree.map((career, index) => ( 
                             <tr key={index} className=' even:bg-gray-50 group'>
-                                {/* {setData(post)} */}
+                                {}
                                 <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{career.degree}</td>
                                 <td className='pl-2'>{career.school}</td>
                                 <td className='pl-14'>{career.total_creditHours}</td>
@@ -97,8 +97,8 @@ export default function CounselingDashboardTable({careerList}) {
                             </tr>
                 ))}
             </table>
-            {/* {isOpen && <DeletePopup toggleModal={setIsOpen} message={"Are you sure you want to delete this row?"} path={"/serviceMember/careerCounseling"} degree={degree}/>} */} 
-            {/*There's an issue because I'm currently modifying degree.. got to fix this*/}
+            {/* {isOpen && <DeletePopup toggleModal={setIsOpen} message={"Are you sure you want to delete this row?"} path={"/serviceMember/careerCounseling"} degree={degree}/>}  */}
+            {}
         </div>
 
     )
