@@ -31,9 +31,6 @@ export default function CareerCounselingList() {
 
     }, []);
 
-    // console.log("user career list:", userCareerList);
-    // console.log("user:", user)
-
 
     return (
         <DefaultLayout>

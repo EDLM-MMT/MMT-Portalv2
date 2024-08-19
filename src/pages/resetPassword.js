@@ -11,20 +11,13 @@ import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
 
 export default function ResetPassword() {
     const userData = useStore((state) => state.userData);
-    const [errorMessage, setErrorMessage] = useState();
+    const [setErrorMessage] = useState();
     const [isOpen, setIsOpen] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted] = useState(false);
     const [newPassword, setNewPassword] = useState({
         password: '',
         retypePassword: '',
       });
-    
-      const handleUpdate = (e) => {
-        setNewPassword((previous) => ({
-          ...previous,
-          [e.target.name]: e.target.value
-        }));
-      };
 
     function handleSubmit(event){
         if (newPassword.password && newPassword.retypePassword){

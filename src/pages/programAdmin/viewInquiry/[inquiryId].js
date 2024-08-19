@@ -21,29 +21,6 @@ export default function ProgramAdminInquiryView({inquiryId}) {
   const currTime = new Date().toLocaleTimeString();
   const timestamp = `${currDate}  ${currTime}`;
 
-  const mockData = [
-    {
-      author:"John Doe",
-      title:"ESO",
-      comment:"SOMETHIGN SOMETHING",
-      timestamp: timestamp,
-
-    },
-    {
-      author:"Mary Doe",
-      title:"",
-      comment:"SOMETHIGN SOMETHING",
-      timestamp: timestamp,
-    },
-    {
-      author:"John Doe",
-      title:"ESO",
-      comment:"SOMETHIGN SOMETHING",
-      timestamp: currDate,
-    },
-
-];
-
     const [inquiry, setInquiry] = useState([]);
     const router = useRouter();
     const [comments,setComments] = useState([]);

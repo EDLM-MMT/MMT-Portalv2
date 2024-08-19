@@ -8,7 +8,7 @@ import useStore from '@/store/store';
 export default function Inquiry() {
     
     const [data, setData] = useState([]);
-    const [update, setUpdate] = useState(false);
+    const [setUpdate] = useState(false);
     const user = useStore((store) => store.userData);
 
 
@@ -16,7 +16,6 @@ export default function Inquiry() {
         axios
           .get('../api/inquiry')
           .then((res) => {
-            // setData(res.data.inquiries);
             let data = res.data.inquiries
             for(let x in data){
                 //console.log("x: ", data[x])

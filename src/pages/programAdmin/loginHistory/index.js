@@ -6,7 +6,6 @@ import Table from '@/components/tables/Table';
 import { useRouter } from 'next/router';
 
 export default function LoginHistory() {
-    const userData = useStore((state) => state.userData);
     const router = useRouter();
 
     const data = [

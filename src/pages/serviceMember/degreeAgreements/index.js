@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 export default function DegreeAgreements() {  
     const [data, setData] = useState([]);
-    const [update, setUpdate] = useState(false);
+    const [setUpdate] = useState(false);
 
     useEffect(() => {
         axios

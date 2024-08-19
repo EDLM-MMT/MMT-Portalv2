@@ -14,7 +14,7 @@ import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
 export default function DegreePathways() {  
     const [selected, setSelected] = useState("School");
     const [searchInput, setSearchInput] = useState("");
-    const [degree, setDegree] = useState([]);
+    const [degree] = useState([]);
     const [degreePathways, setDegreePathways] = useState([]);
 
     const user = useStore((state) => state.userData);
@@ -96,7 +96,6 @@ export default function DegreePathways() {
         const max = 407;
         const crypto = require('crypto');
         const randId = crypto.randomInt(min, max);
-        // const randId = parseInt(min + Math.random() * (max - min));
           
         const newDegree= {
             "id": randId,
@@ -179,7 +178,7 @@ export default function DegreePathways() {
                                 })}
                                 <div className="flex flex-row gap-2">
                                     {<ViewBtn path={`/serviceMember/credits`}/>}
-                                    {/* {<AddBtn btnText={"Add to List"} link={"/serviceMember/counseling"}/>} */}
+                                    {}
                                     {<button 
                                         id={'add-button-to-list'}
                                         className='flex justify-center items-center w-max px-2 p-1.5 gap-2 dod-500 hover:shadow-md font-medium rounded-lg text-sm text-white bg-dod-500/80 hover:bg-blue-400 hover:text-white transform transition-all duration-150 ease-in-out border-dod-500 border-2 focus:ring-2 ring-dod-500 outline-none' 

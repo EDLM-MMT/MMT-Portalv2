@@ -17,7 +17,6 @@ export function getServerSideProps(context) {
 
 export default function DegreeAgreementsView({degreeAgreementsId}) {
 
-    const userData = useStore((state) => state.userData);
     const [degreeAgreement, setDegreeAgreement] = useState([]);
 
     const router = useRouter();

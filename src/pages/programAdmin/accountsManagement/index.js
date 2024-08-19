@@ -7,7 +7,6 @@ import Sort from '@/components/Sort';
 
 export default function AccountsManagement() {
     const [searchInput, setSearchInput] = useState("");
-    const [isOpen, setIsOpen] = useState(false);
     const [modifyData, setModifyData] = useState(modifiedData);
     const router = useRouter();
 
@@ -85,7 +84,7 @@ export default function AccountsManagement() {
                         }
                     }).map((post, index) => (
                         <tr key={index} className=' even:bg-gray-50 group'>
-                            {/* {setData(post)} */}
+                            {}
                             <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{post.name}</td>
                             <td className='pl-2'>{post.username}</td>
                             <td className='pl-2'>{post.role}</td>
@@ -95,8 +94,7 @@ export default function AccountsManagement() {
                     ))
                 }
             </table>
-            {/* {isOpen && <GeneralPurposeOverlay toggleModal={setIsOpen} path={"/programAdmin/accountSupport"}
-                title={"Reset Password Confirmation"} message={"Upon clicking Confirm, a reset password email will be sent to the associated account."}/>} */}
+            {}
         </div>
         </DefaultLayout>
     );

@@ -22,7 +22,6 @@ export default function Credits() {
         });
   }, []);
 
-  // const state = {
         
   //     series: [12],
   //     options: {
