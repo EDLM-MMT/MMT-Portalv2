@@ -14,7 +14,7 @@ jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> 
 describe("Bar Chart component", () => {
 
   it("should render the component", () => {
-    const { getByText } = render(
+    render(
       <MemoryRouterProvider>
         <BarChart chartTitle={"test title"} xAxisTitle="x Axis"/>
       </MemoryRouterProvider> 

@@ -37,7 +37,7 @@ export default function NewInquiry() {
     
     const [commonSolution, setCommonSolution] = useState("");
     const [isNewInqFlag, setNewInqFlag] = useState(false);
-    const [isNewInquiryForm, setNewInquiryForm] = useState([]);
+    const [setNewInquiryForm] = useState([]);
     const [selectedFile, setSelectedFile] = useState();
 	const [isFilePicked, setIsFilePicked] = useState(false);
 
@@ -68,7 +68,6 @@ export default function NewInquiry() {
         const max = 404;
         const crypto = require('crypto');
         const randId = crypto.randomInt(min, max);
-        // const randId = parseInt(min + Math.random() * (max - min));
         const newInquiry = {
             id: randId,
             title: e.target.subject?.value,
@@ -91,7 +90,6 @@ export default function NewInquiry() {
             }
             //console.log("degree list inside axios post: ", degree)          
         });
-        //e.target.reset();
 
 	};
 

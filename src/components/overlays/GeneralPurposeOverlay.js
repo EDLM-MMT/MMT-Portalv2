@@ -5,7 +5,6 @@ import { useRouter } from "next/router"
 
 export default function GeneralPurposeOverlay({ toggleModal, disable, title, message, path, toggle2ndModal}){
     let [open, setOpen] = useState(true);
-    let [setMsg] = useState("");
     const cancelButtonRef = useRef(null);
     const router = useRouter();
 

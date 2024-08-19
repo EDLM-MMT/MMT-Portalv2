@@ -6,7 +6,6 @@ import { useRouter } from "next/router"
 import useStore from '@/store/store';
 
 export default function TranscriptView() {
-    const userData = useStore((state) => state.userData);
     let link = ""
     let downloadLink = 'Phillips,Bill_COMBO_TRANSCRIPT.pdf';
 
