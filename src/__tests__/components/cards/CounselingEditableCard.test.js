@@ -22,7 +22,7 @@ describe("Edit Card component", () => {
   }]
 
   it("should render the component", () => {
-    const { getByText, getByTestId } = render(
+    const { getByText } = render(
       <MemoryRouterProvider>
         <CounselingEditableCard career={mockData} routePath={mockData.id} />
       </MemoryRouterProvider>

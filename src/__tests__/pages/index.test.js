@@ -17,7 +17,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 
 describe("LoginPage page", () => {
   it("should render the page", () => {
-    const { getByText, getAllByText } = render(
+    const {} = render(
         <MemoryRouterProvider>
             <LoginPage />
         </MemoryRouterProvider>

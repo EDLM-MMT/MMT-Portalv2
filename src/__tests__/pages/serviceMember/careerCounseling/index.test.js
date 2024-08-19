@@ -38,7 +38,7 @@ describe('CareerCounselingList component', () => {
   });
 
   it("axios error", () => {
-    const { getByText, getByPlaceholderText } = render(
+    render(
         <MemoryRouterProvider>
             <CareerCounselingList />
         </MemoryRouterProvider>

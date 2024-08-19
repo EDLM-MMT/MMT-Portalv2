@@ -14,9 +14,6 @@ export default function ProgramAdminViewCard({ userData, account , routePath, cl
 
 
     const currDate = new Date();
-    const currTime = new Date().toLocaleTimeString();
-    const timestamp = `${currDate}  ${currTime}`;
-    const one_day = 1000*60*60*24;
     console.log("currDate", currDate)
     const [edit, setEdit] = useState(false);
     const [isOpen, setIsOpen] = useState(false);

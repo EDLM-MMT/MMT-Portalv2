@@ -1,5 +1,6 @@
 import Dropdown from "@/components/dropdowns/Dropdown";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from "react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
@@ -28,8 +29,7 @@ describe("Dropdown component", () => {
       const button2 = getByText('Major');
       act(() => {
           fireEvent.mouseOver(getByText('Major'));
-          fireEvent.click(button);
+          fireEvent.click(button2);
       });
-
     });
 });

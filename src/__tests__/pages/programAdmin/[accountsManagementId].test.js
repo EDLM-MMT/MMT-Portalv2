@@ -59,7 +59,7 @@ describe("Management View page", () => {
     });
 
     it("axios error", () => {
-      const { getByText, getByPlaceholderText } = render(
+      const {} = render(
           <MemoryRouterProvider>
               <AccountsManagementId />
           </MemoryRouterProvider>

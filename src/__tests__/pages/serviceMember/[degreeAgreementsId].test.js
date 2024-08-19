@@ -24,7 +24,7 @@ jest.mock("axios", () => ({
 
 describe("Degree Agreements View  Page", () => {
   it("should render the component", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const { getByText } = render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>
@@ -58,7 +58,7 @@ describe("Degree Agreements View  Page", () => {
   });
 
   it("axios error", () => {
-    const { getByText, getByPlaceholderText } = render(
+    render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>

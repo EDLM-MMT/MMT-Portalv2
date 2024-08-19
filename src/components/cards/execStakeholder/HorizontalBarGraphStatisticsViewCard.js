@@ -8,10 +8,6 @@ import BarChart from "@/components/charts/BarChart";
 
 
 export default function BarGraphStatisticsViewCard({ title , routePath, className}){
-    const descriptionClass = twMerge(`
-        mt-4 font-sans line-clamp-6 
-        ${className ?? ""}
-    `);
 
     const [graph, setGraph] = useState("Personnel Percent");
 

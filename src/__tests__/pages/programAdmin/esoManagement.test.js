@@ -80,7 +80,7 @@ describe("ESO Management Dashbaord page", () => {
       });
     const btn1 = getByText('Name');
       act(() => {
-        fireEvent.click(btn);
+        fireEvent.click(btn1);
       });
   });
 
@@ -97,7 +97,7 @@ describe("ESO Management Dashbaord page", () => {
       });
     const btn1 = getByTestId('Branch');
       act(() => {
-        fireEvent.click(btn);
+        fireEvent.click(btn1);
       });
   });
 

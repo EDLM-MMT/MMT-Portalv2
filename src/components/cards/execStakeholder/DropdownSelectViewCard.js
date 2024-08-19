@@ -4,7 +4,6 @@ import { useRouter } from "next/router"
 import { useState } from "react";
 
 export default function DropdownViewCard({ title, options, routePath, width }){
-    const router = useRouter();
 
     const enrollmentList = [
         {   state: "Florida",
@@ -53,7 +52,6 @@ export default function DropdownViewCard({ title, options, routePath, width }){
         }
     ];
 
-    const [dropdownList, setDropdownList] = useState(enrollmentList);
     const [value, setValue] = useState("Florida")
 
 

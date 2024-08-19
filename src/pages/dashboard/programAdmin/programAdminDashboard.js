@@ -28,7 +28,6 @@ const cards = [
 
 
 export default function ProgramAdminDashboard() {
-    const userData = useStore((state) => state.userData);
 
     return (
         <div className='w-full'>

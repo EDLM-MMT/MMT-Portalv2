@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 export default function ESOCommentsTable({ESOComments}) {
 
-    const router = useRouter();
 
     return(
         <div className='mt-8'>

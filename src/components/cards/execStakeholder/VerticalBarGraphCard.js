@@ -6,10 +6,6 @@ import ColumnChart from "@/components/charts/ColumnChart";
 
 
 export default function VerticalBarGraphStatisticsViewCard({ title, routePath, className}){
-    const descriptionClass = twMerge(`
-        mt-4 font-sans line-clamp-6 
-        ${className ?? ""}
-    `);
 
     const data = [122785, 95391, 120512, 144452];
 

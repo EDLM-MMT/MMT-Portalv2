@@ -134,7 +134,7 @@ function Button({ data, user }) {
 export default function Header() {
   const router = useRouter();
   const user = useStore((state) => state.userData);
-  const {userData, removeUserData} = useStore((state) => state);
+  const { removeUserData } = useStore((state) => state);
   const handleLogout = () => {
     router.push('/');
     removeUserData();

@@ -10,7 +10,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 
 describe("Profile Component", () => {
   it("should render the component", () => {
-    const { getByText, getAllByText } = render(
+    const { getByText } = render(
         <MemoryRouterProvider>
             <Profile />
         </MemoryRouterProvider>

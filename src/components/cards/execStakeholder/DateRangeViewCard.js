@@ -3,7 +3,6 @@ import { useRouter } from "next/router"
 import { useState } from "react";
 
 export default function DateRangeViewCard({ title, options, routePath, width }){
-    const router = useRouter();
 
     const enrollmentList = [
         {   year: "2023-03-31",
@@ -52,7 +51,6 @@ export default function DateRangeViewCard({ title, options, routePath, width }){
         }
     ];
 
-    const [dropdownList, setDropdownList] = useState(enrollmentList);
     const [year, setYear] = useState("2023-04-05")
 
     const panelCode = (content) =>{

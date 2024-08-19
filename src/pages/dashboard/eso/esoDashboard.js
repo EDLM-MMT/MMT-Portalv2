@@ -29,7 +29,6 @@ const cards = [
 ]
 
 export default function ESODashboard() {
-    const userData = useStore((state) => state.userData);
     return (
         <div className='w-full'>
             <h1 className='pb-4 border-b mb-8 text-3xl font-semibold'>

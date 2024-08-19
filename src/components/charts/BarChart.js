@@ -4,8 +4,6 @@ import Dropdown from '../dropdowns/Dropdown';
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export default function BarChart({ chartTitle, xAxisTitle, dataName, labels, data, routePath, stackType }){
-    
-    const [graph, setGraph] = useState("Total Personnel");
 
     const state = {
           

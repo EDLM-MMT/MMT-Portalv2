@@ -1,5 +1,6 @@
 import React from 'react';
-import { act, render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import { act } from "react";
 import TwoChoiceCard from '../../../components/cards/TwoChoiceCard';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
@@ -62,7 +63,7 @@ describe('TwoChoiceCard', () => {
     });
     window.IntersectionObserver = mockIntersectionObserver;
 
-    const { getByText, queryByText } = render(
+    const {} = render(
     <MemoryRouterProvider>
       <TwoChoiceCard card={card} firstRoutePath={"/"} viewRoutePath={"/"} buttonLabel={"Open Degree Agreement"} type={"ESO"}/>
     </MemoryRouterProvider>);

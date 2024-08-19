@@ -99,7 +99,7 @@ describe("Inquiries Page", () => {
   });
 
   it("axios error", () => {
-    const { getByText, getByPlaceholderText } = render(
+    render(
         <MemoryRouterProvider>
             <Inquiry />
         </MemoryRouterProvider>

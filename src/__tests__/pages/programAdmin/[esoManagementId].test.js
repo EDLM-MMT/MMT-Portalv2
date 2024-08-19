@@ -1,5 +1,6 @@
 import ESOManagementView from "@/pages/programAdmin/esoManagement/[esoManagementId]";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import 'react-minimal-pie-chart';
 import axios from 'axios'
@@ -36,53 +37,6 @@ jest.mock('react-minimal-pie-chart', () => {
 })
 
 describe("ESO Management View page", () => {
-  const data = {
-    "id":"500",
-    "name": "John Smith",
-    "permissions": "Counseling",
-    "branch": "Army",
-    "workload": "4",
-    "viewProfile": "View",
-    "inProgressTasks": 35,
-    "notStartedTasks": 12,
-    "completedTasks": 16,
-    "totalTasks": 63,
-    "avgTime": "12 days",
-    "tasks": [
-        {
-            "taskId":"602",
-            "name": "Zach Blanchard",
-            "branch": "Army",
-            "title": "Computer Science",
-            "status": "In Progress",
-            "duration": "3 Days"
-        },
-        {
-            "taskId":"605",
-            "name": "Aimee Wallis",
-            "branch": "Army",
-            "title": "Data Science",
-            "status": "In Progress",
-            "duration": "5 Days"
-        },
-        {
-            "taskId":"607",
-            "name": "Alexia Jacobs",
-            "branch": "Army",
-            "title": "Computer Engineer",
-            "status": "Not Started",
-            "duration": "-"
-        },
-        {
-            "taskId":"607",
-            "name": "Jennie Haywards",
-            "branch": "Army",
-            "title": "Buisness Administration",
-            "status": "Done",
-            "duration": "8 days"
-        }
-    ]
-  }
 
   it("should render the page", () => {
     const { getByText } = render(
@@ -115,7 +69,7 @@ describe("ESO Management View page", () => {
   });
 
   it("should click the edit button", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const { getByText } = render(
         <MemoryRouterProvider>
             <ESOManagementView esoManagementId={500}/>
         </MemoryRouterProvider>
@@ -134,7 +88,7 @@ describe("ESO Management View page", () => {
   });
 
   it("route back to ESOManagement page", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const { getByText } = render(
         <MemoryRouterProvider>
             <ESOManagementView esoManagementId={500}/>
         </MemoryRouterProvider>
@@ -147,7 +101,7 @@ describe("ESO Management View page", () => {
   });
 
   it("axios error", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const {} = render(
         <MemoryRouterProvider>
             <ESOManagementView esoManagementId={500}/>
         </MemoryRouterProvider>

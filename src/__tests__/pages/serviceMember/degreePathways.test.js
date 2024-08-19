@@ -38,7 +38,7 @@ describe("Degree Pathways Page", () => {
 
   it("should check the inner information using the search bar in the component", () => {
 
-    const { getByText, getByPlaceholderText } = render(
+    const { getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <DegreePathways />
         </MemoryRouterProvider>

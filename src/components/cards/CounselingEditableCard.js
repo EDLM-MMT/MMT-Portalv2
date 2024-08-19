@@ -7,15 +7,8 @@ import GeneralPurposeOverlay from "../overlays/GeneralPurposeOverlay";
 
 
 export default function CounselingEditableCard({ career , routePath, className}){
-    const descriptionClass = twMerge(`
-        mt-4 font-sans line-clamp-6 
-        ${className ?? ""}
-    `);
 
     const currDate = new Date();
-    const currTime = new Date().toLocaleTimeString();
-    const timestamp = `${currDate}  ${currTime}`;
-    const one_day = 1000*60*60*24;
     console.log("currDate", currDate)
     const [edit, setEdit] = useState(false);
     const [dropdownValue, setDropdownValue] = useState(career.assigned_eso);

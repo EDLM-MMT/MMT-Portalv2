@@ -147,9 +147,9 @@ describe('ESOCounselingDashboardTable component', () => {
       act(() => {
         fireEvent.click(btn);
       });
-    const btn1 = getByTestId('Name');
+      const btn1 = getByTestId('Name');
       act(() => {
-        fireEvent.click(btn);
+        fireEvent.click(btn1);
       });
   });
 

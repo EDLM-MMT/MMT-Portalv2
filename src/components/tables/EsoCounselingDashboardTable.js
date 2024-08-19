@@ -7,7 +7,6 @@ export default function CounselingTable(careerArray) {
 
     const router = useRouter();
     const [searchInput, setSearchInput] = useState("");
-    const [selected, setSelected] = useState("");
     const [data, setData] = useState(careerArray.careerArray);
 
 
