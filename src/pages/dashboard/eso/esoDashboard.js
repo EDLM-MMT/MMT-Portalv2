@@ -40,7 +40,7 @@ export default function ESODashboard() {
                 {cards.map((card, index) => {
                     return(
                         <div className=''>
-                        <DashboardCard key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} dashboardImage={card.image} routePath={card.routePath}/>
+                        <DashboardCard key={card.id || index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} dashboardImage={card.image} routePath={card.routePath}/>
                         </div>
                     )
                 })}

@@ -22,7 +22,6 @@ export default function DegreePathways() {
 
     },[]);
 
-    //console.log("degreePathways list:", degreePathways[0]?.schoolsList[0]?.datas[0].data);
 
 
     const onChange = (e) => {
@@ -71,17 +70,17 @@ export default function DegreePathways() {
     const panelCode = (content) =>
         content?.map((school, index) => {
             return(
-                <Accordion title={school.name} className={"p-3 bg-dod-300/50"}
+                <Accordion key={school.id || index} title={school.name} className={"p-3 bg-dod-300/50"}
                 content={
                     <div>
                         {school.datas.map((data, index) => {
                             return(
-                            <Accordion title={data.data} className={"p-2 bg-slate-300"} 
+                            <Accordion key={data.id || index} title={data.data} className={"p-2 bg-slate-300"} 
                                 content={
                                 <div className='flex flex-row justify-between'>
                                 {data.codes?.map((code, index) => {
                                     return(
-                                        <div className='flex flex-col font-bold'> 
+                                        <div key={index} className='flex flex-col font-bold'> 
                                             {code}
                                         </div>
                                     );

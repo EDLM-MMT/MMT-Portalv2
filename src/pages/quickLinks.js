@@ -60,7 +60,7 @@ export default function QuickLinks() {
     const panelCode = (content) =>
         content.map((question, index) => {
             return(
-                <Accordion title={question.title} className={"bg-dod-700/70 text-white"}
+                <Accordion key={question.id || index} title={question.title} className={"bg-dod-700/70 text-white"}
                     content={<div> 
                         {question.answer} 
                         {question.link && 

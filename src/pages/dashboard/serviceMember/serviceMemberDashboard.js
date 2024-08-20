@@ -59,7 +59,7 @@ export default function ServiceMemberDashboard() {
             <div className="mx-6 grid grid-cols-3 gap-y-10 gap-x-16">
                 {cards.map((card, index) => {
                     return(
-                        <div className=''>
+                        <div key={card.id || index} className=''>
                         <DashboardCard key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} dashboardImage={card.image} routePath={card.routePath} user={userData}/>
                         </div>
                     )

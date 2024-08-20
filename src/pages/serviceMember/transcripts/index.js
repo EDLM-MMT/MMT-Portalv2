@@ -59,7 +59,7 @@ export default function Transcripts() {
                     {cards.map((card, index) => {
                         return(
                             <div className='px-4'>
-                                <Card key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} routePath={card.routePath}>
+                                <Card key={card.id || index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} routePath={card.routePath}>
                                     <div className='flex flex-row align-bottom justify-between mt-5'>
                                         <ViewBtn transcriptType={card.type}/>
                                         <DownloadButton link={card.downloadLink}/> 
