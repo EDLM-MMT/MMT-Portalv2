@@ -54,40 +54,27 @@ export default function DegreePathways() {
     
 
     const sort = () => {
-        if (selected === "School"){
-            const filtered = degreePathways[0]?.schoolsList.filter(post => {
-                if (searchInput === ''){
-                    return post;
-                } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }else if(post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }
-    
-            })
-            return (
-                <>
-                {panelCode(filtered)}
-                </>
-            ) 
+        let filtered;
+        if (selected === "School") {
+            filtered = degreePathways[0]?.schoolsList.filter(post =>
+                searchInput === '' ||
+                post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())
+            );
+        } else if (selected === "Major") {
+            filtered = degreePathways[1]?.majorsList.filter(post =>
+                searchInput === '' ||
+                post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())
+            );
         }
-        else if (selected === "Major"){
-            const filtered = degreePathways[1]?.majorsList.filter(post => {
-                if (searchInput === ''){
-                    return post;
-                } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }else if(post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }
-            })
-            return (
-                <>
-                {panelCode(filtered)}
-                </>
-            ) 
-        } 
-    }
+        return (
+            <>
+            {panelCode(filtered)}
+            </>
+        ); 
+    } 
+
 
     const handleClick = (name, schoolData) => {
 
@@ -171,7 +158,7 @@ export default function DegreePathways() {
                                 <div className='flex flex-row justify-between'>
                                 {data.codes?.map((code, index) => {
                                     return(
-                                        <div key={index} className='flex flex-col font-bold'> 
+                                        <div key={code.id || index} className='flex flex-col font-bold'> 
                                             {code}
                                         </div>
                                     );
