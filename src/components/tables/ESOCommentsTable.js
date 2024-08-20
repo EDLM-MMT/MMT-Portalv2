@@ -38,7 +38,7 @@ export default function ESOCommentsTable({ESOComments}) {
                     </tr>
                 </thead>
                 {ESOComments?.map((comment, index) => ( 
-                    <tr key={index} className=' even:bg-gray-50 group'>
+                    <tr key={comment.id || index} className=' even:bg-gray-50 group'>
                         <td className='pl-2 p-2 '>{comment.date}</td>
                         <td className='pl-2'>{comment.purpose}</td>
                         <td className='pl-2'>{comment.comment}</td>

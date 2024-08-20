@@ -86,7 +86,7 @@ export default function CounselingDashboardTable({careerList}) {
                     </tr>
                 </thead>
                 {degree.map((career, index) => ( 
-                            <tr key={index} className=' even:bg-gray-50 group'>
+                            <tr key={career.id || index} className=' even:bg-gray-50 group'>
                                 {}
                                 <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{career.degree}</td>
                                 <td className='pl-2'>{career.school}</td>

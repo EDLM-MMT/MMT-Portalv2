@@ -56,7 +56,7 @@ export default function CreditsTable({credits}) {
                     </tr>
                 </thead>
                 {credits?.map((credit, index) => ( 
-                    <tr key={index} className=' even:bg-gray-50 group'>
+                    <tr key={credit.id || index} className=' even:bg-gray-50 group'>
                         {}
                         <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{credit.courseNumber}</td>
                         <td className='pl-2'>{credit.courseName}</td>

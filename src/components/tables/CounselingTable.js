@@ -99,7 +99,7 @@ export default function CounselingTable({coursePlan}) {
                     </tr>
                 </thead>
                 {(coursePlan.length !== 0) ? (courseTable.map((course, index) => ( 
-                            <tr key={index} className=' even:bg-gray-50 group'>
+                            <tr key={course.id || index} className=' even:bg-gray-50 group'>
                                 {}
                                 <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>
                                     <label>
