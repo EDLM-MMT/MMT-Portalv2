@@ -57,9 +57,10 @@ export default function Transcripts() {
                 </h1>
                 <div className='grid grid-cols-2 gap-y-10 gap-x-16'>
                     {cards.map((card, index) => {
+                        card['number']=index
                         return(
-                            <div className='px-4'>
-                                <Card key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} routePath={card.routePath}>
+                            <div key={card.number} className='px-4'>
+                                <Card key={card.number} title={card.title} description={card.description} buttonLabel={card.buttonLabel} routePath={card.routePath}>
                                     <div className='flex flex-row align-bottom justify-between mt-5'>
                                         <ViewBtn transcriptType={card.type}/>
                                         <DownloadButton link={card.downloadLink}/> 
