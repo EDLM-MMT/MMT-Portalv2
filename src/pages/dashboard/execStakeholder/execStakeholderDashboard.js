@@ -37,7 +37,7 @@ export default function ExecStakeholderDashboard() {
                 {cards.map((card, index) => {
                     return(
                         <div className=''>
-                        <DashboardCard key={card.id || index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} secondButtonLabel={card.secondButtonLabel} dashboardImage={card.image} routePath={card.routePath} secondRoutePath={card.secondRoutePath}/>
+                        <DashboardCard key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} secondButtonLabel={card.secondButtonLabel} dashboardImage={card.image} routePath={card.routePath} secondRoutePath={card.secondRoutePath}/>
                         </div>
                     )
                 })}
