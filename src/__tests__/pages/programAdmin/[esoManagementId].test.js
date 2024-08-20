@@ -101,7 +101,7 @@ describe("ESO Management View page", () => {
   });
 
   it("axios error", () => {
-    const {} = render(
+    render(
         <MemoryRouterProvider>
             <ESOManagementView esoManagementId={500}/>
         </MemoryRouterProvider>

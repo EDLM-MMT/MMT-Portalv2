@@ -4,7 +4,7 @@ import DefaultLayout from '@/components/layouts/DefaultLayout';
 import EsoCounselingDashboardTable from '@/components/tables/EsoCounselingDashboardTable'
 import axios from 'axios';
 
-export default function CareerCounseling({}) {
+export default function CareerCounseling() {
     
     const [careerList, setCareerList] = useState([])
 

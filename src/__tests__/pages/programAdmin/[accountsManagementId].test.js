@@ -1,5 +1,6 @@
 import AccountsManagementId from "@/pages/programAdmin/accountsManagement/[accountsManagementId]";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import mockAxios from "@/__mocks__/axios";
 import axios from 'axios'
@@ -59,7 +60,7 @@ describe("Management View page", () => {
     });
 
     it("axios error", () => {
-      const {} = render(
+      render(
           <MemoryRouterProvider>
               <AccountsManagementId />
           </MemoryRouterProvider>

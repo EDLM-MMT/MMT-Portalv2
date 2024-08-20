@@ -15,7 +15,7 @@ describe("Pie Chart component", () => {
 
 
   it("should render the component", () => {
-    const {} = render(
+    render(
       <MemoryRouterProvider>
         <PieChart title={'test title'} series={[12345, 67890]} labels={["Active", "Separated"]} customLables={["Active Personnel Enrolled", "Separated Personnel Enrolled"]}/>
       </MemoryRouterProvider>

@@ -63,7 +63,7 @@ describe('TwoChoiceCard', () => {
     });
     window.IntersectionObserver = mockIntersectionObserver;
 
-    const {} = render(
+    render(
     <MemoryRouterProvider>
       <TwoChoiceCard card={card} firstRoutePath={"/"} viewRoutePath={"/"} buttonLabel={"Open Degree Agreement"} type={"ESO"}/>
     </MemoryRouterProvider>);
