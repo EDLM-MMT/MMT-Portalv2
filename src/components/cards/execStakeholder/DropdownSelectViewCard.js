@@ -66,10 +66,10 @@ export default function DropdownViewCard({ title, options, routePath, width }){
                 {enrollmentList.map((value, index) => {
                     if (value?.state === content){
                         return(
-                            <div>
+                            <div key={index}>
                                 {value?.datas.map((data,index) =>{
                                     return(
-                                        <div className="flex flex-row">
+                                        <div key={index} className="flex flex-row">
                                             <div>
                                                 <div className="mt-12"><b>Total Personnel Enrolled: </b>{data.totalPersonnel}</div>
                                                 <div className="mt-4"><b>Active Personnel Enrolled: </b>{data.activePersonnel}</div>

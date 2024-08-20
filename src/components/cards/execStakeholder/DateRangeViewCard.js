@@ -61,10 +61,10 @@ export default function DateRangeViewCard({ title, options, routePath, width }){
                     console.log("content: ", content);
                     if (value?.year === content){
                         return(
-                            <div>
+                            <div key={index}>
                                 {value?.datas.map((data,index) =>{
                                     return(
-                                        <div>
+                                        <div key={index}>
                                             <div className="mt-12"><b>Total Personnel Enrolled: </b>{data.totalPersonnel}</div>
                                             <div className="mt-4"><b>Active Personnel Enrolled: </b>{data.activePersonnel}</div>
                                             <div className="mt-4"><b>Separated Personnel Enrolled: </b>{data.separatedPersonnel}</div>

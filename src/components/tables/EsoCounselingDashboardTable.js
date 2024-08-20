@@ -83,11 +83,11 @@ export default function CounselingTable(careerArray) {
                         }
 
                     }).map((student, index) => (
-                        <tr key={index} className=' even:bg-gray-50 group'>
+                        <tr key={student.id || index} className=' even:bg-gray-50 group'>
                             <td className='pl-4 p-2 text-left'>{student.name}</td>
                             <td className='pl-10'>{student.mos_code}</td>
                             {(student.career_counseling.map((career) => (
-                                <tr className='pl-4 text-dod-700 font-medium'><button onClick={() => handleCareerClick(career.id)}>{career.major}</button></tr>
+                                <tr key={career.id} className='pl-4 text-dod-700 font-medium'><button onClick={() => handleCareerClick(career.id)}>{career.major}</button></tr>
                             )))}
                             <td className='pl-16 text-dod-700 font-medium'><button onClick={handleView}>View</button></td>
                         </tr>
