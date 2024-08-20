@@ -59,12 +59,14 @@ export default function DateRangeViewCard({ title, options, routePath, width }){
                 {enrollmentList.map((value, index) => {
                     console.log("value.year: ", value.year);
                     console.log("content: ", content);
+                    value['number']=index
                     if (value?.year === content){
                         return(
-                            <div key={index}>
+                            <div key={value.number}>
                                 {value?.datas.map((data,index) =>{
+                                    data['number']=index
                                     return(
-                                        <div key={index}>
+                                        <div key={data.number}>
                                             <div className="mt-12"><b>Total Personnel Enrolled: </b>{data.totalPersonnel}</div>
                                             <div className="mt-4"><b>Active Personnel Enrolled: </b>{data.activePersonnel}</div>
                                             <div className="mt-4"><b>Separated Personnel Enrolled: </b>{data.separatedPersonnel}</div>
