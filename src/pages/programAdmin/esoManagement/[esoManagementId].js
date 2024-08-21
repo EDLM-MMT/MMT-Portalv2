@@ -147,7 +147,7 @@ export default function ESOManagementView({esoManagementId}) {
                     </thead>
         
                     {esoData.tasks?.map((task, index) => (
-                        <tr key={index} className=' even:bg-gray-50 group'>
+                        <tr key={task.id || index} className=' even:bg-gray-50 group'>
                             <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{task.taskId}</td>
                             <td className='pl-2'>{task.name}</td>
                             <td className='pl-2'>{task.branch}</td>
