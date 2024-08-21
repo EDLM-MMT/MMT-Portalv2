@@ -49,8 +49,9 @@ export default function ESOInquiryDashboard() {
                             return post;
                         }
                     }).map((card, index) => {
+                        card['number']=index
                         return(
-                            <TwoChoiceCard key={index} title={card.title} description={card.description} 
+                            <TwoChoiceCard key={card.number} title={card.title} description={card.description} 
                             buttonLabel={card.status} data={data} card={card} degreeIndex={index} 
                             firstRoutePath={card.firstRoutePath} viewRoutePath={card.secondRoutePath}
                             toggleModalUpdate={setUpdate} type="ESO" />

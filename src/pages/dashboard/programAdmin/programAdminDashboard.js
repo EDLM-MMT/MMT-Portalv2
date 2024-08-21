@@ -38,8 +38,9 @@ export default function ProgramAdminDashboard() {
             </h1>
             <div className="mx-6 grid grid-cols-3 gap-y-10 gap-x-16">
                 {cards.map((card, index) => {
+                    card['number']=index
                     return(
-                        <DashboardCard key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} dashboardImage={card.image} routePath={card.routePath}/>
+                        <DashboardCard key={card.number} title={card.title} description={card.description} buttonLabel={card.buttonLabel} dashboardImage={card.image} routePath={card.routePath}/>
                     )
                 })}
             </div>

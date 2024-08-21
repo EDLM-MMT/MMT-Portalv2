@@ -79,8 +79,9 @@ export default function DegreePathways() {
                                 content={
                                 <div className='flex flex-row justify-between'>
                                 {data.codes?.map((code, index) => {
+                                    code['number']=index
                                     return(
-                                        <div key={index} className='flex flex-col font-bold'> 
+                                        <div key={code.number} className='flex flex-col font-bold'> 
                                             {code}
                                         </div>
                                     );
