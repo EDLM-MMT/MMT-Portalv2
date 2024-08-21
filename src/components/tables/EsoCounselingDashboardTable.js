@@ -74,13 +74,11 @@ export default function CounselingTable(careerArray) {
                 </thead>
                 {
                     data?.filter(post => {
-                        if (searchInput === ''){
-                            return post;
-                        } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                            return post;
-                        } else if(post.mos_code.toLowerCase().includes(searchInput.toLowerCase())){
-                            return post;
-                        }
+                        return (
+                            searchInput === '' ||
+                            post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                            post.mos_code.toLowerCase().includes(searchInput.toLowerCase())
+                        );    
 
                     }).map((student, index) => (
                         <tr key={student.id || index} className=' even:bg-gray-50 group'>

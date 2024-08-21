@@ -14,7 +14,7 @@ export default function ResetPassword() {
     const [setErrorMessage] = useState();
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted] = useState(false);
-    const [newPassword, setNewPassword] = useState({
+    const [newPassword] = useState({
         password: '',
         retypePassword: '',
       });

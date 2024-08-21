@@ -9,9 +9,8 @@ import Sort from '@/components/Sort';
 export default function ESOInquiryDashboard() {
     
     const [data, setData] = useState([]);
-    const [update, setUpdate] = useState(false);
+    const [setUpdate] = useState(false);
     const [searchInput, setSearchInput] = useState("");
-    const [selected, setSelected] = useState("");
 
     useEffect(() => {
         axios
