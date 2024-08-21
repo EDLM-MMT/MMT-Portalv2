@@ -45,8 +45,9 @@ export default function Inquiry() {
                 </div>
                 <div className=' flex-col flex h-18 justify-center w-full gap-5'>
                     {data?.map((card, index) => {
+                        card['number']=index
                         return(
-                            <TwoChoiceCard key={index} title={card.title} description={card.description} 
+                            <TwoChoiceCard key={card.number} title={card.title} description={card.description} 
                             buttonLabel={card.status} data={data} card={card} degreeIndex={index} 
                             firstRoutePath={card.firstRoutePath} viewRoutePath={card.secondRoutePath}
                             toggleModalUpdate={setUpdate} type="I" />

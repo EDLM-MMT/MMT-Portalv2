@@ -31,8 +31,9 @@ export default function DegreeAgreements() {
                 </div>
                 <div className=' flex-col flex h-18 justify-center w-full gap-5'>
                     {data?.map((card, index) => {
+                        card['number']=index
                         return(
-                            <TwoChoiceCard key={index} title={card.title} description={card.description} 
+                            <TwoChoiceCard key={card.number} title={card.title} description={card.description} 
                             buttonLabel={card.status} viewRoutePath={card.secondRoutePath} data={data} 
                             card={card} degreeIndex={index} toggleModalUpdate={setUpdate} type="DA"/>
                         )
