@@ -75,11 +75,11 @@ export default function AccountsManagement() {
                 </thead>
                 {
                     modifyData?.filter(post => {
-                        return (
-                            searchInput === '' ||
+                        if (searchInput === '' ||
                             post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-                            post.username.toLowerCase().includes(searchInput.toLowerCase())
-                        );
+                            post.username.toLowerCase().includes(searchInput.toLowerCase())){
+                                return post;
+                            }
                     }).map((post, index) => (
                         <tr key={post.id || index} className=' even:bg-gray-50 group'>
                             {}

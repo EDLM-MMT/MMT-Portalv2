@@ -32,15 +32,11 @@ export default function DegreePathways() {
     }
 
     const sort = () => {
-        let filtered = []
-        
         if (selected === "School"){
             const filtered = degreePathways[0]?.schoolsList.filter(post => {
-                if (searchInput === ''){
-                    return post;
-                } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }else if(post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
+                if (searchInput === ''|| 
+                    post.name.toLowerCase().includes(searchInput.toLowerCase()) 
+                    || post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
                     return post;
                 }
             })
@@ -52,11 +48,7 @@ export default function DegreePathways() {
         }
         else if (selected === "Major"){
             const filtered = degreePathways[1]?.majorsList.filter(post => {
-                if (searchInput === ''){
-                    return post;
-                } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                    return post;
-                }else if(post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
+                if (searchInput === ''|| post.name.toLowerCase().includes(searchInput.toLowerCase()) || post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
                     return post;
                 }
             })

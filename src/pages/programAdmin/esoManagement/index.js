@@ -72,10 +72,10 @@ export default function ESOManagement() {
 
                 {
                     modifyData.filter(post => {
-                        return (
-                            searchInput === '' ||
-                            post.name.toLowerCase().includes(searchInput.toLowerCase())
-                        );
+                        if ( searchInput === '' ||
+                            post.name.toLowerCase().includes(searchInput.toLowerCase())){
+                                return post;
+                            }
                     }).map((post, index) => (
                         <tr key={post.id || index} className=' even:bg-gray-50 group'>
                             <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{post.name}</td>

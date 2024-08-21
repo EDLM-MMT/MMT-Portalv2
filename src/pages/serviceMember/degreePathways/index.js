@@ -54,26 +54,35 @@ export default function DegreePathways() {
     
 
     const sort = () => {
-        let filtered;
-        if (selected === "School") {
-            filtered = degreePathways[0]?.schoolsList.filter(post =>
-                searchInput === '' ||
-                post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-                post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())
-            );
-        } else if (selected === "Major") {
-            filtered = degreePathways[1]?.majorsList.filter(post =>
-                searchInput === '' ||
-                post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-                post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())
-            );
+        if (selected === "School"){
+            const filtered = degreePathways[0]?.schoolsList.filter(post => {
+                if (searchInput === '' || 
+                    post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                    post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
+                        return post;
+                    }
+            })
+            return (
+                <>
+                {panelCode(filtered)}
+                </>
+            ) 
         }
-        return (
-            <>
-            {panelCode(filtered)}
-            </>
-        ); 
-    } 
+        else if (selected === "Major"){
+            const filtered = degreePathways[1]?.majorsList.filter(post => {
+                if (searchInput === '' || 
+                    post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                    post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
+                    return post;
+                }
+            })
+            return (
+                <>
+                {panelCode(filtered)}
+                </>
+            ) 
+        } 
+    }
 
 
     const handleClick = (name, schoolData) => {

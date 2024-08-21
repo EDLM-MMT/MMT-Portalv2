@@ -107,6 +107,7 @@ const handleClick = (label, user) => {
   console.log(context)
   xAPISendStatement(context);
   console.log("sent")
+  return(<></>)
 }
 
 function Button({ data, user }) {
@@ -171,7 +172,7 @@ export default function Header() {
             })}
             {user?.role === 'Executive Stakeholder' && ExecMenuItems.map((item) => {
                 if(item.label === "Enrollment Statistics"){
-                  return <StatsMenu />
+                  return <StatsMenu key={item.label}/>
                 }
                 return <Button key={item.label} data={item} user={user}/>;
             })}

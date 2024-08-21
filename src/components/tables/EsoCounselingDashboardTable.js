@@ -74,12 +74,11 @@ export default function CounselingTable(careerArray) {
                 </thead>
                 {
                     data?.filter(post => {
-                        return (
-                            searchInput === '' ||
+                        if (searchInput === '' ||
                             post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-                            post.mos_code.toLowerCase().includes(searchInput.toLowerCase())
-                        );    
-
+                            post.mos_code.toLowerCase().includes(searchInput.toLowerCase())){
+                            return post;
+                        }    
                     }).map((student, index) => (
                         <tr key={student.id || index} className=' even:bg-gray-50 group'>
                             <td className='pl-4 p-2 text-left'>{student.name}</td>
