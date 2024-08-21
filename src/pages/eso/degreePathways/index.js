@@ -32,6 +32,8 @@ export default function DegreePathways() {
     }
 
     const sort = () => {
+        let filtered = []
+        
         if (selected === "School"){
             const filtered = degreePathways[0]?.schoolsList.filter(post => {
                 if (searchInput === ''){
@@ -41,7 +43,6 @@ export default function DegreePathways() {
                 }else if(post.datas[0].data.toLowerCase().includes(searchInput.toLowerCase())){
                     return post;
                 }
-    
             })
             return (
                 <>

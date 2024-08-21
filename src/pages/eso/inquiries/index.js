@@ -42,11 +42,10 @@ export default function ESOInquiryDashboard() {
                 </div>
                 <div className=' flex-col flex h-18 justify-center w-full gap-5'>
                     {data?.filter(post => {
-                        if (searchInput === ''){
-                            return post;
-                        } else if(post.submitted_by.toLowerCase().includes(searchInput.toLowerCase())){
-                            return post;
-                        }
+                        return (
+                            searchInput === '' ||
+                            post.submitted_by.toLowerCase().includes(searchInput.toLowerCase())
+                        );
                     }).map((card, index) => {
                         card['number']=index
                         return(

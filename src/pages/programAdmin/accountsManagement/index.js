@@ -75,15 +75,13 @@ export default function AccountsManagement() {
                 </thead>
                 {
                     modifyData?.filter(post => {
-                        if (searchInput === ''){
-                            return post;
-                        } else if(post.name.toLowerCase().includes(searchInput.toLowerCase())){
-                            return post;
-                        }else if(post.username.toLowerCase().includes(searchInput.toLowerCase())){
-                            return post;
-                        }
+                        return (
+                            searchInput === '' ||
+                            post.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                            post.username.toLowerCase().includes(searchInput.toLowerCase())
+                        );
                     }).map((post, index) => (
-                        <tr key={index} className=' even:bg-gray-50 group'>
+                        <tr key={post.id || index} className=' even:bg-gray-50 group'>
                             {}
                             <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2'>{post.name}</td>
                             <td className='pl-2'>{post.username}</td>
