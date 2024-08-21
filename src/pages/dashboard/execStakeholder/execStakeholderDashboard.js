@@ -36,8 +36,8 @@ export default function ExecStakeholderDashboard() {
             <div className="flex justify-between gap-x-16 px-56">
                 {cards.map((card, index) => {
                     return(
-                        <div className=''>
-                        <DashboardCard key={index} title={card.title} description={card.description} buttonLabel={card.buttonLabel} secondButtonLabel={card.secondButtonLabel} dashboardImage={card.image} routePath={card.routePath} secondRoutePath={card.secondRoutePath}/>
+                        <div key={card.id} className=''>
+                        <DashboardCard title={card.title} description={card.description} buttonLabel={card.buttonLabel} secondButtonLabel={card.secondButtonLabel} dashboardImage={card.image} routePath={card.routePath} secondRoutePath={card.secondRoutePath}/>
                         </div>
                     )
                 })}

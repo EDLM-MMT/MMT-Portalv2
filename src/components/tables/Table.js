@@ -43,7 +43,7 @@ export default function Table({
                                     <tr>
                                         {columnTitles.length > 0 && columnTitles.map((eachTitle, index) => (
                                             <th
-                                                key={index}
+                                                key={eachTitle.id || index}
                                                 scope='col'
                                                 className='text-lg sticky top-0 z-10 hidden border-b
                                                  border-gray-300 bg-gray-50 bg-opacity-75 pl-2 py-2
@@ -60,11 +60,11 @@ export default function Table({
                                         rowsData.map((row, index) => {
                                             return (
                                                 <tr
-                                                    key={index}
+                                                    key={row.id || index}
                                                     className=' even:bg-gray-50 group'
                                                 >
                                                     {row.map((eachItem, rindex) => (
-                                                        <td key={rindex} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 '>
+                                                        <td key={eachItem.id || rindex} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 '>
                                                             {(eachItem === "View") && <button onClick={handleView} className="text-blue-700 ml-5">{(eachItem)} </button>}
                                                             {(eachItem === "Reset") && <button onClick={handleReset} className="text-blue-700 ml-5">{(eachItem)} </button>}
                                                             {(eachItem === "Go To Counseling") && <button onClick={handleCareerCounseling} className="text-blue-700">{(eachItem)} </button>}
