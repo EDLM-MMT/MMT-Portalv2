@@ -15,13 +15,14 @@ export default function Register() {
         confirmPassword:"",
     });
 
+    console.log(credentials);
+
     function handleChange(event){
         const {name, value} = event.target;
         setCredentials((prev)=>({...prev,[name]:value}));
     }
 
-    function handleSubmit(event){
-    }
+    function handleSubmit(event){console.log(credentials);}
 
     return (
         <DefaultLayout>

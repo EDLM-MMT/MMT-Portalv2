@@ -10,6 +10,8 @@ export default function CounselingDashboardTable({careerList}) {
     const [isOpen, setIsOpen] = useState(false);
     const [degree, setDegree] = useState([]);
 
+    console.log(isOpen);
+
     useEffect(() => {
         setDegree(careerList)
     }, [careerList]);
