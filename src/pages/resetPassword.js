@@ -1,5 +1,6 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import useStore from '@/store/store';
+import { useState, useEffect } from 'react';
 import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
 
 
