@@ -1,7 +1,6 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import { useState, useEffect} from 'react';
 import Dropdown from '@/components/dropdowns/Dropdown';
-import AddBtn from '@/components/buttons/AddButton';
 import ViewBtn from '@/components/buttons/ViewBtn';
 import Accordion from '@/components/Accordion';
 import { PlusCircleIcon } from '@heroicons/react/outline';

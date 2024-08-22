@@ -1,5 +1,4 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import { useRouter } from "next/router"
 import PieChart from '@/components/charts/PieChart';
 import Toggle from '@/components/Toggle';
 import { useState } from 'react'

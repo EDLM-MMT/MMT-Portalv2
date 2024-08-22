@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import Dropdown from '../dropdowns/Dropdown';
+
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export default function BarChart({ chartTitle, xAxisTitle, dataName, labels, data, routePath, stackType }){

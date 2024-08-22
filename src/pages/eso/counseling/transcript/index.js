@@ -1,9 +1,7 @@
 import Button from '@/components/buttons/Button';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DownloadButton from "@/components/buttons/DownloadButton";
-import TranscriptCard from '@/components/cards/TranscriptCard';
 import { useRouter } from "next/router"
-import useStore from '@/store/store';
 
 export default function TranscriptView() {
     let link = ""

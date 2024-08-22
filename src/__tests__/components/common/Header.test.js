@@ -1,5 +1,4 @@
 import Header from '@/components/common/Header';
-import useStore from '@/store/store';
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/dist/MemoryRouterProvider';
 

@@ -1,7 +1,5 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import useStore from '@/store/store';
 import TwoChoiceCard from '@/components/cards/TwoChoiceCard';
-import AddBtn from '@/components/buttons/AddButton';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sort from '@/components/Sort';

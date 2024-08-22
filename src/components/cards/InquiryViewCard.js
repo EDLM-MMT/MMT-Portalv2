@@ -1,6 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import Button from "../buttons/Button";
-import { useState } from 'react';
 import useStore from "@/store/store";
 
 export default function ViewCard({ inquiry , className}){

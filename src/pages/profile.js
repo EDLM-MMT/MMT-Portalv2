@@ -1,7 +1,5 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import useStore from '@/store/store';
-import profileImage from '@/../public/profile-picture.png';
-import Image from 'next/image';
 import Button from '@/components/buttons/Button';
 
 export default function Profile() {

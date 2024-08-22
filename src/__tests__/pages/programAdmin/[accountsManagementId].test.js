@@ -2,7 +2,6 @@ import AccountsManagementId from "@/pages/programAdmin/accountsManagement/[accou
 import { fireEvent, render } from "@testing-library/react";
 import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import mockAxios from "@/__mocks__/axios";
 import axios from 'axios'
 
 let url = ''

@@ -1,11 +1,5 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import useStore from '@/store/store';
-import profileImage from '@/../public/profile-picture.png';
-import Image from 'next/image';
-import Button from '@/components/buttons/Button';
-import { useState, useEffect } from 'react';
-import GeneralPurposeOverlay from '@/components/overlays/GeneralPurposeOverlay';
-import Alert from '@/components/overlays/Alert';
 import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
 
 
@@ -30,6 +24,8 @@ export default function ResetPassword() {
             }
         }
     }
+
+    console.log(handleSubmit);
 
     useEffect(() => {
         if (isSubmitted){

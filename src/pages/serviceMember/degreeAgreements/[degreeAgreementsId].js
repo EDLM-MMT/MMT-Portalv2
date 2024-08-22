@@ -2,7 +2,6 @@ import DefaultLayout from '@/components/layouts/DefaultLayout';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from "next/router"
-import useStore from '@/store/store';
 import DegAgreementsViewCard from '@/components/cards/DegAgreementsViewCard';
 import Table from '@/components/tables/Table';
 

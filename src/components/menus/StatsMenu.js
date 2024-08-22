@@ -1,9 +1,4 @@
-import { ChevronUpIcon, UserIcon } from '@heroicons/react/solid';
 /* eslint-disable no-restricted-globals */
-import {
-    LogoutIcon,
-    UserCircleIcon
-} from '@heroicons/react/outline';
 import { Menu, Transition } from '@headlessui/react';
 
 import { Fragment } from 'react';

@@ -1,6 +1,5 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import DropdownViewCard from "@/components/cards/execStakeholder/DropdownSelectViewCard";
 import PieChart from "@/components/charts/PieChart";
 
 jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));

@@ -1,5 +1,4 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import BranchPersonnelData from '@/components/cards/execStakeholder/BranchPersonnelData';
 import { useRouter } from "next/router"
 import ColumnChart from "@/components/charts/ColumnChart";
 

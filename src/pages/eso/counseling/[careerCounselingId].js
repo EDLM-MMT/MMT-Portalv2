@@ -9,7 +9,6 @@ import CounselingTable from '@/components/tables/CounselingTable';
 import Button from '@/components/buttons/Button';
 import Dropdown from '@/components/dropdowns/Dropdown';
 import ESOCommentsTable from '@/components/tables/ESOCommentsTable';
-import Checkbox from '@/components/Checkbox';
 import GeneralPurposeOverlay from '@/components/overlays/GeneralPurposeOverlay';
 import { xAPISendStatement } from "@/utils/xapi/xAPISendStatement";
 

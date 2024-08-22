@@ -1,8 +1,7 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import modifiedData from "../../../data/programAdmin/accountsManagement.json";
 import { useRouter } from 'next/router';
-import GeneralPurposeOverlay from '@/components/overlays/GeneralPurposeOverlay';
 import Sort from '@/components/Sort';
 
 export default function AccountsManagement() {

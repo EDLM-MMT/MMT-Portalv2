@@ -1,6 +1,5 @@
 import PieChart from "@/components/charts/PieChart";
 import Dropdown from "@/components/dropdowns/Dropdown";
-import { useRouter } from "next/router"
 import { useState } from "react";
 
 export default function DropdownViewCard({ title, options, routePath, width }){

@@ -1,6 +1,5 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import VerticalBarGraphStatisticsViewCard from '@/components/cards/execStakeholder/VerticalBarGraphCard';
-import BarGraphStatisticsViewCard from '@/components/cards/execStakeholder/HorizontalBarGraphStatisticsViewCard';
 import BarChart from '@/components/charts/BarChart';
 import DateRangeViewCard from '@/components/cards/execStakeholder/DateRangeViewCard';
 import Dropdown from '@/components/dropdowns/Dropdown';

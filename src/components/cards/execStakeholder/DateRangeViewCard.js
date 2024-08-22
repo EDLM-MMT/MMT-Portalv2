@@ -1,5 +1,3 @@
-import Dropdown from "@/components/dropdowns/Dropdown";
-import { useRouter } from "next/router"
 import { useState } from "react";
 
 export default function DateRangeViewCard({ title, options, routePath, width }){

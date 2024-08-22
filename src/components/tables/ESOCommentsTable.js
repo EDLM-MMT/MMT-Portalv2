@@ -1,7 +1,3 @@
-import { useRouter } from "next/router"
-import DeletePopup from '@/components/overlays/DeletePopup'
-import { useState } from 'react';
-
 
 export default function ESOCommentsTable({ESOComments}) {
 

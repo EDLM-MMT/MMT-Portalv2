@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { act } from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { act } from "react";
 import TwoChoiceCard from '../../../components/cards/TwoChoiceCard';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 

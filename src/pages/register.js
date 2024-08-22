@@ -22,7 +22,10 @@ export default function Register() {
         setCredentials((prev)=>({...prev,[name]:value}));
     }
 
-    function handleSubmit(event){console.log(credentials);}
+    function handleSubmit(event){
+        event.preventDefault();
+        console.log(credentials);
+    }
 
     return (
         <DefaultLayout>

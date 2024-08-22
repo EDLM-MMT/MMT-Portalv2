@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import DeletePopup from '@/components/overlays/DeletePopup'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 

@@ -1,5 +1,5 @@
 import PersonnelData from "@/pages/execStakeholder/personnelData/index";
-import { fireEvent, render, cleanup } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 

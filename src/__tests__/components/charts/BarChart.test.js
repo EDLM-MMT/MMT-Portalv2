@@ -1,6 +1,5 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import DropdownViewCard from "@/components/cards/execStakeholder/DropdownSelectViewCard";
 import BarChart from "@/components/charts/BarChart";
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({

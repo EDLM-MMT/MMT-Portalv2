@@ -1,5 +1,4 @@
 import DashboardCard from '@/components/cards/DashboardCard';
-import useStore from '@/store/store';
 import inquiriesImage from '../../../assets/images/esoInquiry.png';
 import careerCounselingImage from '../../../assets/images/careercounseling.png';
 import degreePathwaysImage from '../../../assets/images/degreepathways.png';

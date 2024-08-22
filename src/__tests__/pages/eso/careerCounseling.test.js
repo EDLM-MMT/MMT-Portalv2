@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import CareerCounseling from '@/pages/eso/counseling/index';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import axios from 'axios'

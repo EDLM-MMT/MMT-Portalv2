@@ -1,6 +1,6 @@
 import DegreePathways from "@/pages/serviceMember/degreePathways";
-import Inquiry from "@/pages/serviceMember/inquiries";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({

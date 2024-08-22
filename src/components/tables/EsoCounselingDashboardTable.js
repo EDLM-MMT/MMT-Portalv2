@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from 'react';
-import Dropdown from '@/components/dropdowns/Dropdown';
 import Sort from '@/components/Sort';
 
 export default function CounselingTable(careerArray) {

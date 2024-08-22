@@ -1,5 +1,4 @@
 import DegreePathways from "@/pages/eso/degreePathways";
-import Inquiry from "@/pages/serviceMember/inquiries";
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 

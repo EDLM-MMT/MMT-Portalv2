@@ -1,6 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import Button from "../buttons/Button";
-import { useState } from 'react';
 
 export default function DegAgreementsViewCard({ degreeAgreement , className}){
     const descriptionClass = twMerge(`

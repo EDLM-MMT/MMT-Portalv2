@@ -1,4 +1,3 @@
-import InquiryView from "@/pages/serviceMember/inquiries/[inquiryId]";
 import { fireEvent, render } from "@testing-library/react";
 import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';

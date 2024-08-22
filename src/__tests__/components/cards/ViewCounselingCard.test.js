@@ -1,7 +1,6 @@
 import ViewCounselingCard from "@/components/cards/ViewCounselingCard";
-import { act, fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import ViewCard from '../../../components/cards/InquiryViewCard';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
