@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }) {
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps['dehydratedState']}>
           <Head>
-            <title>Experience Discovery Service</title>
+            <title>MMT</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Component {...pageProps} />

@@ -11,9 +11,18 @@ export default function Card({ title, description, buttonLabel, children, image,
     }
     return(
         <div className='bg-white border rounded-md border-gray-200 p-4 shadow-lg focus:shadow-lg px-10 my-8 mr-4 w-1/3'>
-            <div className='max-h-24'>
-              <Image src={image} height={100} alt='' className='rounded'/>
+            <div className='relative my-auto bg-gradient-to-r from-blue-custom to-purple rounded-lg'>
+                <div className="container relative">
+                <div className='opacity-40'> 
+                    <Image src={image} width={400} alt='' className="rounded-lg" />
+                </div>
+                </div>
             </div>
+            {/* <div className='bg-gradient-to-r from-blue-custom to-purple relative'>
+                <div className="container relative">
+                    <Image src={image} width={300} alt='' className='rounded'/>
+                </div>
+            </div> */}
             <h1 className='flex text-xl font-semibold h-6 pt-4'>
                 {title}
             </h1>
