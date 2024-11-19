@@ -26,9 +26,17 @@ export default function ModernMilitaryTranscript() {
       </Head>
 
       <div className='flex flex-col mt-8'>
-            <div className='py-4 text-xl font-bold'> 
-            Welcome Emma Hobert!
+            <div className='flex justify-between py-4 text-xl font-bold'> 
+                <div>
+                Welcome Emma Hobert!
+                </div>
+                <div className="p-0.5 mb-2 text-xs font-medium rounded-lg bg-gradient-to-r from-purple to-blue-custom from-accent-blue to-purple">                        
+                    <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="w-2/3 md:w-auto flex py-2 px-4 font-medium text-purple focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
+                        Request Military Transcript
+                    </button>
+                </div>
             </div>
+
             <div className='bg-white shadow-md'>
 
             </div>
