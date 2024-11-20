@@ -31,13 +31,16 @@ export default function Home() {
               <div className='pt-2 text-lg font-bold'>Meet the Modernized Military Transcript (MMT) </div>
               <div className='pt-2 text-gray-600'>The bridge connecting your military journey with academic credits </div>
               <div className='pt-12 flex flex-row'>
-                <Button onClick={()=>{router.push("/talentFinder")}} children={
+                <div>
+                  <Button onClick={()=>{router.push("/talentFinder")}} children={
                   <div className='flex flex-row gap-2 w-full'> <p className='pt-0.5'>Learn More</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                   </div>
                 }/>
+                </div>
+                
                 <SecondaryButton children={
                   <div className='flex flex-row gap-2'>
                   FAQs
