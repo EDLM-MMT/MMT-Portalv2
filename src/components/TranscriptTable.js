@@ -3,14 +3,19 @@
 import { axiosxapiInstance } from "@/config/axiosConfig";
 import { xapiUsers } from "@/config/endpoints";
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
-import { Checkbox, Table, Label, Progress, TableCell } from "flowbite-react";
+import { Checkbox, Table, Label, Progress, TableCell, Pagination } from "flowbite-react";
 import { useEffect, useState } from "react";
+
+
 
 export var users = [];
 
 export function TranscriptTable() {
 
     // const [talentData, setTalentData] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const onPageChange = (page) => setCurrentPage(page);
+
 
     const data = [
         {firstName: 'Linh', lastName: "Tran", dob: "9 SEP 1991", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Service Member"},
@@ -46,7 +51,7 @@ export function TranscriptTable() {
 
     <div class="mx-auto max-w-screen-xl">
         {/* <!-- Start coding here --> */}
-        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden mb-8">
+        <div class="overflow-x-auto sm:justify-center bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden mb-8">
             <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                 <div class="w-full md:w-1/2">
                     <form class="flex items-center">
@@ -169,6 +174,7 @@ export function TranscriptTable() {
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
+                             <th scope="col" class="px-4 py-3"></th>
                             <th scope="col" class="px-4 py-3">First Name</th>
                             <th scope="col" class="px-4 py-3">Last Name</th>
                             <th scope="col" class="px-4 py-3">DOB</th>
@@ -184,6 +190,9 @@ export function TranscriptTable() {
                         {data.map((data, index) => {
                             return (
                                 <tr class="border-b dark:border-gray-700" key={data.sentTo}>
+                                    <li class="flex mt-3 justify-center">
+                                        <input id="chkbx" type="checkbox" value="" className="px-2 py-2 h-4 w-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                                    </li>
                                     <td class="px-4 py-3">{data.firstName}</td>
                                     <td class="px-4 py-3">{data.lastName}</td>
                                     <td class="px-4 py-3">{data.dob}</td>
@@ -209,7 +218,7 @@ export function TranscriptTable() {
                     Showing
                     <span class="font-semibold text-gray-900 dark:text-white"> 1-5 </span>
                     of
-                    <span class="font-semibold text-gray-900 dark:text-white"> 275</span>
+                    <span class="font-semibold text-gray-900 dark:text-white"> 100</span>
                 </span>
                 <ul class="inline-flex items-stretch -space-x-px">
                     <li>
@@ -233,7 +242,7 @@ export function TranscriptTable() {
                         <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">23</a>
+                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">20</a>
                     </li>
                     <li>
                         <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -245,6 +254,9 @@ export function TranscriptTable() {
                     </li>
                 </ul>
             </nav>
+            {/* <div className="flex overflow-x-auto sm:justify-center">
+                <Pagination layout="table" currentPage={currentPage} totalPages={100} onPageChange={onPageChange} />
+            </div> */}
         </div>
     </div>
     </>
