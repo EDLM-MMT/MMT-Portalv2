@@ -5,6 +5,7 @@ import { xapiUsers } from "@/config/endpoints";
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
 import { Checkbox, Table, Label, Progress, TableCell, Pagination, Tabs } from "flowbite-react";
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 
 
@@ -81,13 +82,14 @@ export function AllTranscriptTable() {
                     </Tabs> */}
                     <div class="w-full md:w-auto flex flex-col pl-2 md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-2 flex-shrink-0">
                         <div class="flex items-center space-x-2 w-full size-20 text-xs md:w-auto">
-                            <div className=" mb-2 overflow-hidden font-medium rounded-lg bg-gradient-to-r from-purple to-blue-custom from-accent-blue to-purple">
-                                <button id="actionsDropdownButton" data-dropdown-toggle="actionsDropdown" className="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-small text-white focus:outline-none bg-purple opacity-50 rounded-lg border border-gray-200 hover:bg-purple hover:opacity-50 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-purple-800 dark:text-black-400 dark:border-gray-600 dark:hover:text-black dark:hover:bg-gray-700" type="button">
-                                    <FolderDownloadIcon className="pr-1 h-4" />
-                                    Download
-                                    <ChevronDownIcon className="pl-1 h-6" />
-                                </button>
-                            </div>
+                            <Button onClick={()=>{}} children={
+                                <div className="flex flex-row">
+                                <FolderDownloadIcon className="pr-2 mt-0.5 h-4" />
+                                Download
+                                <ChevronDownIcon className="ml-1 h-5" />
+                                </div>
+                            }/>
+                            
                             <div className="font-semibold">Filters</div>
 
                             <div id="actionsDropdown" class="hidden z-2 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
