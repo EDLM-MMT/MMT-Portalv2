@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image';
 import React, { useState } from 'react';
 import headerImage from '@/public/Abstact1.png';
-import DefaultLayout from '@/components/layouts/DefaultLayout';
+import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
 import SecondaryButton from '@/components/SecondaryButton';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
 import { Dropdown, Label, Modal, Radio, Tabs, Badge } from "flowbite-react";
@@ -21,7 +21,7 @@ export default function ModernMilitaryTranscript() {
   const [openModal, setOpenModal] = useState(true);
   // Modal
   return (
-    <DefaultLayout>
+    <DefaultLayoutAI>
       <Head>
         <title>MMT</title>
         <link rel="icon" href="/logo.png" />
@@ -43,7 +43,7 @@ export default function ModernMilitaryTranscript() {
 
             </div> */}
 
-        <div className='rounded-md p-4 shadow-lg focus:shadow-lg px-5 my-8 mr-4'>
+        <div className='rounded-md p-4 bg-white shadow-lg focus:shadow-lg px-5 my-4 mr-4'>
           <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
             <div class="w-full md:w-1/2">
               <form class="flex items-center">
@@ -83,7 +83,7 @@ export default function ModernMilitaryTranscript() {
           </Tabs>
         </div>
       </div>
-    </DefaultLayout>
+    </DefaultLayoutAI>
   );
 
 }

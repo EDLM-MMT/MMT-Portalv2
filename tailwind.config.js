@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         'dark-blue': '#010E42',
-        'purple': '#56299080',
+        'purple': '#562990',
         'blue-custom':'#135F9B',
         'gray-custom': '#6B7280',
         'black-10': 'rgba(17, 24, 39, .1)',
