@@ -28,7 +28,7 @@ export default function AcademicInstituteSideNav() {
             </a>
             <a className="flex flex-row gap-4 hover:cursor hover:font-bold hover:underline" href="/academicInstitute/userManagement">
               <UserGroupIcon className="h-5 mt-1"/>
-              Users Management
+              User Management
             </a>
             <a className="flex flex-row gap-4 hover:cursor hover:font-bold hover:underline" href="/academicInstitute/help">
               <QuestionMarkCircleIcon className="h-5 mt-0.5"/>

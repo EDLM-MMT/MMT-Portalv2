@@ -94,7 +94,7 @@ export default function ModernMilitaryTranscript() {
                 <Button onClick={()=>{}} children={
                 <div className="flex flex-row">
                     <PlusIcon className="h-5 mr-2"/>
-                Add New
+                Add New User
                 </div>
                 }/>
             </div>

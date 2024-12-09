@@ -70,10 +70,10 @@ export default function ModernMilitaryTranscript() {
                                 <Radio id="AI" name="sendType" value="AI" defaultChecked />
                                 <Label htmlFor="AI">Academic Institutions</Label>
                             </div>
-                            <div className="flex items-center gap-2">
+                            {/* <div className="flex items-center gap-2">
                                 <Radio id="ESO" name="sendType" value="ESO" />
                                 <Label htmlFor="ESO">Educational Service Officers (ESOs)/Counselors</Label>
-                            </div>
+                            </div> */}
                         </div>
                         <Dropdown label="" placement='bottom' dismissOnClick={false} renderTrigger={() => <div className='flex flex-row justify-between border rounded p-2 bg-gray-100 text-sm'>
                             Select an Institution
