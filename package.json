@@ -26,7 +26,7 @@
     "next": "14.2.10",
     "next-router-mock": "^0.9.11",
     "nth-check": "2.0.1",
-    "path-to-regexp": "0.1.10",
+    "path-to-regexp": "0.1.12",
     "pdfjs-dist": "4.2.67",
     "postcss": "8.4.31",
     "postcss-cli": "^10.1.0",
