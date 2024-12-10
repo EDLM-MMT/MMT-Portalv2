@@ -7,7 +7,7 @@ import headerImage from '@/public/Abstact1.png';
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
 import SecondaryButton from '@/components/SecondaryButton';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
-import { Dropdown, Label, Modal, Radio, Tabs, Badge } from "flowbite-react";
+import { Dropdown, Label, Modal, Radio, Tabs, Badge, Checkbox } from "flowbite-react";
 import ShareTranscriptModal from '@/components/ShareTranscriptModal';
 import Button from '@/components/Button';
 import { NewTranscriptTable } from '@/components/NewTranscriptTable';
@@ -18,7 +18,9 @@ export default function ModernMilitaryTranscript() {
   const router = useRouter();
   const { user } = useAuth();
 
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState(false);
+
   // Modal
   return (
     <DefaultLayoutAI>
@@ -32,10 +34,51 @@ export default function ModernMilitaryTranscript() {
           <div>
             Welcome Emma Hobert!
           </div>
-          <div className="p-0.5 mb-2 text-xs font-medium rounded-lg bg-gradient-to-r from-purple to-blue-custom from-accent-blue to-purple">
-            <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="w-2/3 md:w-auto flex py-2 px-4 font-medium text-purple focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
-              Request Military Transcript
-            </button>
+          <div className="p-0.5 mb-2 text-xs font-medium ">
+            <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Request Military Transcript"} route={"/talentFinder"}  />
+
+            <Modal show={openModal} size="md" position="center" onClose={() => setOpenModal(false)}>
+                    <Modal.Header>Request Military Transcript</Modal.Header>
+                    <Modal.Body>
+                    <div className="space-y-6">
+                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        You can insert the 4 digits of SSN of each Service Member to request their transcript. 
+                        </p>
+                        <div className='flex flex-row gap-5'>
+                            <div className="flex items-center gap-2">
+                                {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                                <Label htmlFor="SSN">SSN</Label>
+                            </div>
+
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                          <Checkbox id="accept" />
+                          <Label htmlFor="accept"> By clicking Request Military Transcript, you confirm that the Service Member(s) have granted their permission(s) for the institution to access their transcript(s) and their PII. </Label>
+                        </div>
+                    </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    
+                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Request Military Transcript</Button>
+
+                    </Modal.Footer>
+                </Modal>
+
+                <Modal show={confirmModal} size="md" position="center" onClose={() => setConfirmModal(false)}>
+                    <Modal.Header>Request Transcript Confirmation</Modal.Header>
+                    <Modal.Body>
+                    <div className="space-y-6">
+                    <p className='font-bold'>Your transcript(s) requests have been successfully delivered! </p>
+                    {/* <p className=''> You can track the transcript status on the <a className='text-purple'> Military Transcript</a>. </p> */}
+                    </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    
+                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
+
+                    </Modal.Footer>
+              </Modal>
           </div>
         </div>
 

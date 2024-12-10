@@ -19,8 +19,6 @@ export default function ModernMilitaryTranscript() {
   const [openModal, setOpenModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
 
-  setConfirmModal
-  Modal
   return (
     <DefaultLayout>
       <Head>
@@ -49,8 +47,6 @@ export default function ModernMilitaryTranscript() {
               <div className='pt-6 flex flex-row gap-5'>
 
               {/* <Button onClick={() => setOpenModal(true)}>Toggle modal</Button> */}
-
-
 
                 <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Share Official Transcript"} route={"/talentFinder"} 
                 icon={<>
@@ -109,7 +105,7 @@ export default function ModernMilitaryTranscript() {
                     </Modal.Body>
                     <Modal.Footer>
                     
-                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Share</Button>
+                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
 
                     </Modal.Footer>
                 </Modal>
