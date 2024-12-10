@@ -1,13 +1,6 @@
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import { fireEvent, render } from "@testing-library/react";
-import { act } from "react";
+import { act, fireEvent, render } from "@testing-library/react";
 import DegreeAgreementsOverlay from '@/components/overlays/DegreeAgreementsOverlay';
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-    observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
-  }))
 
 describe("DegreeAgreementsOverlay Component", () => {
 

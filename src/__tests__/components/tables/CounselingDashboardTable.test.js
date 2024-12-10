@@ -3,12 +3,6 @@ import { act, render, fireEvent } from '@testing-library/react';
 import CounselingDashboardTable from '@/components/tables/CounselingDashboardTable';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
 describe('CounselingDashboardTable component', () => {
   const counseling = [
     {

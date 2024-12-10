@@ -3,12 +3,6 @@ import { act, render, fireEvent } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import CounselingTable from '@/components/tables/CounselingTable';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
 describe('Counseling Table component', () => {
   const course_plan = [
     {
@@ -45,7 +39,7 @@ describe('Counseling Table component', () => {
   ]
 
   it('renders the component with the correct number of rows and columns', () => {
-    const { getByText, getByTestId } = render(
+    const { getByText, getByTestId, container } = render(
       <MemoryRouterProvider url='/'>
         <CounselingTable coursePlan={course_plan} />
       </MemoryRouterProvider>

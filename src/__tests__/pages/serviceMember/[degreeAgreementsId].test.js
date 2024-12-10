@@ -6,12 +6,6 @@ import DegreeAgreementsView from "@/pages/serviceMember/degreeAgreements/[degree
 let url = ''
 let body = {}
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
 jest.mock("axios", () => ({
   get: jest.fn((_url, _body) => { 
     return new Promise((resolve) => {
@@ -24,7 +18,7 @@ jest.mock("axios", () => ({
 
 describe("Degree Agreements View  Page", () => {
   it("should render the component", () => {
-    const { getByText } = render(
+    const { getByText, getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>
@@ -58,7 +52,7 @@ describe("Degree Agreements View  Page", () => {
   });
 
   it("axios error", () => {
-    render(
+    const { getByText, getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>

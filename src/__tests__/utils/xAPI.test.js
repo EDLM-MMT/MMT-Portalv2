@@ -1,12 +1,6 @@
 import { sendStatement } from "@/utils/xapi/xAPIWrapper";
 import xAPIMapper from "@/utils/xapi/xAPIMapper";
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
 describe('xAPI', () => {
   it('should send xAPI Statement to LRS with proper arguments', () => {
 
@@ -39,8 +33,12 @@ describe('xAPI', () => {
 
       expect(spy).toHaveBeenCalled();
       expect(actor.account.name).toBe('John Doe');
+      // expect(actor.account.homePage).toBe('https://ecc.gov');
+      // expect(actor.objectType).toBe('Agent');
 
       expect(verb.id).toBe('http://example.com/verbs/searched');
+      // expect(actor.objectType).toBe('Agent');
+      // expect(object.objectType).toBe('Activity');
       expect(object.id).toBe('http://example.com/search');
 
     });

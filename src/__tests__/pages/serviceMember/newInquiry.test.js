@@ -1,17 +1,10 @@
 import NewInquiry from "@/pages/serviceMember/newInquiry";
-import { fireEvent, render } from "@testing-library/react";
-import {act} from 'react';
+import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import axios from 'axios'
 
 let url = ''
 let body = {}
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
 
 jest.mock("axios", () => ({
   get: jest.fn((_url, _body) => { 
@@ -25,7 +18,7 @@ jest.mock("axios", () => ({
 
 describe("New Inquiry Page", () => {
   it("should render the component", () => {
-    const { getByText } = render(
+    const { getByText, getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <NewInquiry />
         </MemoryRouterProvider>
@@ -115,7 +108,7 @@ describe("New Inquiry Page", () => {
 
 
   it("axios error", () => {
-    render(
+    const { getByText, getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <NewInquiry />
         </MemoryRouterProvider>

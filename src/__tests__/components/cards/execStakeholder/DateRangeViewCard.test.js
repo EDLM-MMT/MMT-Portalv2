@@ -2,12 +2,6 @@ import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import DateRangeViewCard from "@/components/cards/execStakeholder/DateRangeViewCard";
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
 describe("Date Range View Card component", () => {
 
   it("should render the component", () => {

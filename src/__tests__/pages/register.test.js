@@ -1,13 +1,6 @@
-import { fireEvent, render } from "@testing-library/react";
-import { act } from 'react';
+import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import Register from '../../pages/register';
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
 
 describe("Register page", () => {
 
@@ -23,7 +16,7 @@ describe("Register page", () => {
   });
 
   it("should fill the form fields", () => {
-    const { getByPlaceholderText } = render(
+    const { getByText, getByPlaceholderText } = render(
       <MemoryRouterProvider>
           <Register />
       </MemoryRouterProvider>

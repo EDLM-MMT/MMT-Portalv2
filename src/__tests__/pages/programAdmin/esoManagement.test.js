@@ -1,13 +1,6 @@
 import ESOManagement from "@/pages/programAdmin/esoManagement/index";
-import { fireEvent, render } from "@testing-library/react";
-import {act} from 'react';
+import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
 
 describe("ESO Management Dashbaord page", () => {
   it("should render the page", () => {
@@ -80,7 +73,7 @@ describe("ESO Management Dashbaord page", () => {
       });
     const btn1 = getByText('Name');
       act(() => {
-        fireEvent.click(btn1);
+        fireEvent.click(btn);
       });
   });
 
@@ -97,7 +90,7 @@ describe("ESO Management Dashbaord page", () => {
       });
     const btn1 = getByTestId('Branch');
       act(() => {
-        fireEvent.click(btn1);
+        fireEvent.click(btn);
       });
   });
 

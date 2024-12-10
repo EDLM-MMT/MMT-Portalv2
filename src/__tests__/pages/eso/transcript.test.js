@@ -2,11 +2,6 @@ import TranscriptView from "@/pages/eso/counseling/transcript";
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
 
 describe("Transcript Type View Component", () => {
   it("should render the component", () => {

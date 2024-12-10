@@ -2,12 +2,6 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { act, fireEvent, render } from "@testing-library/react";
 import DeletePopup from '@/components/overlays/DeletePopup';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-    observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
-  }))
-
 describe("DeletePopup Component", () => {
   
     it("should render the component", () => {

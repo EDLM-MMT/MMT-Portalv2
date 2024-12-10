@@ -1,13 +1,7 @@
 import React from 'react';
 import { act, render, fireEvent } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import CounselingTable from '@/components/tables/EsoCounselingDashboardTable';
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
+import CounselingTable from '@/components/tables/ESOCounselingDashboardTable';
 
 describe('ESOCounselingDashboardTable component', () => {
   const careerArray = [
@@ -147,9 +141,9 @@ describe('ESOCounselingDashboardTable component', () => {
       act(() => {
         fireEvent.click(btn);
       });
-      const btn1 = getByTestId('Name');
+    const btn1 = getByTestId('Name');
       act(() => {
-        fireEvent.click(btn1);
+        fireEvent.click(btn);
       });
   });
 

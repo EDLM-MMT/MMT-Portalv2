@@ -1,13 +1,7 @@
-import React, { act } from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import React from 'react';
+import { act, render, fireEvent } from '@testing-library/react';
 import TwoChoiceCard from '../../../components/cards/TwoChoiceCard';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
 
 describe('TwoChoiceCard', () => {
   it('renders title and description', () => {
@@ -62,7 +56,7 @@ describe('TwoChoiceCard', () => {
     });
     window.IntersectionObserver = mockIntersectionObserver;
 
-    render(
+    const { getByText, queryByText } = render(
     <MemoryRouterProvider>
       <TwoChoiceCard card={card} firstRoutePath={"/"} viewRoutePath={"/"} buttonLabel={"Open Degree Agreement"} type={"ESO"}/>
     </MemoryRouterProvider>);
