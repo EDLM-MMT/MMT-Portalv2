@@ -26,7 +26,6 @@ export default function ResetPassword() {
         }
     }
 
-    console.log(handleSubmit);
 
     useEffect(() => {
         if (isSubmitted){
