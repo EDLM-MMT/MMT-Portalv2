@@ -13,7 +13,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
-
 jest.mock("axios", () => ({
   get: jest.fn((_url, _body) => { 
     return new Promise((resolve) => {
@@ -60,7 +59,7 @@ describe("Management View page", () => {
     });
 
     it("axios error", () => {
-      const { getByText, getByPlaceholderText } = render(
+      render(
           <MemoryRouterProvider>
               <AccountsManagementId />
           </MemoryRouterProvider>

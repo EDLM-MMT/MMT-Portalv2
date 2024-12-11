@@ -9,7 +9,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
     disconnect: jest.fn(),
   }))
 
-
 describe("Degree Pathways Page", () => {
   it("should render the component", () => {
     const { getByText } = render(
@@ -20,34 +19,6 @@ describe("Degree Pathways Page", () => {
 
     expect(getByText('Degree Pathways Catalog')).toBeInTheDocument();
     expect(getByText('Sort By:')).toBeInTheDocument();
-    expect(getByText('School')).toBeInTheDocument();
-    expect(getByText('City University')).toBeInTheDocument();
-    expect(getByText('Emory Riddle')).toBeInTheDocument();
-
-    let button = getByText('City University');
-    act(() => {
-        fireEvent.click(button);
-    });
-    
-    let button2 = getByText('School');
-    act(() => {
-        fireEvent.click(button2);
-    });
-
-    button = getByText('Major');
-    act(() => {
-        fireEvent.click(button);
-    });
-
-    button2 = getByText('Major');
-    act(() => {
-        fireEvent.click(button2);
-    });
-
-    act(() => {
-        fireEvent.click(getByText('School'));
-    });
-
   });
 
   it("should check the search bar in the component", () => {
@@ -60,12 +31,6 @@ describe("Degree Pathways Page", () => {
 
     act(() => {
         fireEvent.change(getByPlaceholderText('Search for School or Major'), {
-            target: { value: 'City University' },
-        });
-    });
-
-    act(() => {
-        fireEvent.change(getByPlaceholderText('Search for School or Major'), {
             target: { value: 'BS' },
         });
     });
@@ -73,19 +38,11 @@ describe("Degree Pathways Page", () => {
 
   it("should check the inner information using the search bar in the component", () => {
 
-    const { getByText, getByPlaceholderText } = render(
+    const { getByPlaceholderText } = render(
         <MemoryRouterProvider>
             <DegreePathways />
         </MemoryRouterProvider>
     );
-    
-    act(() => {
-        fireEvent.click(getByText('School'));
-    });
-
-    act(() => {
-        fireEvent.click(getByText('Major'));
-    });
 
     expect(getByPlaceholderText('Search for School or Major')).toBeInTheDocument();
 

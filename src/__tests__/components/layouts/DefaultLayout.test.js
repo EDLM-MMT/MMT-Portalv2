@@ -17,7 +17,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
-
 describe('Default Layout', () => {
   it('should show the header & footer component', () => {
     renderer();

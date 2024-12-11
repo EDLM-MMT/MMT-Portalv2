@@ -12,7 +12,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
-
 jest.mock("axios", () => ({
   get: jest.fn((_url, _body) => { 
     return new Promise((resolve) => {
@@ -25,7 +24,7 @@ jest.mock("axios", () => ({
 
 describe("Degree Agreements View  Page", () => {
   it("should render the component", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const { getByText } = render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>
@@ -59,7 +58,7 @@ describe("Degree Agreements View  Page", () => {
   });
 
   it("axios error", () => {
-    const { getByText, getByPlaceholderText } = render(
+    render(
         <MemoryRouterProvider>
             <DegreeAgreementsView />
         </MemoryRouterProvider>

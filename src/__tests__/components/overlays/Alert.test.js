@@ -1,6 +1,5 @@
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import { fireEvent, render } from "@testing-library/react";
-import { act } from "react";
+import { act, fireEvent, render } from "@testing-library/react";
 import Alert from '@/components/overlays/Alert';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
@@ -8,7 +7,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   }))
-  
 
 describe("Alert Component", () => {
     

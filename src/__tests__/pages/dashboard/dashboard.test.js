@@ -7,7 +7,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   }))
-  
+
 describe("Dashboard Component", () => {
     
     it("should render the component", () => {

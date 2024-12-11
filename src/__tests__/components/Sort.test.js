@@ -9,7 +9,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
-
 describe("Sort component", () => {
     it("should render the component", () => {
       const { getByText } = render(

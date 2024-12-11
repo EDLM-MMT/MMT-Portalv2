@@ -1,5 +1,6 @@
 import ArmyPersonnel from "@/pages/execStakeholder/personnelData/army";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
@@ -9,7 +10,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 }))
 
 jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
-
 
 describe("Army Personnel Data page", () => {
 

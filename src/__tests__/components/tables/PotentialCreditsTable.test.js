@@ -9,7 +9,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }))
 
-
 describe('PotentialCreditsTable component', () => {
   const credits = [
     {

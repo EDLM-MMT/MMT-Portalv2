@@ -7,7 +7,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   }))
-  
 
 describe("Stats Menu Component", () => {
 
@@ -29,7 +28,7 @@ describe("Stats Menu Component", () => {
     );
 
     it("should render the component", () => {
-        const { getByText, getByTestId } = render(
+        const { getByText } = render(
             <MemoryRouterProvider url='/' >
                 <StatsMenu />
             </MemoryRouterProvider> );

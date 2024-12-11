@@ -1,5 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
-import { act } from "react";
+import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import AssignInquiryOverlay from "../../../components/overlays/AssignInquiryOverlay";
 
@@ -8,7 +7,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }))
-
 
 describe("Assign Inquiry Overlay component", () => {
 

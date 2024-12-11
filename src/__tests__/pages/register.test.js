@@ -1,4 +1,5 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import Register from '../../pages/register';
 
@@ -22,7 +23,7 @@ describe("Register page", () => {
   });
 
   it("should fill the form fields", () => {
-    const { getByText, getByPlaceholderText } = render(
+    const { getByPlaceholderText } = render(
       <MemoryRouterProvider>
           <Register />
       </MemoryRouterProvider>

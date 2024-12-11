@@ -3,13 +3,11 @@ import { act } from "react";
 import Card from "@/components/cards/Card";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
-
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }))
-
 
 describe("Card Component", () => {
   it("should render the component", () => {

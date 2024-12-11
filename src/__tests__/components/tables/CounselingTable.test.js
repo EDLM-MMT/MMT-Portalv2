@@ -45,7 +45,7 @@ describe('Counseling Table component', () => {
   ]
 
   it('renders the component with the correct number of rows and columns', () => {
-    const { getByText, getByTestId, container } = render(
+    const { getByText, getByTestId } = render(
       <MemoryRouterProvider url='/'>
         <CounselingTable coursePlan={course_plan} />
       </MemoryRouterProvider>

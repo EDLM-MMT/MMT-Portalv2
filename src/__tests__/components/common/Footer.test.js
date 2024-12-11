@@ -1,13 +1,11 @@
 import Footer from '@/components/common/Footer';
 import { render, screen} from '@testing-library/react';
 
-
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }))
-
 
 describe('Footer', () => {
     it('should show the footer text', () => {
