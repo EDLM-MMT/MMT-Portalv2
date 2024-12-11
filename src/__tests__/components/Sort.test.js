@@ -1,6 +1,14 @@
 import Sort from "@/components/Sort";
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
 
 describe("Sort component", () => {
     it("should render the component", () => {

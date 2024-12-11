@@ -2,6 +2,14 @@ import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import CounselingEditableCard from '../../../components/cards/CounselingEditableCard';
 
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
+
 describe("Edit Card component", () => {
 
   const mockData = [{

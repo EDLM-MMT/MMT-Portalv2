@@ -2,6 +2,13 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { act, fireEvent, render } from "@testing-library/react";
 import StatsMenu from '@/components/menus/StatsMenu';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }))
+  
+
 describe("Stats Menu Component", () => {
 
     jest.mock('@/store/store', () =>

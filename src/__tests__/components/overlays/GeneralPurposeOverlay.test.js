@@ -1,6 +1,13 @@
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import { act } from "react";
 import GeneralPurposeOverlay from '@/components/overlays/GeneralPurposeOverlay';
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  }))
 
 describe("GeneralPurposeOverlay Component", () => {
 

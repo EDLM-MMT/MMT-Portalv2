@@ -2,6 +2,14 @@ import InquiryDropdown from "@/components/dropdowns/InquiryDropdown";
 import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
+
 describe("Inquiry Dropdown component", () => {
 
     const onChange = jest.fn()

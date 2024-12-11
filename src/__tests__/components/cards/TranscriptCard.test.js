@@ -2,6 +2,14 @@ import { act, fireEvent, render } from "@testing-library/react";
 import TranscriptCard from "@/components/cards/TranscriptCard";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
+
 describe("TranscriptCard Component", () => {
   it("should render the component", () => {
     const { getByText } = render(

@@ -1,6 +1,16 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
+import {act} from 'react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import DashboardCard from "@/components/cards/DashboardCard";
+
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
+jest.mock('react-apexcharts', () => ({ __esModule: true, default: () => <div /> }));
 
 describe("Dashbaord Card Component", () => {
   it("should render the component", () => {

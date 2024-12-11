@@ -1,6 +1,14 @@
 import { act, fireEvent, render } from "@testing-library/react";
 import AddBtn from "@/components/buttons/AddButton";
 
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}))
+
+
 describe("Add Button Component", () => {
   it("should render the component", () => {
     const { getByText } = render(<AddBtn btnText={"Test Button"} link={"www.google.com"} />);
