@@ -32,7 +32,7 @@ export default function Docs() {
                 </div>
                 </div>
             </div>
-            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8'>
+            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8 h-min'>
                 1. Getting Started
             </h1>
             <div className='flex flex-row py-3 pl-5'>
@@ -62,7 +62,7 @@ export default function Docs() {
                 </div>
                 </div>
             </div>
-            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8'>
+            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8 h-min'>
                 2. Military and Academic Credits
             </h1>
             <div className='flex flex-row py-3 pl-5'>
@@ -87,7 +87,7 @@ export default function Docs() {
                 </div>
                 </div>
             </div>
-            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8'>
+            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8 h-min'>
                 3. Applying to Academic Institution
             </h1>
             <div className='flex flex-row py-3 pl-5'>
@@ -110,17 +110,17 @@ export default function Docs() {
             </div>
         </div>
 
-        <div className='flex flex-row gap-10 pt-10 justify-between'>
-            <div>
+        <div className='flex flex-row gap-10 pt-10 justify-left'>
+        <div className='w-1/3'>
             <div className='relative my-auto bg-gradient-to-r from-blue-custom to-purple rounded-lg'>
                 <div className="container relative">
                 <div className='opacity-40'> 
-                    <Image src={cardImage4} width={500} height={250} alt='' className="rounded-lg" />
+                    <Image src={cardImage1} width={400} alt='' className="rounded-lg" />
                 </div>
                 </div>
-            </div>
-            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8'>
-                4. Career Planning
+            </div >
+            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8 h-min'>
+              4. Career Planning
             </h1>
             <div className='flex flex-row py-3 pl-5'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -141,15 +141,15 @@ export default function Docs() {
             </div>
             </div>
 
-            <div >
+            <div className='w-1/3'>
             <div className='relative my-auto bg-gradient-to-r from-blue-custom to-purple rounded-lg'>
                 <div className="container relative">
                 <div className='opacity-40'> 
-                    <Image src={cardImage5} width={500} alt='' className="rounded-lg" />
+                    <Image src={cardImage2} width={400} alt='' className="rounded-lg" />
                 </div>
                 </div>
             </div>
-            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8'>
+            <h1 className='flex text-xl font-semibold h-6 pt-4 pb-8 h-min'>
                 5. Preparing for Post-Military Separation
             </h1>
             <div className='flex flex-row py-3 pl-5'>
