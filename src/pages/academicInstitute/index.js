@@ -48,7 +48,7 @@ export default function ModernMilitaryTranscript() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div className='flex flex-col bg-white mt-8'>
+      <div className='flex flex-col mt-8'>
         <div className='flex justify-between py-4 text-xl font-bold'>
           <div>
             Welcome Emma Hobert!
@@ -105,7 +105,7 @@ export default function ModernMilitaryTranscript() {
 
             </div> */}
 
-        <div className='rounded-md p-4 shadow-lg focus:shadow-lg px-5 my-4 mr-4'>
+        <div className='rounded-md p-4 shadow-lg focus:shadow-lg px-5 my-4 mr-4 bg-white'>
           <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
             <div class="w-full md:w-1/2">
               <SearchBar
