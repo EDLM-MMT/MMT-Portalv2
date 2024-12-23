@@ -12,12 +12,16 @@ import { AdminUsersTable } from '@/components/AdminUsersTable';
 import SecondaryButton from '@/components/SecondaryButton';
 import SearchBar from '@/components/SearchBar';
 import useField from '@/hooks/useField';
+import { Label, Modal, Checkbox } from "flowbite-react";
+import InputField from '@/components/InputField';
+
 
 export default function ModernMilitaryTranscript() {
   const router = useRouter();
   const { user } = useAuth();
 
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState(false);
 
   const { fields, updateKeyValuePair, resetKey } = useField({
     keyword: '',
@@ -91,12 +95,62 @@ export default function ModernMilitaryTranscript() {
             </div>
 
             <div className='flex justify-end'>
-              <Button onClick={() => { }} children={
+              <Button onClick={() => setOpenModal(true)} children={
                 <div className="flex flex-row">
                   <PlusIcon className="h-5 mr-2" />
                   Add New User
                 </div>
               } />
+
+              <Modal show={openModal} size="md" position="center" onClose={() => setOpenModal(false)}>
+                <Modal.Header>Add New User</Modal.Header>
+                <Modal.Body>
+                  <div className="space-y-6">
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                    Insert the first and last name, email, and role (optional) to add a user to have access to the system. 
+                    </p>
+                    <div className='flex flex-col gap-4'>
+                      <div className="flex items-center gap-2">
+                        {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                        <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
+                        <InputField required={true}/>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                        <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
+                        <InputField />
+                      </div><div className="flex items-center gap-2">
+                        {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                        <Label htmlFor="Email" className='w-1/3'>Email</Label>
+                        <InputField placeholder={""}/>
+                      </div><div className="flex items-center gap-2">
+                        {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                        <Label htmlFor="Role" className='w-1/3'>Role</Label>
+                        <InputField />
+                      </div>
+                    </div>
+                  </div>
+                </Modal.Body>
+                <Modal.Footer>
+  
+                  <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Add User</Button>
+  
+                </Modal.Footer>
+              </Modal>
+  
+              <Modal show={confirmModal} size="md" position="center" onClose={() => setConfirmModal(false)}>
+                <Modal.Header>Adding New User Confirmation</Modal.Header>
+                <Modal.Body>
+                  <div className="space-y-6">
+                    <p className='font-bold'>The user has been successfully added! </p>
+                  </div>
+                </Modal.Body>
+                <Modal.Footer>
+  
+                  <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
+  
+                </Modal.Footer>
+              </Modal>
             </div>
 
           </div>

@@ -65,7 +65,7 @@ export default function ModernMilitaryTranscript() {
                   Insert the first and last name, date of birth, and the last 4 digits of the Service Member’s SSN to request their transcript. 
                   </p>
                   <div className='flex flex-col gap-4'>
-                    <div className="flex items-center gap-">
+                    <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
                       <InputField required={true}/>
