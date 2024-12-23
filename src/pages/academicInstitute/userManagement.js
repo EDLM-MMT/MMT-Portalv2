@@ -23,6 +23,10 @@ export default function ModernMilitaryTranscript() {
 
   const [openModal, setOpenModal] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [role, setRole] = useState('');
 
   const { fields, updateKeyValuePair, resetKey } = useField({
     keyword: '',
@@ -117,30 +121,34 @@ export default function ModernMilitaryTranscript() {
                       <div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
-                        <InputField required={true}/>
+                        <InputField value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
                       </div>
                       <div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
-                        <InputField />
+                        <InputField value={lastName} onChange={(event) => setLastName(event.target.value)}/>
                       </div><div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Email" className='w-1/3'>Email</Label>
-                        <InputField placeholder={""}/>
+                        <InputField value={email} onChange={(event) => setEmail(event.target.value)} placeholder={""}/>
                       </div><div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Role" className='w-1/3'>Role</Label>
-                        <InputField />
+                        <InputField value={role} onChange={(event) => setRole(event.target.value)} placeholder={""} />
                       </div>
                     </div>
                   </div>
                 </Modal.Body>
                 <Modal.Footer className='flex flex-col'>
   
-                  <Button className='w-full' onClick={() => { 
+                  <Button className='w-full' onClick={(e) => { 
                     //setOpenModal(false); 
                     // API Call 
                     setDisplayContent(true);
+                    setFirstName('')
+                    setLastName('')
+                    setEmail('')
+                    setRole('')               
                   }}>Add User</Button>
                   {displayContent && 
                   <div className='flex flex-row mt-2 pr-5 text-green-600'>
