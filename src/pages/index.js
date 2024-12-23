@@ -10,10 +10,18 @@ import DefaultLayout from '@/components/layouts/DefaultLayout';
 import SecondaryButton from '@/components/SecondaryButton';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
 import MyUpdatesSections from '@/components/MyUpdatesSections';
+import Announcements from '@/components/Announcements';
 
 export default function Home() {
   const router = useRouter();
   const { user } = useAuth();
+
+  const data = [
+    {date:"December 20, 2024", time: "12:44 PM EST", announcement: "MMT is temporarily down. Service will be restored as soon as possible. Current estimate is by the end of the day.", type: "persist"},
+    {date:"January 30, 2025", time: "12:44 PM EST", announcement: "ARMY, NAVY, MARINE CORPS, SPACE FORCE: All veterans, active duty, National Guard Personnel should use the Joint Services Transcript (JST). AIR FORCE: All veterans, active duty, National Guard Personnel should use the re-designed Modernized Military Transcript (MMT).", type: "dismiss"},
+
+    
+];
   
   return (
     <DefaultLayout>
@@ -22,8 +30,11 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
+
       <div className='flex flex-col mt-8'>
         <div className='py-4 text-xl font-bold'>Welcome, E-5, Julio Gomez! </div>
+        <div className='mb-5 '><Announcements content={data}/></div>
+
         <div className='bg-white shadow-md'>
 
           <div className='flex flex-row justify-between'>
