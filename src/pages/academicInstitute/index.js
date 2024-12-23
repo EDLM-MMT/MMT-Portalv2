@@ -15,6 +15,7 @@ import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
 import SearchBar from '@/components/SearchBar';
 import useField from '@/hooks/useField';
 import InputField from '@/components/InputField';
+import { CheckCircleIcon } from '@heroicons/react/solid';
 
 
 export default function ModernMilitaryTranscript() {
@@ -22,7 +23,7 @@ export default function ModernMilitaryTranscript() {
   const { user } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
-  const [confirmModal, setConfirmModal] = useState(false);
+  const [displayContent, setDisplayContent] = useState(false);
 
   const { fields, updateKeyValuePair, resetKey } = useField({
     keyword: '',
@@ -56,8 +57,12 @@ export default function ModernMilitaryTranscript() {
           </div>
           <div className="p-0.5 mb-2 text-xs font-medium ">
             <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Request Military Transcript"} route={"/talentFinder"} />
-
-            <Modal show={openModal} size="md" position="center" onClose={() => setOpenModal(false)}>
+            {openModal && <div 
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+                onClick={openModal}
+              ></div>}
+              
+            <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}}>
               <Modal.Header>Request Military Transcript</Modal.Header>
               <Modal.Body>
                 <div className="space-y-6">
@@ -93,27 +98,22 @@ export default function ModernMilitaryTranscript() {
                   </div>
                 </div>
               </Modal.Body>
-              <Modal.Footer>
+              <Modal.Footer className='flex flex-col'>
 
-                <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Request Military Transcript</Button>
-
+                {/* <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Request Military Transcript</Button> */}
+                <Button className='w-full' onClick={() => { 
+                    //setOpenModal(false); 
+                    // API Call 
+                    setDisplayContent(true);
+                  }}>Request Military Transcript</Button>
+                  {displayContent && 
+                  <div className='flex flex-row mt-2'>
+                    <CheckCircleIcon className='h-5 mt-0.5 mr-2 font-green' />
+                    Your transcript request have been successfully delivered!</div>
+                  }
               </Modal.Footer>
             </Modal>
 
-            <Modal show={confirmModal} size="md" position="center" onClose={() => setConfirmModal(false)}>
-              <Modal.Header>Request Transcript Confirmation</Modal.Header>
-              <Modal.Body>
-                <div className="space-y-6">
-                  <p className='font-bold'>Your transcript(s) requests have been successfully delivered! </p>
-                  {/* <p className=''> You can track the transcript status on the <a className='text-purple'> Military Transcript</a>. </p> */}
-                </div>
-              </Modal.Body>
-              <Modal.Footer>
-
-                <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
-
-              </Modal.Footer>
-            </Modal>
           </div>
         </div>
 

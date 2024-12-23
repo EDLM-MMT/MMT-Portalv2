@@ -14,6 +14,7 @@ import SearchBar from '@/components/SearchBar';
 import useField from '@/hooks/useField';
 import { Label, Modal, Checkbox } from "flowbite-react";
 import InputField from '@/components/InputField';
+import { CheckCircleIcon } from '@heroicons/react/solid';
 
 
 export default function ModernMilitaryTranscript() {
@@ -21,7 +22,7 @@ export default function ModernMilitaryTranscript() {
   const { user } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
-  const [confirmModal, setConfirmModal] = useState(false);
+  const [displayContent, setDisplayContent] = useState(false);
 
   const { fields, updateKeyValuePair, resetKey } = useField({
     keyword: '',
@@ -101,8 +102,11 @@ export default function ModernMilitaryTranscript() {
                   Add New User
                 </div>
               } />
-
-              <Modal show={openModal} size="md" position="center" onClose={() => setOpenModal(false)}>
+              {openModal && <div 
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+                onClick={openModal}
+              ></div>}
+              <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false)}}>
                 <Modal.Header>Add New User</Modal.Header>
                 <Modal.Body>
                   <div className="space-y-6">
@@ -131,14 +135,22 @@ export default function ModernMilitaryTranscript() {
                     </div>
                   </div>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className='flex flex-col'>
   
-                  <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Add User</Button>
-  
+                  <Button className='w-full' onClick={() => { 
+                    //setOpenModal(false); 
+                    // API Call 
+                    setDisplayContent(true);
+                  }}>Add User</Button>
+                  {displayContent && 
+                  <div className='flex flex-row mt-2 pr-5'>
+                    <CheckCircleIcon className='h-5 mt-0.5 mr-2 font-green' />
+                    User added</div>
+                  }
                 </Modal.Footer>
               </Modal>
   
-              <Modal show={confirmModal} size="md" position="center" onClose={() => setConfirmModal(false)}>
+              {/* <Modal show={confirmModal} size="md" position="center" onClose={() => setConfirmModal(false)}>
                 <Modal.Header>Adding New User Confirmation</Modal.Header>
                 <Modal.Body>
                   <div className="space-y-6">
@@ -150,7 +162,7 @@ export default function ModernMilitaryTranscript() {
                   <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
   
                 </Modal.Footer>
-              </Modal>
+              </Modal> */}
             </div>
 
           </div>
