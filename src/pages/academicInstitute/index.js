@@ -14,6 +14,7 @@ import { NewTranscriptTable } from '@/components/NewTranscriptTable';
 import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
 import SearchBar from '@/components/SearchBar';
 import useField from '@/hooks/useField';
+import InputField from '@/components/InputField';
 
 
 export default function ModernMilitaryTranscript() {
@@ -61,12 +62,27 @@ export default function ModernMilitaryTranscript() {
               <Modal.Body>
                 <div className="space-y-6">
                   <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    You can insert the 4 digits of SSN of each Service Member to request their transcript.
+                  Insert the first and last name, date of birth, and the last 4 digits of the Service Member’s SSN to request their transcript. 
                   </p>
-                  <div className='flex flex-row gap-5'>
+                  <div className='flex flex-col gap-4'>
+                    <div className="flex items-center gap-">
+                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                      <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
+                      <InputField required={true}/>
+                    </div>
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                      <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
+                      <InputField />
+                    </div><div className="flex items-center gap-2">
+                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                      <Label htmlFor="DOB" className='w-1/3'>Date of Birth</Label>
+                      <InputField placeholder={"MM/DD/YYYY"}/>
+                    </div><div className="flex items-center gap-2">
+                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="SSN">SSN</Label>
+                      <div className='w-1/4 ml-4'> <InputField placeholder={"####"}/></div>
+                      
                     </div>
 
                   </div>
