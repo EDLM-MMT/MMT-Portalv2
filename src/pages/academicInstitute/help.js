@@ -115,7 +115,7 @@ export default function Docs() {
             <div className='relative my-auto bg-gradient-to-r from-blue-custom to-purple rounded-lg'>
                 <div className="container relative">
                 <div className='opacity-40'> 
-                    <Image src={cardImage1} width={400} alt='' className="rounded-lg" />
+                    <Image src={cardImage4} width={400} alt='' className="rounded-lg" />
                 </div>
                 </div>
             </div >
@@ -146,7 +146,7 @@ export default function Docs() {
             <div className='relative my-auto bg-gradient-to-r from-blue-custom to-purple rounded-lg'>
                 <div className="container relative">
                 <div className='opacity-40'> 
-                    <Image src={cardImage2} width={400} alt='' className="rounded-lg" />
+                    <Image src={cardImage5} width={400} alt='' className="rounded-lg" />
                 </div>
                 </div>
             </div>
@@ -165,6 +165,11 @@ export default function Docs() {
               </svg>
               <p className='ml-2 mb-0 text-lg justify-left text-left text-purple'> How do courses get evaluated by ACE?</p>
             </div> */}
+            </div>
+
+            <div className='w-1/3'>
+
+
             </div>
 
         </div>
