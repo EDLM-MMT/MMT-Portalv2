@@ -24,6 +24,11 @@ export default function ModernMilitaryTranscript() {
 
   const [openModal, setOpenModal] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [dob, setDob] = useState('');
+  const [ssn, setSsn] = useState('');
+
 
   const { fields, updateKeyValuePair, resetKey } = useField({
     keyword: '',
@@ -73,20 +78,20 @@ export default function ModernMilitaryTranscript() {
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
-                      <InputField required={true}/>
+                      <InputField value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
                     </div>
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
-                      <InputField />
+                      <InputField value={lastName} onChange={(event) => setLastName(event.target.value)} />
                     </div><div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="DOB" className='w-1/3'>Date of Birth</Label>
-                      <InputField placeholder={"MM/DD/YYYY"}/>
+                      <InputField value={dob} onChange={(event) => setDob(event.target.value)} placeholder={"MM/DD/YYYY"}/>
                     </div><div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="SSN">SSN</Label>
-                      <div className='w-1/4 ml-4'> <InputField placeholder={"####"}/></div>
+                      <div className='w-1/4 ml-4'> <InputField value={ssn} onChange={(event) => setSsn(event.target.value)} placeholder={"####"}/></div>
                       
                     </div>
 
@@ -105,6 +110,10 @@ export default function ModernMilitaryTranscript() {
                     //setOpenModal(false); 
                     // API Call 
                     setDisplayContent(true);
+                    setFirstName('')
+                    setLastName('')
+                    setDob('')
+                    setSsn('')    
                   }}>Request Military Transcript</Button>
                   {displayContent && 
                   <div className='flex flex-row mt-2 text-green-600'>
