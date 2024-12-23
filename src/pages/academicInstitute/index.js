@@ -61,7 +61,7 @@ export default function ModernMilitaryTranscript() {
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 onClick={openModal}
               ></div>}
-              
+
             <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}}>
               <Modal.Header>Request Military Transcript</Modal.Header>
               <Modal.Body>
@@ -107,8 +107,8 @@ export default function ModernMilitaryTranscript() {
                     setDisplayContent(true);
                   }}>Request Military Transcript</Button>
                   {displayContent && 
-                  <div className='flex flex-row mt-2'>
-                    <CheckCircleIcon className='h-5 mt-0.5 mr-2 font-green' />
+                  <div className='flex flex-row mt-2 text-green-600'>
+                    <CheckCircleIcon className='h-5 mt-1 mr-2' />
                     Your transcript request have been successfully delivered!</div>
                   }
               </Modal.Footer>

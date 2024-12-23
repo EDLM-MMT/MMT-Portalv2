@@ -143,7 +143,7 @@ export default function ModernMilitaryTranscript() {
                     setDisplayContent(true);
                   }}>Add User</Button>
                   {displayContent && 
-                  <div className='flex flex-row mt-2 pr-5'>
+                  <div className='flex flex-row mt-2 pr-5 text-green-600'>
                     <CheckCircleIcon className='h-5 mt-0.5 mr-2 font-green' />
                     User added</div>
                   }
