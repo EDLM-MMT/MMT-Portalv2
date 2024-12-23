@@ -19,7 +19,7 @@ export default function Announcements({ title, content, className }) {
         {({ open }) => (
             <div className='hover:bg-gray-200 hover:rounded-lg'>
                 <Disclosure.Button className={'flex flex-row rounded-lg justify-between bg-purple bg-opacity-30 text-purple text-left w-full p-5 font-medium border border-gray-300 hover:opacity-90 hover:shadow'}>
-                    <SpeakerphoneIcon className='h-5' /> <div className='flex justify-start'>Notifications ({counter})</div>
+                <div className='flex justify-start'> <SpeakerphoneIcon className='h-5 mr-4' /> Notifications ({counter})</div>
                     <ChevronDownIcon className={`flex w-6 h-6 justify-end ${open ? "transform rotate-180" : ""} `} />
                 </Disclosure.Button>
 
