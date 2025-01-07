@@ -19,8 +19,6 @@ export default function ModernMilitaryTranscript() {
   const [openModal, setOpenModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
 
-  setConfirmModal
-  Modal
   return (
     <DefaultLayout>
       <Head>
@@ -50,8 +48,6 @@ export default function ModernMilitaryTranscript() {
 
               {/* <Button onClick={() => setOpenModal(true)}>Toggle modal</Button> */}
 
-
-
                 <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Share Official Transcript"} route={"/talentFinder"} 
                 icon={<>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -70,10 +66,10 @@ export default function ModernMilitaryTranscript() {
                                 <Radio id="AI" name="sendType" value="AI" defaultChecked />
                                 <Label htmlFor="AI">Academic Institutions</Label>
                             </div>
-                            <div className="flex items-center gap-2">
+                            {/* <div className="flex items-center gap-2">
                                 <Radio id="ESO" name="sendType" value="ESO" />
                                 <Label htmlFor="ESO">Educational Service Officers (ESOs)/Counselors</Label>
-                            </div>
+                            </div> */}
                         </div>
                         <Dropdown label="" placement='bottom' dismissOnClick={false} renderTrigger={() => <div className='flex flex-row justify-between border rounded p-2 bg-gray-100 text-sm'>
                             Select an Institution
@@ -109,7 +105,7 @@ export default function ModernMilitaryTranscript() {
                     </Modal.Body>
                     <Modal.Footer>
                     
-                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Share</Button>
+                    <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(false) }}>Close</Button>
 
                     </Modal.Footer>
                 </Modal>

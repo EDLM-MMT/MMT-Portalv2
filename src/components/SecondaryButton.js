@@ -8,7 +8,7 @@ export default function SecondaryButton({ onClick, id, children }) {
                       
         <button
             type="button"
-            className="p-2 pt-2.5 bg-gray-100 transition-all ease-in duration-75 rounded-md hover:bg-opacity-50 border-2 border-white text-sm"
+            className="p-1.5 mt-0.25 bg-gray-100 transition-all ease-in duration-75 rounded-md hover:bg-opacity-50 border-2 border-white text-sm"
             onClick={onClick}
             id={id}
         >
