@@ -3,7 +3,7 @@
 import '@testing-library/jest-dom'
 import { AuthContext, AuthProvider, useAuth } from '@/contexts/AuthContext';
 import { render, screen } from '@testing-library/react';
-import { act } from 'react';
+import { act } from '@testing-library/react';
 
 // import mockAxios from 'jest-mock-axios';
 
