@@ -85,7 +85,7 @@ describe('Auth Context', () => {
       getByText('Register').click();
     });
 
-    // expect(getByTestId('user-data')).toHaveTextContent('{"id":1,"name":"Test Test"}');
+    expect(getByTestId('user-data')).toHaveTextContent('{"id":1,"name":"Test Test"}');
   })
 
   it('logs in a user', () => {
@@ -122,8 +122,8 @@ describe('Auth Context', () => {
 
       return (
         <div>
-          <button onClick={() => { login(testUser);}}>Check User</button>
-          {/* <button onClick={() => { login(testUser); checkUserLoggedIn(); }}>Check User</button> */}
+          {/* <button onClick={() => { login(testUser);}}>Check User</button> */}
+          <button onClick={() => { login(testUser); checkUserLoggedIn(); }}>Check User</button>
           <div data-testid="user-data">{JSON.stringify(user)}</div>
         </div>
       );
