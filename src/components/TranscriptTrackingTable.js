@@ -4,22 +4,20 @@ export var users = [];
 
 export function TranscriptTrackingTable() {
 
-
     const data = [
         {requestedBy: 'Institution', sentTo: "Purdue University School of Aeronautics and Astronautics", sendDate: "29 MAR 2024, 22:00:00 ", status: "Downloaded", downloadDate: "30 MAR 2024, 9:00:00", downloadBy: "Registrar", action: "Cancel"},
         {requestedBy: 'Self', sentTo: "Bunker Hill Community College", sendDate: "6 SEP 2006, 10:00:00", status: "Downloaded", downloadDate: "7 SEP 2006, 8:00:00", downloadBy: "Military Enrollment Technician", action: "Cancel"},
         
     ];
 
-
-    function updateUsers(event) {
-        var index = users.indexOf(event.target.name)
-        if (index >= 0){
-            users.splice(index,1);
-        }else{
-            users.push(event.target.name);
-        }
-    }
+    // function updateUsers(event) {
+    //     var index = users.indexOf(event.target.name)
+    //     if (index >= 0){
+    //         users.splice(index,1);
+    //     }else{
+    //         users.push(event.target.name);
+    //     }
+    // }
 
   return (
     <>
