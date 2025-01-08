@@ -22,78 +22,30 @@ afterEach(() => {
 });
 
 describe('Request Military Transcript AI Page', () => {
-  it('should render the button', () => {
-    useAuthenticatedUser();
-    const { getByText } = renderer();
-    
-    expect(getByText('Request Military Transcript')).toBeInTheDocument();
+  it('should render the page', () => {
+      useAuthenticatedUser();
+      const { getByText, getByPlaceholderText, getByTestId } = renderer();
+      
+      expect(getByText('Welcome Emma Hobert!')).toBeInTheDocument();
+
+      fireEvent.click(getByText('Request Military Transcript'))
+
+      expect(getByPlaceholderText('First Name')).toBeInTheDocument();
+      fireEvent.change(getByPlaceholderText('First Name'), {
+        target: { value: 'John' },
+      });
+      fireEvent.change(getByPlaceholderText('Last Name'), {
+        target: { value: 'Doe' },
+      });
+      fireEvent.change(getByPlaceholderText("MM/DD/YYYY"), {
+        target: { value: '01/01/1990' },
+      });
+      fireEvent.change(getByPlaceholderText('####'), {
+        target: { value: '1111' },
+      });
+
+      fireEvent.click(getByTestId('requestTranscriptButton'))
+      expect(getByText('Your transcript request have been successfully delivered!')).toBeInTheDocument();
+      
   });
-
-//   it('should open a modal for creating a saved search when the button is clicked', () => {
-//     useAuthenticatedUser();
-//     useMockCreateSaveSearch();
-//     const { getByText, getByPlaceholderText } = renderer();
-//     act(() => {
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     expect(getByPlaceholderText('Query Name')).toBeInTheDocument();
-//     expect(getByText('Request Military Transcript')).toBeInTheDocument();
-//   });
-
-//   it('should call the api when save is clicked', () => {
-//     useAuthenticatedUser();
-//     useMockCreateSaveSearch();
-//     const { getByText, getByPlaceholderText } = renderer();
-//     act(() => {2
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     act(() => {
-//       fireEvent.change(getByPlaceholderText('Query Name'), {
-//         target: { value: 'test' },
-//       });
-//     });
-//     act(() => {
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     expect(createSaveSearchMockFn).toHaveBeenCalled();
-//   });
-
-//   it('should call the api when save is clicked and block special chars', () => {
-//     useAuthenticatedUser();
-//     useMockCreateSaveSearch();
-//     const { getByText, getByPlaceholderText } = renderer();
-//     act(() => {2
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     act(() => {
-//       fireEvent.keyPress(getByPlaceholderText('Query Name'), {
-//         key: ";", code: 186, charCode: 186 
-//       });
-//     });
-//     act(() => {
-//       fireEvent.keyPress(getByPlaceholderText('Query Name'), {
-//         key: "1", code: 49, charCode: 49
-//       });
-//     });
-//     act(() => {
-//       fireEvent.change(getByPlaceholderText('Query Name'), {
-//         target: { value: 'test' },
-//       });
-//     });
-//     act(() => {
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     expect(createSaveSearchMockFn).toHaveBeenCalled();
-//   });
-
-//   it('should not call the api when there is no query to save', () => {
-//     useAuthenticatedUser();
-//     useMockCreateSaveSearch();
-//     const { getByText, getByPlaceholderText } = renderer();
-//     act(() => {
-//       fireEvent.click(getByText('Request Military Transcript'));
-//     });
-//     expect(createSaveSearchMockFn).not.toHaveBeenCalled();
-//   });
 });
-

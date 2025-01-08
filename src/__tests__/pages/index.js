@@ -27,6 +27,5 @@ describe('Home Page', () => {
 
     fireEvent.click(getByText('Learn More'))
 
-
   });
 });

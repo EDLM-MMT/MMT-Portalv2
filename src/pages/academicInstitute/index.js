@@ -78,12 +78,12 @@ export default function ModernMilitaryTranscriptAIPage() {
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
-                      <InputField value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
+                      <InputField placeholder='First Name' value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
                     </div>
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
-                      <InputField value={lastName} onChange={(event) => setLastName(event.target.value)} />
+                      <InputField placeholder='Last Name' value={lastName} onChange={(event) => setLastName(event.target.value)} />
                     </div><div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="DOB" className='w-1/3'>Date of Birth</Label>
@@ -106,7 +106,7 @@ export default function ModernMilitaryTranscriptAIPage() {
               <Modal.Footer className='flex flex-col'>
 
                 {/* <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Request Military Transcript</Button> */}
-                <Button className='w-full' onClick={() => { 
+                <Button className='w-full' testid="requestTranscriptButton" onClick={() => { 
                     //setOpenModal(false); 
                     // API Call 
                     setDisplayContent(true);

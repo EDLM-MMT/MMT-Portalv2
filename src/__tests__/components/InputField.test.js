@@ -17,7 +17,6 @@ describe ('InputField component test', () => {
         const screen = renderer();
         expect(screen.getByPlaceholderText('Input Field'));
 
-
         act(() => {
             fireEvent.keyPress(screen.getByPlaceholderText('Input Field'), {
               charCode: '13',
