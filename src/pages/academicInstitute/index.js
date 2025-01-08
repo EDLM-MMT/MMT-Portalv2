@@ -13,12 +13,12 @@ import Button from '@/components/Button';
 import { NewTranscriptTable } from '@/components/NewTranscriptTable';
 import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
 import SearchBar from '@/components/SearchBar';
-import useField from '@/hooks/useField';
+import  useField  from '@/hooks/useField';
 import InputField from '@/components/InputField';
 import { CheckCircleIcon } from '@heroicons/react/solid';
 
 
-export default function ModernMilitaryTranscript() {
+export default function ModernMilitaryTranscriptAIPage() {
   const router = useRouter();
   const { user } = useAuth();
 

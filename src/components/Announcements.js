@@ -3,7 +3,7 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { useState } from 'react';
 
 
-export default function Announcements({ title, content, className }) {
+export default function Announcements({ content, className }) {
 
     const [isOpen, setIsOpen] = useState(true);
     const [counter, setCounter] = useState(content.length);
@@ -20,7 +20,7 @@ export default function Announcements({ title, content, className }) {
             <div className='hover:bg-gray-200 hover:rounded-lg'>
                 <Disclosure.Button className={'flex flex-row rounded-lg justify-between bg-purple bg-opacity-30 text-purple text-left w-full p-5 font-medium border border-gray-300 hover:opacity-90 hover:shadow'}>
                 <div className='flex justify-start'> <SpeakerphoneIcon className='h-5 mr-4' /> Notifications ({counter})</div>
-                    <ChevronDownIcon className={`flex w-6 h-6 justify-end ${open ? "transform rotate-180" : ""} `} />
+                    <ChevronDownIcon data-testid="testId" className={`flex w-6 h-6 justify-end ${open ? "transform rotate-180" : ""} `} />
                 </Disclosure.Button>
 
                 <Transition
@@ -52,8 +52,8 @@ export default function Announcements({ title, content, className }) {
                                                     {data.date} at {data.time}
                                                 </div>
                                                 <div className="">
-                                                    <button data-collapse-toggle="banner" type="button" onClick={handleClick} className="text-gray-400 hover:bg-gray-200 hover:text-black-900 rounded-lg text-sm pt-1 dark:hover:bg-gray-600 dark:hover:text-white">
-                                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                                                    <button data-collapse-toggle="banner" type="button" onClick={handleClick} className="text-gray-400 hover:bg-gray-200 hover:text-black-900 rounded-lg text-sm pt-1 dark:hover:bg-gray-600 dark:hover:text-white" >
+                                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" data-testid="testId" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                                                     </button>
                                                 </div>
                                             </div>

@@ -1,7 +1,6 @@
 "use client";
 
-import { axiosxapiInstance } from "@/config/axiosConfig";
-import { xapiUsers } from "@/config/endpoints";
+
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
 import { Checkbox, Table, Label, Progress, TableCell, Pagination, Tabs } from "flowbite-react";
 import { useEffect, useState } from "react";
@@ -26,17 +25,6 @@ export function AllTranscriptTable() {
         { firstName: 'Themba', lastName: "Eurja", dob: "30 JUN 1991", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
         { firstName: 'Anastasia', lastName: "Nguyen", dob: "20 JUL 1982", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
     ];
-
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
 
 
     function updateUsers(event) {

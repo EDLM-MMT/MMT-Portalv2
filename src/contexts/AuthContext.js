@@ -1,7 +1,7 @@
 import { axiosInstance } from '@/config/axiosConfig';
 import { backendHost } from '../config/endpoints';
-import { createContext, useContext, useEffect, useState } from 'react';
-import { useLocalStorage } from '../hooks/useStorage';
+import { createContext, useContext, useEffect, useState, useMemo } from 'react';
+import { useLocalStorage, useSessionStorage } from "../hooks/useStorage";
 
 export const AuthContext = createContext({});
 
@@ -10,7 +10,7 @@ export function useAuth() {
 }
 export function AuthProvider({ children }) {
   const [error, setError] = useState(null);
-  const [user, setLocal, removeLocal] = useLocalStorage('user', null);
+  const [user, setLocal, removeLocal] = useSessionStorage('user', null);
 
   useEffect(() => checkUserLoggedIn(), []);
 
@@ -54,8 +54,9 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const logindetails = useMemo(() => ({ user, error, register, login, logout }),[]);
   return (
-    <AuthContext.Provider value={{ user, error, register, login, logout }}>
+    <AuthContext.Provider value={logindetails}>
       {children}
     </AuthContext.Provider>
   );

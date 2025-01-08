@@ -15,17 +15,6 @@ export function AdminUsersTable() {
         { firstName: 'Linh', lastName: "Tran", email: "linh.tran@mmt.edu", dateAdded: "December 2, 2024 1:45 PM" },
     ];
 
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
-
 
     function updateUsers(event) {
         var index = users.indexOf(event.target.name)

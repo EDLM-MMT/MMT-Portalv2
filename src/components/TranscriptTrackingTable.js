@@ -1,15 +1,9 @@
 "use client";
 
-import { axiosxapiInstance } from "@/config/axiosConfig";
-import { xapiUsers } from "@/config/endpoints";
-import { Checkbox, Label, Progress } from "flowbite-react";
-import { useEffect, useState } from "react";
-
 export var users = [];
 
 export function TranscriptTrackingTable() {
 
-    // const [talentData, setTalentData] = useState(null);
 
     const data = [
         {requestedBy: 'Institution', sentTo: "Purdue University School of Aeronautics and Astronautics", sendDate: "29 MAR 2024, 22:00:00 ", status: "Downloaded", downloadDate: "30 MAR 2024, 9:00:00", downloadBy: "Registrar", action: "Cancel"},
@@ -17,17 +11,6 @@ export function TranscriptTrackingTable() {
         
     ];
 
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
-    
 
     function updateUsers(event) {
         var index = users.indexOf(event.target.name)

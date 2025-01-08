@@ -1,9 +1,5 @@
 "use client";
 
-import { axiosxapiInstance } from "@/config/axiosConfig";
-import { xapiUsers } from "@/config/endpoints";
-import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
-import { Checkbox, Table, Label, Progress, TableCell, Pagination, Tabs } from "flowbite-react";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
@@ -33,16 +29,6 @@ export function AllUsersTable() {
         { firstName: 'Ember', lastName: "Muzuyka", email: "ember.muzuyka@mmt.edu", dateAdded: "December 2, 2024 1:45 PM"},
     ];
 
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
 
 
     function updateUsers(event) {
