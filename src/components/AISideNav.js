@@ -9,8 +9,8 @@ import { DocumentTextIcon, UserGroupIcon, QuestionMarkCircleIcon} from "@heroico
 
 
 export default function AcademicInstituteSideNav() {
-    const [isOpen, setIsOpen] = useState(true);
-    const handleClose = () => setIsOpen(false);
+    // const [isOpen, setIsOpen] = useState(true);
+    // const handleClose = () => setIsOpen(false);
                   
     return (
       <>

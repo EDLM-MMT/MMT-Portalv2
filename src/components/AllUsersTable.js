@@ -5,15 +5,13 @@ import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
 import { PlusIcon } from "@heroicons/react/outline";
 
-
-
 export var users = [];
 
 export function AllUsersTable() {
 
     // const [talentData, setTalentData] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const onPageChange = (page) => setCurrentPage(page);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const onPageChange = (page) => setCurrentPage(page);
 
 
     const data = [
@@ -29,16 +27,14 @@ export function AllUsersTable() {
         { firstName: 'Ember', lastName: "Muzuyka", email: "ember.muzuyka@mmt.edu", dateAdded: "December 2, 2024 1:45 PM"},
     ];
 
-
-
-    function updateUsers(event) {
-        var index = users.indexOf(event.target.name)
-        if (index >= 0) {
-            users.splice(index, 1);
-        } else {
-            users.push(event.target.name);
-        }
-    }
+    // function updateUsers(event) {
+    //     var index = users.indexOf(event.target.name)
+    //     if (index >= 0) {
+    //         users.splice(index, 1);
+    //     } else {
+    //         users.push(event.target.name);
+    //     }
+    // }
 
     return (
         <>

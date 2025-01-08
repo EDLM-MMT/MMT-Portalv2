@@ -7,8 +7,8 @@ export var users = [];
 export function AdminUsersTable() {
 
     // const [talentData, setTalentData] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const onPageChange = (page) => setCurrentPage(page);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const onPageChange = (page) => setCurrentPage(page);
 
 
     const data = [
@@ -16,14 +16,14 @@ export function AdminUsersTable() {
     ];
 
 
-    function updateUsers(event) {
-        var index = users.indexOf(event.target.name)
-        if (index >= 0) {
-            users.splice(index, 1);
-        } else {
-            users.push(event.target.name);
-        }
-    }
+    // function updateUsers(event) {
+    //     var index = users.indexOf(event.target.name)
+    //     if (index >= 0) {
+    //         users.splice(index, 1);
+    //     } else {
+    //         users.push(event.target.name);
+    //     }
+    // }
 
     return (
         <>
