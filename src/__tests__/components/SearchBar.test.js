@@ -63,6 +63,10 @@ describe('SearchBar', () => {
       />
     );
 
+    fireEvent.change(screen.getByPlaceholderText('Search'), {
+      target: { value: '?' },
+    });
+
     act(() => {
       fireEvent.keyPress(screen.getByPlaceholderText('Search'), {});
     });
