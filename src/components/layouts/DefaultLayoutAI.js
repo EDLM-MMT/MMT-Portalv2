@@ -1,12 +1,10 @@
-// import { useConfig } from '../../hooks/useConfig';
-import SideNav from '../SideNav';
+import AcademicInstituteSideNav from '../AISideNav';
 
-export default function DefaultLayout({ children, footerLocation }) {
-  // useConfig();
+export default function DefaultLayoutAI({ children, footerLocation }) {
   return (
     <div className={'flex relative custom-scroll min-h-screen'}>
       {/* <SideNav /> */}
-      <SideNav />
+      <AcademicInstituteSideNav />
       <div className='w-5/6 max-w-7xl mx-auto pr-8 sm:pr-6 lg:pr-10'>{children}</div>
       {/* <Footer location={footerLocation} /> */}
     </div>

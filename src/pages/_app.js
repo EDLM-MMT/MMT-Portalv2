@@ -1,16 +1,40 @@
-import '../styles/globals.css'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import Head from 'next/head'
+import React, { useState } from 'react';
 
-function MyApp({ Component, pageProps, title = 'Enterprise Transcript' }) {
+// contexts
+import { AuthProvider } from '../contexts/AuthContext';
+
+// styles
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }) {
+  // to avoid sharing results from other users.
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            refetchOnWindowFocus: false,
+            retry: false,
+          },
+        },
+      })
+  );
+
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/logo.png" />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps['dehydratedState']}>
+          <Head>
+            <title>MMT</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Component {...pageProps} />
+          <ReactQueryDevtools />
+        </Hydrate>
+      </QueryClientProvider>
+    </AuthProvider>
+  );
 }
-
-export default MyApp

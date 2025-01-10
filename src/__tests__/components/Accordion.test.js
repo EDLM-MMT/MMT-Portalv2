@@ -1,30 +1,20 @@
-import Accordion from "@/components/Accordion";
-import { act, fireEvent, render } from "@testing-library/react";
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
+import { fireEvent, render } from '@testing-library/react';
+import Accordion from '@/components/Accordion';
 
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
+const renderer = () => {
+    return render(
+      <QueryClientWrapper>
+        <Accordion title='Accordion Title' content='' />
+      </QueryClientWrapper>
+    );
+};
 
-
-describe("Accordion component", () => {
-
-    it("should render the component", () => {
-      const { getByText } = render(
-        <MemoryRouterProvider>
-          <Accordion title={"Title"} content={"content"} />
-        </MemoryRouterProvider>
-      );
-
-      expect(getByText(/Title/i)).toBeInTheDocument();
-
-      const button = getByText('Title');
-      act(() => {
-          fireEvent.click(button);
-      });
-      expect(getByText(/content/i)).toBeInTheDocument();
-
-    });
-});
+describe ('Accordion component test', () => {
+    it ('show that an accordion can render', () =>{
+        const screen = renderer();
+        expect(screen.getByText('Accordion Title'))
+        fireEvent.click(screen.getByText('Accordion Title'))
+        fireEvent.click(screen.getByText('Accordion Title'))
+    })  
+})

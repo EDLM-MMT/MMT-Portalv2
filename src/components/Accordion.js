@@ -1,18 +1,16 @@
-import { Disclosure, Transition } from '@headlessui/react';
 import {ChevronDownIcon} from '@heroicons/react/solid';
-import { twMerge } from "tailwind-merge";
+import { Disclosure, Transition } from '@headlessui/react';
+
+// import { twMerge } from "tailwind-merge";
 
 
-export default function Accordion({ title, content, className }) {
+export default function Accordion({ title, content }) {
 
-    const classes = twMerge(`flex items-center rounded-lg justify-between text-left w-full p-5 font-medium border border-gray-300 hover:opacity-90 hover:shadow 
-        ${className ?? ""}
-    `);
     return (
         <Disclosure>
         {({ open }) => (
-            <div className='p-2 hover:bg-gray-200 hover:rounded-lg'>
-                <Disclosure.Button className={classes}>
+            <div className='hover:bg-gray-200 hover:rounded-lg'>
+                <Disclosure.Button className={'flex items-center rounded-lg justify-between text-left w-full p-5 font-medium border border-gray-300 hover:opacity-90 hover:shadow'}>
                     {title}
                     <ChevronDownIcon className={`w-6 h-6 ${open ? "transform rotate-180" : ""} `} />
                 </Disclosure.Button>
