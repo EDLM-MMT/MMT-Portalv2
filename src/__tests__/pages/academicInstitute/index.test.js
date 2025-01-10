@@ -28,6 +28,14 @@ describe('Request Military Transcript AI Page', () => {
       
       expect(getByText('Welcome Emma Hobert!')).toBeInTheDocument();
 
+      fireEvent.click(getByText('Search'));
+
+      expect(getByText('Search')).toBeInTheDocument();
+      fireEvent.change(getByPlaceholderText('Search'), {
+        target: { value: 'John' },
+      });
+      fireEvent.click(getByText('Search'));
+
       fireEvent.click(getByText('Request Military Transcript'))
 
       expect(getByPlaceholderText('First Name')).toBeInTheDocument();

@@ -26,6 +26,14 @@ describe('UserManagement', () => {
       useAuthenticatedUser();
       const { getByText, getByPlaceholderText } = renderer();
       
+      fireEvent.click(getByText('Search'));
+
+      expect(getByText('Search')).toBeInTheDocument();
+      fireEvent.change(getByPlaceholderText('Search'), {
+        target: { value: 'John' },
+      });
+      fireEvent.click(getByText('Search'));
+
       fireEvent.click(getByText('Add New User'));
 
       expect(getByPlaceholderText('First Name')).toBeInTheDocument();
