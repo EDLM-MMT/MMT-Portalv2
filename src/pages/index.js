@@ -1,4 +1,3 @@
-import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Image from 'next/image';
@@ -14,7 +13,6 @@ import SecondaryButton from '@/components/SecondaryButton';
 
 export default function Home() {
   const router = useRouter();
-  const { user } = useAuth();
 
   const data = [
     {date:"December 20, 2024", time: "12:44 PM EST", announcement: "MMT is temporarily down. Service will be restored as soon as possible. Current estimate is by the end of the day.", type: "persist"},

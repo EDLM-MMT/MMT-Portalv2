@@ -5,7 +5,6 @@ import { Badge, Tabs } from "flowbite-react";
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Checkbox, Label, Modal } from "flowbite-react";
 import { NewTranscriptTable } from '@/components/NewTranscriptTable';
-import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/router';
 import Button from '@/components/Button';
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
@@ -19,7 +18,6 @@ import useField from '@/hooks/useField';
 
 export default function UserManagement() {
   const router = useRouter();
-  const { user } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);

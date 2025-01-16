@@ -1,7 +1,5 @@
 import { Checkbox, Dropdown, Label, Modal, Radio } from 'flowbite-react';
 import { TranscriptTrackingTable } from '@/components/TranscriptTrackingTable';
-import { useAuth } from '@/contexts/AuthContext';
-import { useRouter } from 'next/router';
 import Button from '@/components/Button';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
@@ -13,8 +11,6 @@ import ShareTranscriptModal from '@/components/ShareTranscriptModal';
 import headerImage from '@/public/Abstact1.png';
 
 export default function ModernMilitaryTranscript() {
-  const router = useRouter();
-  const { user } = useAuth();
 
   const [openModal, setOpenModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
