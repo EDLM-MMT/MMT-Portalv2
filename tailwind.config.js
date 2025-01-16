@@ -1,27 +1,27 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  style: {
-    postcss: {
-      plugins: [require("tailwindcss"), require("autoprefixer")],
-    },
-  },
-  jit: false,
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+    'node_modules/flowbite-react/lib/esm/**/*.js',
+    "./node_modules/flowbite/**/*.js",
+    "./src/**/*.{html,js}"
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       colors: {
-        dod: {
-          100: '#8BC3E1',
-          300: '#2492C9',
-          500: '#127CB1',
-          700: '#006699',
-          900: '#083DF8',
-        },
+        'dark-blue': '#010E42',
+        'purple': '#562990',
+        'blue-custom':'#135F9B',
+        'gray-custom': '#6B7280',
+        'black-10': 'rgba(17, 24, 39, .1)',
+        'red': '#902929',
+        'light-purple': '#F1F0F1',
       },
     },
-    plugins: [],
   },
-};
+  plugins: [
+    require('flowbite/plugin')
+  ],
+}
