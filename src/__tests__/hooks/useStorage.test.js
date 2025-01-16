@@ -1,5 +1,5 @@
+import { act, renderHook } from '@testing-library/react';
 import { useLocalStorage, useSessionStorage } from '@/hooks/useStorage';
-import { renderHook, act } from '@testing-library/react';
 
 describe('useStorage', () => {
   beforeEach(() => {

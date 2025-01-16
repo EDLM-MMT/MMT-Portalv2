@@ -1,11 +1,11 @@
-import { useState } from "react";
+import {  } from "@heroicons/react/solid";
+import { DocumentTextIcon, QuestionMarkCircleIcon, UserGroupIcon} from "@heroicons/react/outline";
 import {
   HiSearch,
 } from "react-icons/hi";
-import headerImage from '@/public/ADLLogo.png';
+import { useState } from "react";
 import Image from 'next/image';
-import {  } from "@heroicons/react/solid";
-import { DocumentTextIcon, UserGroupIcon, QuestionMarkCircleIcon} from "@heroicons/react/outline";
+import headerImage from '@/public/ADLLogo.png';
 
 
 export default function AcademicInstituteSideNav() {
