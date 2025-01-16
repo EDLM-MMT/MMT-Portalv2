@@ -1,5 +1,5 @@
 {
-  "name": "edlm-ui",
+  "name": "mmt-portal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.2",
     "next": "^14.2.5",
+    "nth-check": "^2.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-query": "^3.26.0",
@@ -23,7 +24,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "test:unit": "jest --coverage --maxWorkers=1",
     "coverage": "jest --watchAll --coverage --verbose --noStackTrace --silent --maxWorkers=50%"
   },
   "eslintConfig": {
