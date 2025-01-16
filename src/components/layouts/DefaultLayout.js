@@ -1,8 +1,6 @@
-// import { useConfig } from '../../hooks/useConfig';
 import SideNav from '../SideNav';
 
 export default function DefaultLayout({ children, footerLocation }) {
-  // useConfig();
   return (
     <div className={'flex relative custom-scroll min-h-screen'}>
       {/* <SideNav /> */}

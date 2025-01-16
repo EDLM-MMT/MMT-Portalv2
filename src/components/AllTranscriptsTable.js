@@ -13,10 +13,6 @@ export var users = [];
 
 export function AllTranscriptTable() {
 
-    // const [talentData, setTalentData] = useState(null);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const onPageChange = (page) => setCurrentPage(page);
-
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", dob: "9 SEP 1991", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Service Member" },

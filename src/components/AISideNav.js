@@ -9,8 +9,6 @@ import headerImage from '@/public/ADLLogo.png';
 
 
 export default function AcademicInstituteSideNav() {
-    // const [isOpen, setIsOpen] = useState(true);
-    // const handleClose = () => setIsOpen(false);
                   
     return (
       <>

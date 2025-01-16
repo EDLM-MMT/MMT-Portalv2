@@ -9,10 +9,6 @@ export var users = [];
 
 export function AllUsersTable() {
 
-    // const [talentData, setTalentData] = useState(null);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const onPageChange = (page) => setCurrentPage(page);
-
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", email: "linh.tran@mmt.edu", dateAdded: "December 2, 2024 1:45 PM" },

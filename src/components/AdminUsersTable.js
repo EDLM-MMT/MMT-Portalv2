@@ -6,9 +6,6 @@ import GraySecondaryButton from "./GraySecondaryButton";
 export var users = [];
 export function AdminUsersTable() {
 
-    // const [talentData, setTalentData] = useState(null);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const onPageChange = (page) => setCurrentPage(page);
 
 
     const data = [

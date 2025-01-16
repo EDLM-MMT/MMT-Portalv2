@@ -6,10 +6,6 @@ import cardImage from '@/public/card-header.png'
 export default function MyUpdatesSections({ title, description, icon, badgelabel, sentDate, date }){
     const router = useRouter();
 
-    // const handleClick=(e)=>{
-    //     e.preventDefault();
-    //     router.push(route)
-    // }
     return(
         <div>
             <div className='flex flex-row'>

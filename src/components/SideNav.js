@@ -7,8 +7,6 @@ import headerImage from '@/public/ADLLogo.png';
 
 
 export default function SideNav() {
-    // const [isOpen, setIsOpen] = useState(true);
-    // const handleClose = () => setIsOpen(false);
                   
     return (
       <>
