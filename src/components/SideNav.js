@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 
 export default function SideNav() {
-    const [isOpen, setIsOpen] = useState(true);
-    const handleClose = () => setIsOpen(false);
+    // const [isOpen, setIsOpen] = useState(true);
+    // const handleClose = () => setIsOpen(false);
                   
     return (
       <>

@@ -1,9 +1,6 @@
 "use client";
 
-import { axiosxapiInstance } from "@/config/axiosConfig";
-import { xapiUsers } from "@/config/endpoints";
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
-import { Checkbox, Table, Label, Progress, TableCell, Pagination, Tabs } from "flowbite-react";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
@@ -13,11 +10,9 @@ import GraySecondaryButton from "./GraySecondaryButton";
 export var users = [];
 
 export function NewTranscriptTable() {
-
     // const [talentData, setTalentData] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const onPageChange = (page) => setCurrentPage(page);
-
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const onPageChange = (page) => setCurrentPage(page);
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", dob: "9 SEP 1991", status: "New", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Service Member" },
@@ -27,26 +22,14 @@ export function NewTranscriptTable() {
         { firstName: 'Anastasia', lastName: "Nguyen", dob: "20 JUL 1982", status: "New", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
     ];
 
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
-
-
-    function updateUsers(event) {
-        var index = users.indexOf(event.target.name)
-        if (index >= 0) {
-            users.splice(index, 1);
-        } else {
-            users.push(event.target.name);
-        }
-    }
+    // function updateUsers(event) {
+    //     var index = users.indexOf(event.target.name)
+    //     if (index >= 0) {
+    //         users.splice(index, 1);
+    //     } else {
+    //         users.push(event.target.name);
+    //     }
+    // }
 
     return (
         <>

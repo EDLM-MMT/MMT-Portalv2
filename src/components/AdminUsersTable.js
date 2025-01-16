@@ -7,34 +7,23 @@ export var users = [];
 export function AdminUsersTable() {
 
     // const [talentData, setTalentData] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const onPageChange = (page) => setCurrentPage(page);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const onPageChange = (page) => setCurrentPage(page);
 
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", email: "linh.tran@mmt.edu", dateAdded: "December 2, 2024 1:45 PM" },
     ];
 
-    // useEffect(() => {
-    //     axiosxapiInstance
-    //     .get(xapiUsers)
-    //     .then((res) => {
-    //         setTalentData(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }, []);
 
-
-    function updateUsers(event) {
-        var index = users.indexOf(event.target.name)
-        if (index >= 0) {
-            users.splice(index, 1);
-        } else {
-            users.push(event.target.name);
-        }
-    }
+    // function updateUsers(event) {
+    //     var index = users.indexOf(event.target.name)
+    //     if (index >= 0) {
+    //         users.splice(index, 1);
+    //     } else {
+    //         users.push(event.target.name);
+    //     }
+    // }
 
     return (
         <>

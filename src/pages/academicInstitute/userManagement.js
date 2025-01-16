@@ -17,7 +17,7 @@ import InputField from '@/components/InputField';
 import { CheckCircleIcon } from '@heroicons/react/solid';
 
 
-export default function ModernMilitaryTranscript() {
+export default function UserManagement() {
   const router = useRouter();
   const { user } = useAuth();
 
@@ -121,20 +121,20 @@ export default function ModernMilitaryTranscript() {
                       <div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
-                        <InputField value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
+                        <InputField placeholder="First Name" value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
                       </div>
                       <div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
-                        <InputField value={lastName} onChange={(event) => setLastName(event.target.value)}/>
+                        <InputField placeholder="Last Name" value={lastName} onChange={(event) => setLastName(event.target.value)}/>
                       </div><div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Email" className='w-1/3'>Email</Label>
-                        <InputField value={email} onChange={(event) => setEmail(event.target.value)} placeholder={""}/>
+                        <InputField placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
                       </div><div className="flex items-center gap-2">
                         {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                         <Label htmlFor="Role" className='w-1/3'>Role</Label>
-                        <InputField value={role} onChange={(event) => setRole(event.target.value)} placeholder={""} />
+                        <InputField placeholder="Role" value={role} onChange={(event) => setRole(event.target.value)} />
                       </div>
                     </div>
                   </div>
