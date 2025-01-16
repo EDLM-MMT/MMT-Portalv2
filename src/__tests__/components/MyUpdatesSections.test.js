@@ -1,5 +1,5 @@
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import MyUpdatesSections from '@/components/MyUpdatesSections';
 
 const renderer = () => {

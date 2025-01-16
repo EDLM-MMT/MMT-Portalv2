@@ -6,11 +6,12 @@ import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import {
   useAuthenticatedUser,
+
 //   useMockConfig,
   useUnauthenticatedUser,
 } from '@/__mocks__/predefinedMocks';
-import mockRouter from 'next-router-mock';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
+import mockRouter from 'next-router-mock';
 
 const Wrapper = ({ children }) => {
   const queryClient = new QueryClient();

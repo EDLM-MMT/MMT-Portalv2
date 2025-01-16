@@ -1,5 +1,5 @@
-import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
+import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { render, screen } from '@testing-library/react';
 
 const renderer = () => {

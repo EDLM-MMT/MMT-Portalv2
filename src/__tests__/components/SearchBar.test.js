@@ -1,5 +1,5 @@
-import SearchBar from '@/components/SearchBar';
 import { act, fireEvent, render, screen } from '@testing-library/react';
+import SearchBar from '@/components/SearchBar';
 
 describe('SearchBar', () => {
   it('should render', () => {

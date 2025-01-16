@@ -1,21 +1,21 @@
+import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
+import { Badge, Checkbox, Dropdown, Label, Modal, Radio, Tabs } from "flowbite-react";
+import { CheckCircleIcon } from '@heroicons/react/solid';
+import { NewTranscriptTable } from '@/components/NewTranscriptTable';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/router';
+import Button from '@/components/Button';
+import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
+import GraySecondaryButton from '@/components/GraySecondaryButton';
 import Head from 'next/head'
 import Image from 'next/image';
-import React, { useState, useCallback } from 'react';
-import headerImage from '@/public/Abstact1.png';
-import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
-import SecondaryButton from '@/components/SecondaryButton';
-import GraySecondaryButton from '@/components/GraySecondaryButton';
-import { Dropdown, Label, Modal, Radio, Tabs, Badge, Checkbox } from "flowbite-react";
-import ShareTranscriptModal from '@/components/ShareTranscriptModal';
-import Button from '@/components/Button';
-import { NewTranscriptTable } from '@/components/NewTranscriptTable';
-import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
-import SearchBar from '@/components/SearchBar';
-import  useField  from '@/hooks/useField';
 import InputField from '@/components/InputField';
-import { CheckCircleIcon } from '@heroicons/react/solid';
+import React, { useCallback, useState } from 'react';
+import SearchBar from '@/components/SearchBar';
+import SecondaryButton from '@/components/SecondaryButton';
+import ShareTranscriptModal from '@/components/ShareTranscriptModal';
+import headerImage from '@/public/Abstact1.png';
+import  useField  from '@/hooks/useField';
 
 
 export default function ModernMilitaryTranscriptAIPage() {
@@ -131,8 +131,8 @@ export default function ModernMilitaryTranscriptAIPage() {
             </div> */}
 
         <div className='rounded-md p-4 shadow-lg focus:shadow-lg px-5 my-4 mr-4 bg-white'>
-          <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-            <div class="w-full md:w-1/2">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+            <div className="w-full md:w-1/2">
               <SearchBar
                 parameters={fields}
                 onReset={resetKey}
