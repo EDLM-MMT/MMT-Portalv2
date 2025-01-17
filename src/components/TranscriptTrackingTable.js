@@ -1,6 +1,6 @@
 "use client";
 
-export var users = [];
+export const users = [];
 
 export function TranscriptTrackingTable() {
 

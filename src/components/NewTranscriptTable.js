@@ -7,7 +7,7 @@ import GraySecondaryButton from "./GraySecondaryButton";
 
 
 
-export var users = [];
+export const users = [];
 
 export function NewTranscriptTable() {
 
@@ -19,14 +19,6 @@ export function NewTranscriptTable() {
         { firstName: 'Anastasia', lastName: "Nguyen", dob: "20 JUL 1982", status: "New", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
     ];
 
-    // function updateUsers(event) {
-    //     var index = users.indexOf(event.target.name)
-    //     if (index >= 0) {
-    //         users.splice(index, 1);
-    //     } else {
-    //         users.push(event.target.name);
-    //     }
-    // }
 
     return (
         <>

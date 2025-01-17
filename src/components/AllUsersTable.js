@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
 
-export var users = [];
+export const users = [];
 
 export function AllUsersTable() {
 
@@ -23,14 +23,6 @@ export function AllUsersTable() {
         { firstName: 'Ember', lastName: "Muzuyka", email: "ember.muzuyka@mmt.edu", dateAdded: "December 2, 2024 1:45 PM"},
     ];
 
-    // function updateUsers(event) {
-    //     var index = users.indexOf(event.target.name)
-    //     if (index >= 0) {
-    //         users.splice(index, 1);
-    //     } else {
-    //         users.push(event.target.name);
-    //     }
-    // }
 
     return (
         <>

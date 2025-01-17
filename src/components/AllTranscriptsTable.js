@@ -9,7 +9,7 @@ import GraySecondaryButton from "./GraySecondaryButton";
 
 
 
-export var users = [];
+export const users = [];
 
 export function AllTranscriptTable() {
 
@@ -23,14 +23,6 @@ export function AllTranscriptTable() {
     ];
 
 
-    // function updateUsers(event) {
-    //     var index = users.indexOf(event.target.name)
-    //     if (index >= 0) {
-    //         users.splice(index, 1);
-    //     } else {
-    //         users.push(event.target.name);
-    //     }
-    // }
 
     return (
         <>
