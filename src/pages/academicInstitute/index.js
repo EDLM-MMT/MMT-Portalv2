@@ -63,6 +63,8 @@ export default function ModernMilitaryTranscriptAIPage() {
             {openModal && <div 
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 onClick={openModal}
+                onKeyDown={openModal}
+                role='presentation'
               ></div>}
 
             <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}}>

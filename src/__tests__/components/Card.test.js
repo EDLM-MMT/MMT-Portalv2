@@ -5,7 +5,9 @@ import Card from '@/components/Card';
 const renderer = () => {
     return render(
       <QueryClientWrapper>
-        <Card title={"Card Title"} description={"Card desc"} buttonLabel="Button" children={<div>Test content</div>} image={"test.png"} route={"/"} />
+        <Card title={"Card Title"} description={"Card desc"} buttonLabel="Button" image={"test.png"} route={"/"}>
+          <div>Test content</div>
+        </Card>
       </QueryClientWrapper>
     );
 };

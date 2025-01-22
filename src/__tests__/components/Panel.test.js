@@ -5,7 +5,9 @@ import Panel from '@/components/Panel';
 const renderer = () => {
     return render(
       <QueryClientWrapper>
-        <Panel title={"Panel Title"} description={"Panel desc"} buttonLabel="Button" children={<div>Test content</div>} image={"test.png"} route={"/"} icon={<>icon</>}/>
+        <Panel title={"Panel Title"} description={"Panel desc"} buttonLabel="Button" image={"test.png"} route={"/"} icon={<>icon</>}>
+          <div>Test content</div>
+        </Panel>
       </QueryClientWrapper>
     );
 };

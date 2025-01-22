@@ -5,7 +5,9 @@ import SecondaryButton from '@/components/SecondaryButton';
 const renderer = () => {
     return render(
       <QueryClientWrapper>
-        <SecondaryButton onClick={null} id='id1' children='test' />
+        <SecondaryButton onClick={null} id='id1'>
+          test
+        </SecondaryButton>
       </QueryClientWrapper>
     );
 };

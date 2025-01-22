@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom'; 
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { fireEvent, render } from '@testing-library/react';
 import Accordion from '@/components/Accordion';
-import '@testing-library/jest-dom'; 
+
 
 const renderer = () => {
     return render(

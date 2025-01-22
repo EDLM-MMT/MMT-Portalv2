@@ -41,23 +41,24 @@ export default function Home() {
               <div className='pt-2 text-gray-600'>The bridge connecting your military journey with academic credits </div>
               <div className='pt-12 flex flex-row'>
                 <div>
-                  <Button onClick={()=>{router.push("/talentFinder")}} children={
-                  <div className='flex flex-row gap-2 w-full'> <p className='pt-0.5'>Learn More</p>
+                  <Button onClick={()=>{router.push("/talentFinder")}}>
+                    <div className='flex flex-row gap-2 w-full'> <p className='pt-0.5'>Learn More</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                      </svg>
+                    </div>
+                  </Button>
+
+                </div>
+                
+                <SecondaryButton>
+                  <div className='flex flex-row gap-2'>
+                    FAQs
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                   </div>
-                  }/>
-                </div>
-                
-                <SecondaryButton children={
-                  <div className='flex flex-row gap-2'>
-                  FAQs
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                  </svg>
-                  </div>
-                }/>
+                </SecondaryButton>
               </div>
             </div>
             <div className='max-h-36'>

@@ -5,7 +5,9 @@ import Button from '@/components/Button';
 const renderer = () => {
     return render(
       <QueryClientWrapper>
-        <Button onClick={null} id='id1' children='test' />
+        <Button onClick={null} id='id1'>
+          test
+        </Button>
       </QueryClientWrapper>
     );
 };

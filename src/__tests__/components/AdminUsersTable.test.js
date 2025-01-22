@@ -1,7 +1,7 @@
+import '@testing-library/jest-dom'; 
 import { AdminUsersTable } from '@/components/AdminUsersTable';
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'; 
 
 const renderer = () => {
   return render(

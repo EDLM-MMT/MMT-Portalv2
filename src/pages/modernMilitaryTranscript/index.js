@@ -80,7 +80,7 @@ export default function ModernMilitaryTranscript() {
                         </Dropdown>
                         <div className="flex items-center gap-2">
                           <Checkbox id="accept" />
-                          <Label htmlFor="accept">By clicking Share, you are authorizing this institution(s) to have access of your <a className='font-bold'>Official transcript </a> and PII. </Label>
+                          <Label htmlFor="accept">By clicking Share, you are authorizing this institution(s) to have access of your <a href="#/" className='font-bold'>Official transcript </a> and PII. </Label>
                         </div>
                     </div>
                     </Modal.Body>
@@ -96,7 +96,7 @@ export default function ModernMilitaryTranscript() {
                     <Modal.Body>
                     <div className="space-y-6">
                     <p className='font-bold'>Your transcript(s) have been successfully delivered! </p>
-                    <p className=''> You can track the transcript status on the <a className='text-purple'> Military Transcript</a>. </p>
+                    <p className=''> You can track the transcript status on the <a href="#/" className='text-purple'> Military Transcript</a>. </p>
                     </div>
                     </Modal.Body>
                     <Modal.Footer>

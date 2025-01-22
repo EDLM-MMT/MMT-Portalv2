@@ -10,8 +10,7 @@
     ],
     "rules": {
       "react-hooks/exhaustive-deps": "off",
-      "testing-library/prefer-screen-queries": "off",
-      "react/no-unescaped-entities": 0,
+      "@next/next/no-html-link-for-pages": "off",
       "sort-imports-es6-autofix/sort-imports-es6": [
         2,
         {

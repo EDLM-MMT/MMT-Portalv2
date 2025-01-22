@@ -74,11 +74,11 @@ export default function UserManagement() {
               <div id="actionsDropdown" className="hidden z-2 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="actionsDropdownButton">
                   <li>
-                    <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mass Edit</a>
+                    <a href="/#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mass Edit</a>
                   </li>
                 </ul>
                 <div className="py-1">
-                  <a href="#" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete all</a>
+                  <a href="/#" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete all</a>
                 </div>
               </div>
         
@@ -99,15 +99,17 @@ export default function UserManagement() {
             </div>
 
             <div className='flex justify-end'>
-              <Button onClick={() => setOpenModal(true)} children={
+              <Button onClick={() => setOpenModal(true)} >
                 <div className="flex flex-row">
                   <PlusIcon className="h-5 mr-2" />
                   Add New User
                 </div>
-              } />
+               </Button>
               {openModal && <div 
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 onClick={openModal}
+                onKeyDown={openModal}
+                role='presentation'
               ></div>}
               <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false)}}>
                 <Modal.Header>Add New User</Modal.Header>
