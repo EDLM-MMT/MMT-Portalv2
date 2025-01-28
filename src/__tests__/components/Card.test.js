@@ -1,3 +1,5 @@
+'use strict';
+
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { fireEvent, render } from '@testing-library/react';
 import Card from '@/components/Card';

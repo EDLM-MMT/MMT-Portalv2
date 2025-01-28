@@ -1,3 +1,5 @@
+'use strict';
+
 import '@testing-library/jest-dom'; 
 import { AdminUsersTable } from '@/components/AdminUsersTable';
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';

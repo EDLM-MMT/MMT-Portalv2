@@ -1,7 +1,7 @@
+'use strict';
+
 import { useRouter } from "next/router"
 import Image from 'next/image';
-import cardImage from '@/public/card-header.png'
-
 
 export default function Card({ title, description, buttonLabel, children, image, route }){
     const router = useRouter();

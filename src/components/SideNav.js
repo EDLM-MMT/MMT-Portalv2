@@ -1,7 +1,5 @@
-import {
-  HiSearch,
-} from "react-icons/hi";
-import { useState } from "react";
+'use strict';
+
 import Image from 'next/image';
 import headerImage from '@/public/ADLLogo.png';
 

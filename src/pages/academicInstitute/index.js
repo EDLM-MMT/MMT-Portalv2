@@ -1,3 +1,5 @@
+'use strict';
+
 import { AllTranscriptTable } from '@/components/AllTranscriptsTable';
 import { Badge, Checkbox, Dropdown, Label, Modal, Radio, Tabs } from "flowbite-react";
 import { CheckCircleIcon } from '@heroicons/react/solid';
@@ -7,14 +9,10 @@ import Button from '@/components/Button';
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
 import Head from 'next/head'
-import Image from 'next/image';
 import InputField from '@/components/InputField';
 import React, { useCallback, useState } from 'react';
 import SearchBar from '@/components/SearchBar';
-import SecondaryButton from '@/components/SecondaryButton';
-import ShareTranscriptModal from '@/components/ShareTranscriptModal';
-import headerImage from '@/public/Abstact1.png';
-import  useField  from '@/hooks/useField';
+import useField  from '@/hooks/useField';
 
 
 export default function ModernMilitaryTranscriptAIPage() {

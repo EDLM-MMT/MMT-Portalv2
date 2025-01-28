@@ -1,3 +1,5 @@
+'use strict';
+
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { TranscriptTrackingTable } from '@/components/TranscriptTrackingTable';
 import { render, screen } from '@testing-library/react';

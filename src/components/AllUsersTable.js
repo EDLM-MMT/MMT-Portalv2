@@ -1,14 +1,10 @@
 "use client";
+'use strict';
 
-import { PlusIcon } from "@heroicons/react/outline";
-import { useEffect, useState } from "react";
-import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
 
 export const users = [];
-
 export function AllUsersTable() {
-
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", email: "linh.tran@mmt.edu", dateAdded: "December 2, 2024 1:45 PM" },
@@ -22,8 +18,7 @@ export function AllUsersTable() {
         { firstName: 'Leon', lastName: "Becker", email: "leon.becker@mmt.edu", dateAdded: "December 2, 2024 1:45 PM"},
         { firstName: 'Ember', lastName: "Muzuyka", email: "ember.muzuyka@mmt.edu", dateAdded: "December 2, 2024 1:45 PM"},
     ];
-
-
+    
     return (
         <>
             <div className="mx-auto max-w-screen-xl">

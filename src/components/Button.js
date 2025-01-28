@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 
 export default function Button({ onClick, id, children, testid }) {

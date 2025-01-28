@@ -1,7 +1,7 @@
+'use strict';
+
 import {ChevronDownIcon} from '@heroicons/react/solid';
 import { Disclosure, Transition } from '@headlessui/react';
-
-
 
 export default function Accordion({ title, content }) {
 

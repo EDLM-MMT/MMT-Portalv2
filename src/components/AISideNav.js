@@ -1,3 +1,5 @@
+'use strict';
+
 import {  } from "@heroicons/react/solid";
 import { DocumentTextIcon, QuestionMarkCircleIcon, UserGroupIcon} from "@heroicons/react/outline";
 import {

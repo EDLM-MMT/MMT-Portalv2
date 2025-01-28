@@ -1,4 +1,5 @@
 "use client";
+'use strict';
 
 export const users = [];
 
@@ -9,7 +10,6 @@ export function TranscriptTrackingTable() {
         {requestedBy: 'Self', sentTo: "Bunker Hill Community College", sendDate: "6 SEP 2006, 10:00:00", status: "Downloaded", downloadDate: "7 SEP 2006, 8:00:00", downloadBy: "Military Enrollment Technician", action: "Cancel"},
         
     ];
-
 
   return (
     <>
