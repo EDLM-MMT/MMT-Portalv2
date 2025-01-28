@@ -1,3 +1,5 @@
+'use strict';
+
 import { NewTranscriptTable } from '@/components/NewTranscriptTable';
 import { QueryClientWrapper } from '@/__mocks__/queryClientMock';
 import { render, screen } from '@testing-library/react';

@@ -1,3 +1,5 @@
+'use strict';
+
 import SideNav from '../SideNav';
 
 export default function DefaultLayout({ children, footerLocation }) {

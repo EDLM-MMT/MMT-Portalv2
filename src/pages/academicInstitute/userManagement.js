@@ -1,10 +1,11 @@
+'use strict';
+
 import { AdminUsersTable } from '@/components/AdminUsersTable';
 import { AllUsersTable } from '@/components/AllUsersTable';
-import { ArrowDownIcon, ChevronDownIcon, PlusIcon } from '@heroicons/react/outline';
+import { PlusIcon } from '@heroicons/react/outline';
 import { Badge, Tabs } from "flowbite-react";
 import { CheckCircleIcon } from '@heroicons/react/solid';
-import { Checkbox, Label, Modal } from "flowbite-react";
-import { NewTranscriptTable } from '@/components/NewTranscriptTable';
+import { Label, Modal } from "flowbite-react";
 import { useRouter } from 'next/router';
 import Button from '@/components/Button';
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
@@ -12,9 +13,7 @@ import Head from 'next/head'
 import InputField from '@/components/InputField';
 import React, { useCallback, useState } from 'react';
 import SearchBar from '@/components/SearchBar';
-import SecondaryButton from '@/components/SecondaryButton';
 import useField from '@/hooks/useField';
-
 
 export default function UserManagement() {
   const router = useRouter();

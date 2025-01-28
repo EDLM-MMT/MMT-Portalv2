@@ -1,14 +1,12 @@
+'use strict';
+
 import { Checkbox, Dropdown, Label, Modal, Radio } from 'flowbite-react';
 import { TranscriptTrackingTable } from '@/components/TranscriptTrackingTable';
 import Button from '@/components/Button';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import GraySecondaryButton from '@/components/GraySecondaryButton';
 import Head from 'next/head'
-import Image from 'next/image';
 import React, { useState } from 'react';
-import SecondaryButton from '@/components/SecondaryButton';
-import ShareTranscriptModal from '@/components/ShareTranscriptModal';
-import headerImage from '@/public/Abstact1.png';
 
 export default function ModernMilitaryTranscript() {
 

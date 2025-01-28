@@ -1,10 +1,6 @@
-import { useRouter } from "next/router"
-import Image from 'next/image';
-import cardImage from '@/public/card-header.png'
-
+'use strict';
 
 export default function MyUpdatesSections({ title, description, icon, badgelabel, sentDate, date }){
-    const router = useRouter();
 
     return(
         <div>

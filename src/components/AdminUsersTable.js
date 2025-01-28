@@ -1,4 +1,5 @@
 "use client";
+'use strict';
 
 import { useState } from "react";
 import GraySecondaryButton from "./GraySecondaryButton";

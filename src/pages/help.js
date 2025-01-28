@@ -1,4 +1,5 @@
-import Card from '@/components/Card';
+'use strict';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Image from 'next/image';
 import cardImage1 from '@/public/help1.png';

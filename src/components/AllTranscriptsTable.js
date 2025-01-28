@@ -1,18 +1,13 @@
 "use client";
-
+'use strict';
 
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
-import { Checkbox, Label, Pagination, Progress, Table, TableCell, Tabs } from "flowbite-react";
-import { useEffect, useState } from "react";
 import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
-
-
 
 export const users = [];
 
 export function AllTranscriptTable() {
-
 
     const data = [
         { firstName: 'Linh', lastName: "Tran", dob: "9 SEP 1991", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Service Member" },
@@ -21,8 +16,6 @@ export function AllTranscriptTable() {
         { firstName: 'Themba', lastName: "Eurja", dob: "30 JUN 1991", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
         { firstName: 'Anastasia', lastName: "Nguyen", dob: "20 JUL 1982", status: "Downloaded", branch: "Army", receivedOn: "29 MAR 2024", downloadDate: "30 MAR 2024", downloadBy: "Emma Hobert", requestedBy: "Institution" },
     ];
-
-
 
     return (
         <>

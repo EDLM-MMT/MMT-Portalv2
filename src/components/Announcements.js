@@ -1,14 +1,13 @@
+'use strict';
+
 import {ChevronDownIcon, SpeakerphoneIcon} from '@heroicons/react/solid';
 import { Disclosure, Transition } from '@headlessui/react';
 import { useState } from 'react';
-
 
 export default function Announcements({ content, className }) {
 
     const [isOpen, setIsOpen] = useState(true);
     const [counter, setCounter] = useState(content.length);
-
-
 
     const handleClick=(e)=>{
         setIsOpen(false)

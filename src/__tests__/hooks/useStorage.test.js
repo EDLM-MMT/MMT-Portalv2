@@ -1,3 +1,5 @@
+'use strict';
+
 import { act, renderHook } from '@testing-library/react';
 import { useLocalStorage, useSessionStorage } from '@/hooks/useStorage';
 

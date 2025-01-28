@@ -1,11 +1,9 @@
 "use client";
+'use strict';
 
 import { ArrowDownIcon, ChevronDownIcon, FolderDownloadIcon, TableIcon } from "@heroicons/react/solid";
-import { useEffect, useState } from "react";
 import Button from "./Button";
 import GraySecondaryButton from "./GraySecondaryButton";
-
-
 
 export const users = [];
 
