@@ -65,10 +65,10 @@ export default function ModernMilitaryTranscriptAIPage() {
                 role='presentation'
               ></div>}
 
-            <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}}>
+            <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}} >
               <Modal.Header>Request Military Transcript</Modal.Header>
               <Modal.Body>
-                <div className="space-y-6">
+                <div className="space-y-6 px-24 py-5">
                   <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                   Insert the first and last name, date of birth, and the last 4 digits of the Service Member’s SSN to request their transcript. 
                   </p>
@@ -79,20 +79,17 @@ export default function ModernMilitaryTranscriptAIPage() {
                       <InputField placeholder='First Name' value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
                     </div>
                     <div className="flex items-center gap-2">
-                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
                       <InputField placeholder='Last Name' value={lastName} onChange={(event) => setLastName(event.target.value)} />
-                    </div><div className="flex items-center gap-2">
-                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
+                    </div>
+                    <div className="flex items-center gap-2">
                       <Label htmlFor="DOB" className='w-1/3'>Date of Birth</Label>
                       <InputField value={dob} onChange={(event) => setDob(event.target.value)} placeholder={"MM/DD/YYYY"}/>
-                    </div><div className="flex items-center gap-2">
-                      {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
-                      <Label htmlFor="SSN">SSN</Label>
-                      <div className='w-1/4 ml-4'> <InputField value={ssn} onChange={(event) => setSsn(event.target.value)} placeholder={"####"}/></div>
-                      
                     </div>
-
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="SSN" >SSN</Label>
+                      <div className='w-1/4 ml-4'> <InputField value={ssn} onChange={(event) => setSsn(event.target.value)} placeholder={"####"}/></div>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-2">
@@ -101,7 +98,7 @@ export default function ModernMilitaryTranscriptAIPage() {
                   </div>
                 </div>
               </Modal.Body>
-              <Modal.Footer className='flex flex-col'>
+              <Modal.Footer className='flex flex-col pb-8'>
 
                 {/* <Button className='w-full' onClick={() => { setOpenModal(false); setConfirmModal(true) }}>Request Military Transcript</Button> */}
                 <Button className='w-full' testid="requestTranscriptButton" onClick={() => { 
