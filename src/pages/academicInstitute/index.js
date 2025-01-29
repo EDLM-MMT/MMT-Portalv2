@@ -57,7 +57,7 @@ export default function ModernMilitaryTranscriptAIPage() {
             Welcome Emma Hobert!
           </div>
           <div className="p-0.5 mb-2 text-xs font-medium ">
-            <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Request Military Transcript"} route={"/talentFinder"} />
+            <GraySecondaryButton handleClick={() => setOpenModal(true)} buttonLabel={"Request Military Transcript"} route={"/"} />
             {openModal && <div 
                 className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 onClick={openModal}

@@ -2,10 +2,10 @@
 
 import { AdminUsersTable } from '@/components/AdminUsersTable';
 import { AllUsersTable } from '@/components/AllUsersTable';
-import { PlusIcon } from '@heroicons/react/outline';
 import { Badge, Tabs } from "flowbite-react";
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Label, Modal } from "flowbite-react";
+import { PlusIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
 import Button from '@/components/Button';
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';

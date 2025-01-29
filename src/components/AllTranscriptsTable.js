@@ -95,7 +95,7 @@ export function AllTranscriptTable() {
                                 </button>
                             </div>
                             <div className="p-0.5 mb-2 overflow-hidden font-medium rounded-lg bg-gradient-to-r from-purple to-blue-custom">
-                                <GraySecondaryButton handleClick={() => setOpenModal(true)}  buttonLabel={"Export to Excel"} icon={<TableIcon className="pr-1 h-6 mr-1" />} route={"/talentFinder"} />
+                                <GraySecondaryButton handleClick={() => setOpenModal(true)}  buttonLabel={"Export to Excel"} icon={<TableIcon className="pr-1 h-6 mr-1" />} route={"/"} />
                             </div>
                             <div id="filterDropdown" className="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
                                 <h6 className="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose brand</h6>

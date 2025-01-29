@@ -43,7 +43,7 @@ export default function Home() {
               <div className='pt-2 text-gray-600'>The bridge connecting your military journey with academic credits </div>
               <div className='pt-12 flex flex-row'>
                 <div>
-                  <Button onClick={()=>{router.push("/talentFinder")}}>
+                  <Button onClick={()=>{router.push("/")}}>
                     <div className='flex flex-row gap-2 w-full'> <p className='pt-0.5'>Learn More</p>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -74,18 +74,18 @@ export default function Home() {
             My Modernized Military Transcript
           </h1>
           <div className='flex align-bottom items-bottom mt-4 gap-5'>
-            <GraySecondaryButton buttonLabel={"Download Unofficial Transcript (PDF)"} route={"/talentFinder"} 
+            <GraySecondaryButton buttonLabel={"Download Unofficial Transcript (PDF)"} route={"/"} 
             icon={<>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg> </>} />
-            <GraySecondaryButton buttonLabel={"Share Official Transcript"} route={"/talentFinder"} 
+            <GraySecondaryButton buttonLabel={"Share Official Transcript"} route={"/"} 
             icon={<>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
             </svg> </>}/>
 
-            <GraySecondaryButton buttonLabel={"Update/Correct Transcript"} route={"/talentFinder"} 
+            <GraySecondaryButton buttonLabel={"Update/Correct Transcript"} route={"/"} 
             icon={<>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
