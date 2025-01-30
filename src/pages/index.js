@@ -19,9 +19,30 @@ export default function Home() {
   const data = [
     {date:"December 20, 2024", time: "12:44 PM EST", announcement: "MMT is temporarily down. Service will be restored as soon as possible. Current estimate is by the end of the day.", type: "persist"},
     {date:"January 30, 2025", time: "12:44 PM EST", announcement: "ARMY, NAVY, MARINE CORPS, SPACE FORCE: All veterans, active duty, National Guard Personnel should use the Joint Services Transcript (JST). AIR FORCE: All veterans, active duty, National Guard Personnel should use the re-designed Modernized Military Transcript (MMT).", type: "dismiss"},
+  ];
 
-    
-];
+  // Check if user has given consent already, checking local storage as of now as a proof of concept, will get changed to something such as useAuth, once the server is ready
+  useEffect(() => {
+    if (localStorage.getItem('userInfoConsent')) {
+      const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' } );
+      const time = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit'});
+      data.push({
+        date: date,
+        time: time,
+        announcement: (
+          <span> You have given consent to use your data. If you would like to make some changes to the consent, please{' '}
+            <span className='text-blue-500 cursor-pointer' role="button" tabIndex={0} onClick={() => {
+              localStorage.removeItem('userInfoConsent');
+              window.location.reload();
+            }}
+            onKeyDown={() => {}}
+            >click here</span>
+          </span>
+        ),
+        type: "persist"
+      });
+    }
+  }, []);
   
   return (
     <DefaultLayout>
