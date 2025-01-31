@@ -25,6 +25,10 @@ module.exports = {
       {
         source: '/(.*)',
         headers: createSecureHeaders({
+          forceHTTPSRedirect: [
+            true,
+            { maxAge: 1024000, includeSubDomains: true, preload: true },
+          ],
           contentSecurityPolicy: {
             directives: {
               defaultSrc: [
