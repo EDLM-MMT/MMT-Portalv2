@@ -33,20 +33,15 @@ module.exports = {
             directives: {
               defaultSrc: [
                 "'self'",
-                "https://ecc.staging.dso.mil",
-                "https://ecc.staging.dso.mil/ecc-openlxp-xds/",
-                "https://ecc.apps.dso.mil",
-                "https://ecc.apps.dso.mil/ecc-openlxp-xds-ui/",
+                "https://mmt.staging.dso.mil/",
+                "https://mmt.staging.dso.mil/mmt-backend/",
                 "'unsafe-eval'"
               ],
               styleSrc: [
                 "'self'",
-                "https://ecc.apps.dso.mil",
-                "https://ecc.apps.dso.mil/ecc-openlxp-xds-ui/",
-                "https://ecc.staging.dso.mil",
-                "https://fonts.googleapis.com",
+                "https://mmt.staging.dso.mil/",
+                "https://mmt.staging.dso.mil/mmt-backend/",
                 "'unsafe-inline'"
-
               ],
               imgSrc: ["'self'",
                 "data:",
