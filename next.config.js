@@ -72,6 +72,7 @@ module.exports = {
             nosniff: "nosniff",
             xssProtection: "sanitize",
             referrerPolicy: "origin-when-cross-origin",
+            gpc: true,
           }
         })
       },
