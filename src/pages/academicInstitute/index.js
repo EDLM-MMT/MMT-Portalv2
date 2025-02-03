@@ -68,7 +68,7 @@ export default function ModernMilitaryTranscriptAIPage() {
             <Modal show={openModal} size="md" position="center" onClose={() => {setOpenModal(false); setDisplayContent(false);}} >
               <Modal.Header>Request Military Transcript</Modal.Header>
               <Modal.Body>
-                <div className="space-y-6 px-24 py-5">
+                <div className="space-y-6 py-3">
                   <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                   Insert the first and last name, date of birth, and the last 4 digits of the Service Member’s SSN to request their transcript. 
                   </p>
