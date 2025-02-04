@@ -7,6 +7,8 @@ export default function InputField({
   placeholder,
   name,
   value,
+  onFocus,
+  onBlur,
   onChange,
   required,
 }) {
@@ -15,6 +17,8 @@ export default function InputField({
       type={type}
       value={value}
       onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
       required={required}
       placeholder={placeholder}
       name={name}

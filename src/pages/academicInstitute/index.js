@@ -24,6 +24,7 @@ export default function ModernMilitaryTranscriptAIPage() {
   const [lastName, setLastName] = useState('');
   const [dob, setDob] = useState('');
   const [ssn, setSsn] = useState('');
+  const [filling, setFilling] = useState('');
 
 
   const { fields, updateKeyValuePair, resetKey } = useField({
@@ -72,23 +73,28 @@ export default function ModernMilitaryTranscriptAIPage() {
                   <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                   Insert the first and last name, date of birth, and the last 4 digits of the Service Member’s SSN to request their transcript. 
                   </p>
+                  {filling && (
+                    <div className="p-2 bg-blue-100  rounded-md">
+                      Just in time reminder: The <strong>{filling}</strong> will be processed 
+                    </div>
+                  )}
                   <div className='flex flex-col gap-4'>
                     <div className="flex items-center gap-2">
                       {/* <Radio id="AI" name="sendType" value="AI" defaultChecked /> */}
                       <Label htmlFor="Fname" className='w-1/3'>First Name</Label>
-                      <InputField placeholder='First Name' value={firstName} onChange={(event) => setFirstName(event.target.value)} required={true}/>
+                      <InputField placeholder='First Name' value={firstName} onChange={(event) => setFirstName(event.target.value)} onFocus={() => setFilling("First Name")}  onBlur={() => setFilling('')} required={true}/>
                     </div>
                     <div className="flex items-center gap-2">
                       <Label htmlFor="Lname" className='w-1/3'>Last Name</Label>
-                      <InputField placeholder='Last Name' value={lastName} onChange={(event) => setLastName(event.target.value)} />
+                      <InputField placeholder='Last Name' value={lastName} onChange={(event) => setLastName(event.target.value)}  onFocus={() => setFilling("Last Name")}  onBlur={() => setFilling('')} />
                     </div>
                     <div className="flex items-center gap-2">
                       <Label htmlFor="DOB" className='w-1/3'>Date of Birth</Label>
-                      <InputField value={dob} onChange={(event) => setDob(event.target.value)} placeholder={"MM/DD/YYYY"}/>
+                      <InputField value={dob} onChange={(event) => setDob(event.target.value)} placeholder={"MM/DD/YYYY"}  onFocus={() => setFilling("Birth Date")}  onBlur={() => setFilling('')}/>
                     </div>
                     <div className="flex items-center gap-2">
                       <Label htmlFor="SSN" >SSN</Label>
-                      <div className='w-1/4 ml-4'> <InputField value={ssn} onChange={(event) => setSsn(event.target.value)} placeholder={"####"}/></div>
+                      <div className='w-1/4 ml-4'> <InputField value={ssn} onChange={(event) => setSsn(event.target.value)} placeholder={"####"} onFocus={() => setFilling("SSN")}  onBlur={() => setFilling('')}/></div>
                     </div>
                   </div>
 
