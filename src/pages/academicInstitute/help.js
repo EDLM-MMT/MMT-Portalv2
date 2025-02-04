@@ -1,5 +1,6 @@
 'use strict';
 
+import { DocumentTextIcon} from "@heroicons/react/outline";
 import DefaultLayoutAI from '@/components/layouts/DefaultLayoutAI';
 import Image from 'next/image';
 import cardImage1 from '@/public/help1.png';
@@ -7,7 +8,6 @@ import cardImage2 from '@/public/help2.png';
 import cardImage3 from '@/public/help3.png';
 import cardImage4 from '@/public/help4.png';
 import cardImage5 from '@/public/help5.png';
-import { DocumentTextIcon} from "@heroicons/react/outline";
 
 export default function Docs() {
   return (
